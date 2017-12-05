@@ -52,3 +52,15 @@ CREATE TABLE Teams_Leagues (
 	CONSTRAINT U_T_L_Team_League UNIQUE (ID_Team, ID_League)
 );
 
+CREATE TABLE Scheduled (
+	ID INT UNSIGNED AUTO_INCREMENT,
+	ID_First_Team_League INT UNSIGNED NOT NULL,
+	ID_Second_Team_League INT UNSIGNED NOT NULL,
+	Match_Date DATE NOT NULL,
+	First_Team_Points INT UNSIGNED,
+	Second_Team_Points INT UNSIGNED,
+	CONSTRAINT PK_Leagues PRIMARY KEY (ID),
+	CONSTRAINT FK_Scheduled_FTL FOREIGN KEY (ID_First_Team_League) REFERENCES Teams(ID),
+	CONSTRAINT FK_Scheduled_STL FOREIGN KEY (ID_Second_Team_League) REFERENCES Teams (ID)
+)
+
