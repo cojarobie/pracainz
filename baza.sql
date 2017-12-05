@@ -1,0 +1,13 @@
+CREATE Table Users (
+	ID INT UNSIGNED AUTO_INCREMENT,
+	Name VARCHAR(50) NOT NULL,
+	Surname VARCHAR(50) NOT NULL,
+	Nickname VARCHAR(50),
+	Birth_Date	DATE,
+	Email VARCHAR(50) NOT NULL,
+	Password_Hash VARCHAR(50) NOT NULL,
+	Avatar VARCHAR(100),
+	Description VARCHAR(100),
+	CONSTRAINT PK_Users PRIMARY KEY (ID),
+	CONSTRAINT U_Users_Email_Pasword UNIQUE (Email, Password_Hash),
+)
