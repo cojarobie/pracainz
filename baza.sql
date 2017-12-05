@@ -1,4 +1,4 @@
-CREATE Table Users (
+CREATE TABLE Users (
 	ID INT UNSIGNED AUTO_INCREMENT,
 	Name VARCHAR(50) NOT NULL,
 	Surname VARCHAR(50) NOT NULL,
@@ -9,5 +9,5 @@ CREATE Table Users (
 	Avatar VARCHAR(100),
 	Description VARCHAR(100),
 	CONSTRAINT PK_Users PRIMARY KEY (ID),
-	CONSTRAINT U_Users_Email_Pasword UNIQUE (Email, Password_Hash),
-)
+	CONSTRAINT U_Users_Email_Pasword UNIQUE (Email, Password_Hash)
+);
