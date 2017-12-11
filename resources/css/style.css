@@ -1,8 +1,6 @@
 body {
-	/*background: url("../bg/noisy_net_2X.png");
-	color: #bbc;*/
-	background-color: #2F3336;
-	color: #efefef;
+	background: url("../bg/noisy_net_2X.png");
+	color: #bbc;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
@@ -43,3 +41,26 @@ img {
 	max-width: 100%;
 }
 
+.top-content .description {
+	margin: 20px 0 20px 0;
+}
+
+.form-box {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.form-top {
+	overflow: hidden;
+	padding: 15px 25px 5px 25px;
+	background: #224;
+	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+	text-align: left;
+}
+
+.form-bottom {
+	padding: 5px 25px 15px 25px;
+	background: #224;
+	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+	text-align: left;
+}
