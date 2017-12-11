@@ -1,7 +1,45 @@
 body {
 	/*background: url("../bg/noisy_net_2X.png");
 	color: #bbc;*/
-	font-family: 'Roboto', sans-serif;
 	background-color: #2F3336;
 	color: #efefef;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 30px;
+	text-align: center;
 }
+
+strong {
+	font-weight: 500;
+}
+
+a, a:hover, a:focus {
+	color: #19b9e7;
+	text-decoration: none;
+	-o-transition: all .3s;
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-ms-transition: all .3s;
+	transition: all .3s;
+}
+
+h1, h2 {
+	margin-top: 10px;
+	font-size: 38px;
+	font-weight: 100;
+	color: #ddd;
+	line-height: 50px;
+}
+
+h3 {
+	font-size: 22px;
+	font-weight: 300;
+	color: #ddd;
+	line-height: 30px;
+}
+
+img {
+	max-width: 100%;
+}
+
