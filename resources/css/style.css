@@ -54,23 +54,32 @@ img {
 	overflow: hidden;
 	padding: 15px 25px 5px 25px;
 	background: #003366;
-	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+	-moz-border-radius: 10px 10px 0 0; -webkit-border-radius: 10px 10px 0 0; border-radius: 10px 10px 0 0;
 	text-align: left;
 }
 
 .form-bottom {
 	padding: 5px 25px 15px 25px;
 	background: #003366;
-	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 10px 10px; -webkit-border-radius: 0 0 10px 10px; border-radius: 0 0 10px 10px;
 	text-align: left;
 }
 
-.main {
-	background-color: #2f3336;
+.header {
+	background-color: #2a2e32;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
 }
 
-.footer, .header {
-	background-color: #191d21;
+.footer {
+	background-color: #2a2e32;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 
 .text {
