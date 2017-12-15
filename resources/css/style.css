@@ -53,42 +53,23 @@ img {
 .form-top {
 	overflow: hidden;
 	padding: 15px 25px 5px 25px;
-	background: #224;
+	background: #003366;
 	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
 	text-align: left;
 }
 
 .form-bottom {
 	padding: 5px 25px 15px 25px;
-	background: #224;
+	background: #003366;
 	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
 	text-align: left;
 }
 
-.form-top-left {
-	float: left;
-	width: 75%;
-	padding-top: 10px;
+.main {
+	background-color: #2f3336;
 }
 
-.form-top-right {
-	float: left;
-	width: 25%;
-	padding-top: 5px;
-	font-size: 66px;
-	color: #ddd;
-	line-height: 100px;
-	text-align: right;
-}
-
-.form-top-left h3 { margin-top: 0; }
-
-.form-top-right {
-	float: left;
-	width: 25%;
-	padding-top: 5px;
-	font-size: 66px;
-	color: #ddd;
-	line-height: 100px;
-	text-align: right;
+.footer, .header {
+	background-color: #191d21;
+	text-align: center;
 }
