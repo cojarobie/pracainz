@@ -71,5 +71,8 @@ img {
 
 .footer, .header {
 	background-color: #191d21;
-	text-align: center;
+}
+
+.text {
+	margin: 0 auto;
 }
