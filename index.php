@@ -12,7 +12,9 @@
 	<link rel="stylesheet" href="resources/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
-	
+  
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
   <body>
 	
 	<!-- Header -->
@@ -91,7 +93,14 @@
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="form-password">Password</label>
-										<input type="password" name="form-password" placeholder="Password..." class="form-paswword form-control" id="form-password">
+										<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+									</div>
+									<div class="form-group">
+										<label class="sr-only" for="form-repeat-password">Repeat password</label>
+										<input type="password" name="form-repeat-password" placeholder="Repeat password..." class="form-password form-control" id="form-repeat-password">
+									</div>
+									<div class="form-group">
+										<div class="g-recaptcha" data-sitekey="6Lf97CYTAAAAAJ_LjPqCdOqnc4c0U-a5b_Uivh6e"></div>
 									</div>
 									<button type="submit" class="btn">Sign me up!</button>
 								</form>
