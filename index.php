@@ -74,7 +74,7 @@
 								<p>Fill in the form below to get instant access:</p>
 							</div>
 							<div class="form-bottom">
-								<form role="form" action="" method="post" class="registration-form">
+								<form role="form" action="registration.php" method="post" class="registration-form">
 									<div class="form-group">
 										<label class="sr-only" for="form-first-name">First name</label>
 										<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
