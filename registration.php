@@ -6,8 +6,8 @@
 	$lastName   = $_POST['form-last-name'];
 	$nickname   = $_POST['form-nickname'];
 	$email      = $_POST['form-email'];
-	$password   = $_POST['form-password'];
-	$repeatPass = $_POST['form-repeat-password'];
+	$password1  = $_POST['form-password'];
+	$password2  = $_POST['form-repeat-password'];
 	
 	
 	//***First Name***
@@ -51,6 +51,16 @@
 		$_SESSION['e-form-email'] = "Invalid email address";
 	}
 	
+	//***Password***
+	if ((strlen(password) < 8) || (strlen(password) > 30)) {
+		$correctData = false;
+		$_SESSION['e-form-password'] = "Password must contain from 8 to 30 characters";
+	}
 	
+	if ($password1 != $password2) {
+		$correctData = false;
+		$_SESSION['e-form-password'] = "Passwords are not the same";
+	}
 	
+		
 ?>
