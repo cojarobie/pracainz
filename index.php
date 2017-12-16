@@ -104,7 +104,7 @@
 										<input type="password" name="form-repeat-password" placeholder="Repeat password..." class="form-password form-control" id="form-repeat-password">
 									</div>
 									<div class="form-group">
-										<div class="g-recaptcha" data-sitekey="6Lf97CYTAAAAAJ_LjPqCdOqnc4c0U-a5b_Uivh6e"></div>
+										<div class="g-recaptcha" data-sitekey="6LdzTz0UAAAAAPzt8ywGo2j3IdTS9U0MnsD7b4vA"></div>
 									</div>
 									<button type="submit" class="btn">Sign me up!</button>
 								</form>
