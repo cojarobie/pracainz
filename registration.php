@@ -103,6 +103,13 @@
   </head>
   
   <body>
-  
+  <?php
+    if (isset($_SESSION['e-form-first-name'])) echo $_SESSION['e-form-first-name']."<br/>";
+    if (isset($_SESSION['e-form-last-name'])) echo $_SESSION['e-form-last-name']."<br/>";
+    if (isset($_SESSION['e-form-nickname'])) echo $_SESSION['e-form-nickname']."<br/>";
+    if (isset($_SESSION['e-form-email']))  echo $_SESSION['e-form-email']."<br/>";
+    if (isset($_SESSION['e-form-password']))  echo $_SESSION['e-form-password']."<br/>";
+    if (isset($_SESSION['e-form-recaptcha']))  echo $_SESSION['e-form-recaptcha']."<br/>";
+  ?> 
   </body>
 </html>
