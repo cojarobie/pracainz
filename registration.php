@@ -64,7 +64,7 @@
 	}
 	
 	//***reCaptcha***
-	$secret = "6Lf97CYTAAAAAF_8m4a2xs_Y1IiI8s40CbetFMUB";
+	$secret = "6LdzTz0UAAAAAOsYBumnWYzRUj84V45dQuJGgqG1";
 	
 	$postdata = http_build_query(
 		array(
