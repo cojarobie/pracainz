@@ -83,3 +83,9 @@ img {
 .text {
 	margin: 0 auto;
 }
+
+.middle-border {
+	margin: 20px 0;
+	min-height: 300px;
+	border-right: 1px solid #003366;
+}
