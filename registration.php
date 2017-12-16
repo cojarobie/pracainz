@@ -28,4 +28,15 @@
 		$correctData = false;
 		$_SESSION['e-form-last-name'] = "Last name can contain only alphanumeric characters"; 
 	}
+	
+	if ((strlen($nickname) < 2) || (strlen($nickname) > 50)) {
+		$correctData = false;
+		$_SESSION['e-form-nickname'] = "Nickname must contain from 2 to 50 characters";
+	}
+	
+	if (!ctype_alnum($nickname)) {
+		$correctData = false;
+		$_SESSION['e-form-nickname'] = "Nickname can contain only alphanumeric characters"; 
+	}
+	
 ?>
