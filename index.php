@@ -89,11 +89,7 @@
 										<label class="sr-only" for="form-email">Email</label>
 										<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
 									</div>
-									<div class="form-group">
-										<label class="sr-only" for="form-about-yourself">About yourself</label>
-										<textarea name="form-about-yourself" placeholder="About yourself..." 
-													class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-									</div>
+									
 									<button type="submit" class="btn">Sign me up!</button>
 								</form>
 							</div>
