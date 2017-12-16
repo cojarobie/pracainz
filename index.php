@@ -43,7 +43,7 @@
 						<div class="form-box">
 							<div class="form-top">
 								<h3>Login to our site</h3>
-								<p>Enter email and passwoerd to log on:</p>
+								<p>Enter email and passwored to log on:</p>
 							</div>
 							<div class="form-bottom">
 								<form role="form" action="" method="post">
@@ -89,7 +89,10 @@
 										<label class="sr-only" for="form-email">Email</label>
 										<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
 									</div>
-									
+									<div class="form-group">
+										<label class="sr-only" for="form-password">Password</label>
+										<input type="password" name="form-password" placeholder="Password..." class="form-paswword form-control" id="form-password">
+									</div>
 									<button type="submit" class="btn">Sign me up!</button>
 								</form>
 							</div>
