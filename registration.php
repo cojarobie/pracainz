@@ -8,6 +8,7 @@
 	$email      = $_POST['form-email'];
 	$password1  = $_POST['form-password'];
 	$password2  = $_POST['form-repeat-password'];
+	$response   = $_POST['g-recaptcha-response'];
 	
 	
 	//***First Name***
@@ -64,7 +65,6 @@
 	
 	//***reCaptcha***
 	$secret = "6Lf97CYTAAAAAF_8m4a2xs_Y1IiI8s40CbetFMUB";
-	$response = $_POST['g-recaptcha-response'];
 	
 	$postdata = http_build_query(
 		array(
@@ -92,22 +92,3 @@
 		$_SESSION['e-form-recaptcha'] = "Prove that your not a robot";
 	}
 ?>
-
-<!doctype html>
-<html lang="en">
-  <head>
-  <title>Registration</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  </head>
-  
-  <body>
-  
-  <?php
-	echo "Odczytana wartosc to: " . $correctData;
-  ?>
-  
-  </body>
-</html>
