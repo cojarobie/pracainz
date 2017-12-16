@@ -52,7 +52,7 @@
 	}
 	
 	//***Password***
-	if ((strlen(password) < 8) || (strlen(password) > 30)) {
+	if ((strlen($password1) < 8) || (strlen($password1) > 30)) {
 		$correctData = false;
 		$_SESSION['e-form-password'] = "Password must contain from 8 to 30 characters";
 	}
@@ -81,12 +81,33 @@
 		)
 	);
 	
-	$context = stream_context_create($opt);
+	$context = stream_context_create($opts);
 	$resource = "https://www.google.com/recaptcha/api/siteverify";
-	$result = file_get_contents($resource, false, $context);
+	$apiResponse = file_get_contents($resource, false, $context);
 	
-	if ($result->$success == false) {
+	$result = json_decode($apiResponse);
+	
+	if ($result->success == false) {
 		$correctData = false;
 		$_SESSION['e-form-recaptcha'] = "Prove that your not a robot";
 	}
 ?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+  <title>Registration</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  
+  <body>
+  
+  <?php
+	echo "Odczytana wartosc to: " . $correctData;
+  ?>
+  
+  </body>
+</html>
