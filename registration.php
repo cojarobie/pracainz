@@ -47,7 +47,7 @@
 	//***Email***
 	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
 	
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL) == false || strlen($email) == 0) {
 		$correctData = false;
 		$_SESSION['e-form-email'] = "Invalid email address";
 	}
@@ -92,3 +92,17 @@
 		$_SESSION['e-form-recaptcha'] = "Prove that your not a robot";
 	}
 ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>E-sport</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  
+  <body>
+  
+  </body>
+</html>
