@@ -82,6 +82,10 @@
 										<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
 									</div>
 									<div class="form-group">
+										<label class="sr-only" for="form-nickname">Nickname</label>
+										<input type="text" name="form-nickname" placeholder="Nickname..." class="form-nickname form-control" id="form-nickname">
+									</div>
+									<div class="form-group">
 										<label class="sr-only" for="form-email">Email</label>
 										<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
 									</div>
