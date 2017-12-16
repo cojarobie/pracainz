@@ -62,5 +62,31 @@
 		$_SESSION['e-form-password'] = "Passwords are not the same";
 	}
 	
-		
+	//***reCaptcha***
+	$secret = "6Lf97CYTAAAAAF_8m4a2xs_Y1IiI8s40CbetFMUB";
+	$response = $_POST['g-recaptcha-response'];
+	
+	$postdata = http_build_query(
+		array(
+			'secret' => $secret,
+			'response' => $response
+		)
+	);
+	
+	$opts = array('http' =>
+		array(
+			'method'  => 'POST',
+			'header'  => 'Content-type: application/x-www-form-urlencoded',
+			'content' => $postdata
+		)
+	);
+	
+	$context = stream_context_create($opt);
+	$resource = "https://www.google.com/recaptcha/api/siteverify";
+	$result = file_get_contents($resource, false, $context);
+	
+	if ($result->$success == false) {
+		$correctData = false;
+		$_SESSION['e-form-recaptcha'] = "Prove that your not a robot";
+	}
 ?>
