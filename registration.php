@@ -103,11 +103,6 @@
 		$_SESSION['e-form-recaptcha'] = "Prove that your not a robot";
 	}
   
-  if ($correctData == false) {
-    header("Location: index.php");
-    exit();
-  }
-  
   require_once 'connection.php';
   mysqli_report(MYSQLI_REPORT_STRICT);
   
@@ -118,7 +113,23 @@
       throw new Exception(mysqli_connect_errno());
     } else {
         //Connection succeeded
+        $result = $connection->query("SELECT id FROM users WHERE email='$email'");
         
+        if (!$result) {
+           throw new Exception($connection->error);
+        }
+        
+        if ($result->num_rows > 0) {
+          $correctData = false;
+          $_SESSION['e-form-email'] = "Email already in use";
+        }
+        
+        if ($correctData == false) {
+          $conncection->close();
+          header("Location: index.php");
+          exit();
+        }
+                
         $conncection->close();
     }
   
