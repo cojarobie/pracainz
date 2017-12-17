@@ -18,7 +18,7 @@
 	$_SESSION['form-repeat-password'] = $_POST['form-repeat-password'];
 	
 	//***First Name***	
-	if (!ctype_alnum($firstName)) {
+	if (preg_match('/[\'"^L$%&*()}{@#~?><>,|=_+¬-]/', $firstName)) {
 		$correctData = false;
 		$_SESSION['e-form-first-name'] = "First name can contain only alphanumeric characters"; 
 	}
@@ -29,7 +29,7 @@
 	}
 	
 	//***Last Name***	
-	if (!ctype_alnum($lastName)) {
+	if (preg_match('/[\'"^L$%&*()}{@#~?><>,|=_+¬-]/', $lastName)) {
 		$correctData = false;
 		$_SESSION['e-form-last-name'] = "Last name can contain only alphanumeric characters"; 
 	}
@@ -40,7 +40,7 @@
 	}
 	
 	//***Nickname***	
-	if (!ctype_alnum($nickname)) {
+	if (preg_match('/[\'"^L$%&*()}{@#~?><>,|=_+¬-]/', $nickname)) {
 		$correctData = false;
 		$_SESSION['e-form-nickname'] = "Nickname can contain only alphanumeric characters"; 
 	}
