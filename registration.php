@@ -9,13 +9,12 @@
 	$password1  = $_POST['form-password'];
 	$password2  = $_POST['form-repeat-password'];
 	$response   = $_POST['g-recaptcha-response'];
-  
-  
+    
 	$_SESSION['form-first-name']      = $_POST['form-first-name'];
 	$_SESSION['form-last-name']       = $_POST['form-last-name'];
 	$_SESSION['form-nickname']        = $_POST['form-nickname'];
-	$_SSESION['form-email']           = $_POST['form-email'];
-	$_SSESION['form-password']        = $_POST['form-password'];
+	$_SESSION['form-email']           = $_POST['form-email'];
+	$_SESSION['form-password']        = $_POST['form-password'];
 	$_SESSION['form-repeat-password'] = $_POST['form-repeat-password'];
 	
 	//***First Name***	
@@ -46,15 +45,15 @@
 		$_SESSION['e-form-nickname'] = "Nickname can contain only alphanumeric characters"; 
 	}
   
-  if ((strlen($nickname) < 2) || (strlen($nickname) > 50)) {
+  if ((strlen($nickname) < 2) || (strlen($nickname) > 30)) {
 		$correctData = false;
-		$_SESSION['e-form-nickname'] = "Nickname must contain from 2 to 50 characters";
+		$_SESSION['e-form-nickname'] = "Nickname must contain from 2 to 30 characters";
 	}
 	
 	//***Email***
-	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+	$emailFilter = filter_var($email, FILTER_SANITIZE_EMAIL);
 	
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL) == false || strlen($email) == 0) {
+	if (filter_var($emailFilter, FILTER_VALIDATE_EMAIL) == false) {
 		$correctData = false;
 		$_SESSION['e-form-email'] = "Invalid email address";
 	}
@@ -116,10 +115,20 @@
   <body>
   <?php
     if (isset($_SESSION['e-form-first-name'])) echo $_SESSION['e-form-first-name']."<br/>";
+    if (isset($_SESSION['form-first-name'])) echo $_SESSION['form-first-name']."<br/>";
+    
     if (isset($_SESSION['e-form-last-name'])) echo $_SESSION['e-form-last-name']."<br/>";
+    if (isset($_SESSION['form-last-name'])) echo $_SESSION['form-last-name']."<br/>";
+    
     if (isset($_SESSION['e-form-nickname'])) echo $_SESSION['e-form-nickname']."<br/>";
+    if (isset($_SESSION['form-nickname'])) echo $_SESSION['form-nickname']."<br/>";
+    
     if (isset($_SESSION['e-form-email']))  echo $_SESSION['e-form-email']."<br/>";
+    if (isset($_SESSION['form-email']))  echo $_SESSION['form-email']."<br/>";
+    
     if (isset($_SESSION['e-form-password']))  echo $_SESSION['e-form-password']."<br/>";
+    if (isset($_SESSION['form-password']))  echo $_SESSION['form-password']."<br/>";
+    
     if (isset($_SESSION['e-form-recaptcha']))  echo $_SESSION['e-form-recaptcha']."<br/>";
   ?> 
   </body>
