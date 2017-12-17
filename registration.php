@@ -116,7 +116,8 @@
         $result = $connection->query("SELECT id FROM users WHERE email='$email'");
         
         if (!$result) {
-           throw new Exception($connection->error);
+          $conncection->close();
+          throw new Exception($connection->error);
         }
         
         if ($result->num_rows > 0) {
@@ -132,6 +133,10 @@
                 
         $conncection->close();
     }
+    catch (Exception $e) {
+      $_SESSION['server-error'] = '<div class="server-error">It looks like we have a server error. Please try to register later</div>';
+      echo '</br> Error info: ' . $e . '<br/><br/>';
+    }
   
   function has_special($text) {
     $special = false;
@@ -141,34 +146,23 @@
     return $special;
   }
 ?>
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>E-sport</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  </head>
+
+<?php
+  if (isset($_SESSION['e-form-first-name'])) echo $_SESSION['e-form-first-name']."<br/>";
+  if (isset($_SESSION['form-first-name'])) echo $_SESSION['form-first-name']."<br/>";
   
-  <body>
-  <?php
-    if (isset($_SESSION['e-form-first-name'])) echo $_SESSION['e-form-first-name']."<br/>";
-    if (isset($_SESSION['form-first-name'])) echo $_SESSION['form-first-name']."<br/>";
-    
-    if (isset($_SESSION['e-form-last-name'])) echo $_SESSION['e-form-last-name']."<br/>";
-    if (isset($_SESSION['form-last-name'])) echo $_SESSION['form-last-name']."<br/>";
-    
-    if (isset($_SESSION['e-form-nickname'])) echo $_SESSION['e-form-nickname']."<br/>";
-    if (isset($_SESSION['form-nickname'])) echo $_SESSION['form-nickname']."<br/>";
-    
-    if (isset($_SESSION['e-form-email']))  echo $_SESSION['e-form-email']."<br/>";
-    if (isset($_SESSION['form-email']))  echo $_SESSION['form-email']."<br/>";
-    
-    if (isset($_SESSION['e-form-password']))  echo $_SESSION['e-form-password']."<br/>";
-    if (isset($_SESSION['form-password']))  echo $_SESSION['form-password']."<br/>";
-    
-    if (isset($_SESSION['e-form-recaptcha']))  echo $_SESSION['e-form-recaptcha']."<br/>";
-  ?> 
-  </body>
-</html>
+  if (isset($_SESSION['e-form-last-name'])) echo $_SESSION['e-form-last-name']."<br/>";
+  if (isset($_SESSION['form-last-name'])) echo $_SESSION['form-last-name']."<br/>";
+  
+  if (isset($_SESSION['e-form-nickname'])) echo $_SESSION['e-form-nickname']."<br/>";
+  if (isset($_SESSION['form-nickname'])) echo $_SESSION['form-nickname']."<br/>";
+  
+  if (isset($_SESSION['e-form-email']))  echo $_SESSION['e-form-email']."<br/>";
+  if (isset($_SESSION['form-email']))  echo $_SESSION['form-email']."<br/>";
+  
+  if (isset($_SESSION['e-form-password']))  echo $_SESSION['e-form-password']."<br/>";
+  if (isset($_SESSION['form-password']))  echo $_SESSION['form-password']."<br/>";
+  
+  if (isset($_SESSION['e-form-recaptcha']))  echo $_SESSION['e-form-recaptcha']."<br/>";
+?> 
+
