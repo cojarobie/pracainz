@@ -60,14 +60,14 @@
 								<p>Enter email and passwored to log on:</p>
 							</div>
 							<div class="form-bottom">
-								<form role="form" action="" method="post">
+								<form role="form" action="login.php" method="post">
 									<div class="form-group">
 										<label class="sr-only" for="login-email">Email</label>
 										<input type="text" name="login-email" placeholder="Email..." class="login-email form-control" id="login-email">
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="login-password">Password</label>
-										<input type="password" name="form-login-password" placeholder="Password..." class="login-password form-control" id="login-password">
+										<input type="password" name="login-password" placeholder="Password..." class="login-password form-control" id="login-password">
 									</div>
 									<button type="submit" class="btn">Sign in!</button>
 								</form>
