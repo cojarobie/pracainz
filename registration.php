@@ -107,7 +107,7 @@
   mysqli_report(MYSQLI_REPORT_STRICT);
   
   try {
-    $conncection = new mysqli($host, $db_user, $db_password), $db_name);
+    $connection = new mysqli($host, $db_user, $db_password, $db_name);
     
     if ($connection->connect_errno != 0) {
       throw new Exception(mysqli_connect_errno());
@@ -126,17 +126,18 @@
         }
         
         if ($correctData == false) {
-          $conncection->close();
+          $connection->close();
           header("Location: index.php");
           exit();
         }
                 
         $conncection->close();
     }
-    catch (Exception $e) {
-      $_SESSION['server-error'] = '<div class="server-error">It looks like we have a server error. Please try to register later</div>';
-      echo '</br> Error info: ' . $e . '<br/><br/>';
-    }
+  }
+  catch (Exception $e) {
+    $_SESSION['server-error'] = '<div class="server-error">It looks like we have a server error. Please try to register later</div>';
+    echo '</br> Error info: ' . $e . '<br/><br/>';
+  }
   
   function has_special($text) {
     $special = false;
