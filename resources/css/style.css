@@ -2,7 +2,7 @@ body {
 	background: url("../bg/noisy_net_2X.png");
 	color: #bbc;
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 	line-height: 30px;
 	text-align: center;
@@ -88,4 +88,12 @@ img {
 	margin: 20px 0;
 	min-height: 300px;
 	border-right: 1px solid #003366;
+}
+
+.error-info {
+  font-size: 0.8rem;
+  line-height: 1;
+  color: red;
+  padding: 5px 0 0 5px;
+  margin: 0;
 }
