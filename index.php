@@ -95,26 +95,76 @@
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="form-last-name">Last name</label>
-										<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+										<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name"<?php
+                      if (isset($_SESSION['form-last-name'])) {
+                        echo ' value="'.$_SESSION['form-last-name'].'"';
+                      }?>>
+                      <?php
+                        if (isset($_SESSION['e-form-last-name'])) {
+                          echo '<div class="error-info">';
+                          echo $_SESSION['e-form-last-name'];
+                          echo '</div>';
+                        }
+                      ?>
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="form-nickname">Nickname</label>
-										<input type="text" name="form-nickname" placeholder="Nickname..." class="form-nickname form-control" id="form-nickname">
+										<input type="text" name="form-nickname" placeholder="Nickname..." class="form-nickname form-control" id="form-nickname"<?php
+                      if (isset($_SESSION['form-nickname'])) {
+                        echo ' value="'.$_SESSION['form-nickname'].'"';
+                      }?>>
+                      <?php
+                        if (isset($_SESSION['e-form-nickname'])) {
+                          echo '<div class="error-info">';
+                          echo $_SESSION['e-form-nickname'];
+                          echo '</div>';
+                        }
+                      ?>
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="form-email">Email</label>
-										<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+										<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email"<?php
+                      if (isset($_SESSION['form-email'])) {
+                        echo ' value="'.$_SESSION['form-email'].'"';
+                      }?>>
+                      <?php
+                        if (isset($_SESSION['e-form-email'])) {
+                          echo '<div class="error-info">';
+                          echo $_SESSION['e-form-email'];
+                          echo '</div>';
+                        }
+                      ?>
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="form-password">Password</label>
-										<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+										<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password"<?php
+                      if (isset($_SESSION['form-password'])) {
+                        echo ' value="'.$_SESSION['form-password'].'"';
+                      }?>>
+                      <?php
+                        if (isset($_SESSION['e-form-password'])) {
+                          echo '<div class="error-info">';
+                          echo $_SESSION['e-form-password'];
+                          echo '</div>';
+                        }
+                      ?>
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="form-repeat-password">Repeat password</label>
-										<input type="password" name="form-repeat-password" placeholder="Repeat password..." class="form-password form-control" id="form-repeat-password">
+										<input type="password" name="form-repeat-password" placeholder="Repeat password..." class="form-password form-control" id="form-repeat-password"<?php
+                      if (isset($_SESSION['form-password'])) {
+                        echo ' value="'.$_SESSION['form-password'].'"';
+                      }?>>
 									</div>
 									<div class="form-group">
 										<div class="g-recaptcha" data-sitekey="6LdzTz0UAAAAAPzt8ywGo2j3IdTS9U0MnsD7b4vA"></div>
+                    <?php
+                        if (isset($_SESSION['e-form-recaptcha'])) {
+                          echo '<div class="error-info">';
+                          echo $_SESSION['e-form-recaptcha'];
+                          echo '</div>';
+                        }
+                      ?>
 									</div>
 									<button type="submit" class="btn">Sign me up!</button>
 								</form>
