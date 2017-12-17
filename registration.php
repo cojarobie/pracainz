@@ -1,5 +1,10 @@
 <?php
 	session_start();
+  if (!isset($_POST['form-first-name'])) {
+    session_unset();
+    header('Location: index.php');
+    exit();
+  }
 	$correctData = true;
 	
 	$firstName  = $_POST['form-first-name'];
@@ -142,11 +147,13 @@
         session_unset();
         $_SESSION['registration-result'] = '<div style="color: green; border-color: green;" class="registration-success">Congratulations you have register! Now you can login.</div>';
         header('Location: index.php');
+        exit();
     }
   }
   catch (Exception $e) {
     $_SESSION['registration-result'] = '<div style="color: #ff1a1a; border-color: #ff1a1a;" class="server-error">It looks like we have a server error. Please try to register later</div>';
     header('Location: index.php');
+    exit();
   }
   
   function has_special($text) {
