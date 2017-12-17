@@ -58,6 +58,10 @@ img {
 	text-align: left;
 }
 
+.form-top p {
+  margin: 0px;
+}
+
 .form-bottom {
 	padding: 5px 25px 15px 25px;
 	background: #003366;
