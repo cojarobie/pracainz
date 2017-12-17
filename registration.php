@@ -18,7 +18,7 @@
 	$_SESSION['form-repeat-password'] = $_POST['form-repeat-password'];
 	
 	//***First Name***	
-	if (preg_match('/[\'"^L$%&*()}{@#~?><>,|=_+¬-]/', $firstName)) {
+	if (has_special($firstName)) {
 		$correctData = false;
 		$_SESSION['e-form-first-name'] = "First name can contain only alphanumeric characters"; 
 	}
@@ -29,7 +29,7 @@
 	}
 	
 	//***Last Name***	
-	if (preg_match('/[\'"^L$%&*()}{@#~?><>,|=_+¬-]/', $lastName)) {
+	if (has_special($lastName)) {
 		$correctData = false;
 		$_SESSION['e-form-last-name'] = "Last name can contain only alphanumeric characters"; 
 	}
@@ -40,7 +40,7 @@
 	}
 	
 	//***Nickname***	
-	if (preg_match('/[\'"^L$%&*()}{@#~?><>,|=_+¬-]/', $nickname)) {
+	if (has_special($nickname)) {
 		$correctData = false;
 		$_SESSION['e-form-nickname'] = "Nickname can contain only alphanumeric characters"; 
 	}
@@ -69,10 +69,10 @@
 		$_SESSION['e-form-password'] = "Password must contain from 8 to 30 characters";
 	}
   
-  /*if (preg_match('/[\'"^L$%&*()}{@#~?><>,|=_+¬-]/', $password1)) {
+  if (preg_match('/\'"/', $password1)) {
     $correctData = false;
     $_SESSION['e-form-password'] = "Password password cannot contain ' or \"";
-  }*/
+  }
 	
 	//***reCaptcha***
 	$secret = "6LdzTz0UAAAAAOsYBumnWYzRUj84V45dQuJGgqG1";
@@ -105,6 +105,14 @@
   
   if ($correctData == false) {
     header("Location: index.php");
+  }
+  
+  function has_special($text) {
+    $special = false;
+    if (preg_match('/[\'"^$%&*()}{@#~?><>,.;:|=_+¬]/', $text)) {
+      $special = true;
+    }
+    return $special;
   }
 ?>
 <!doctype html>
