@@ -81,7 +81,17 @@
 								<form role="form" action="registration.php" method="post" class="registration-form">
 									<div class="form-group">
 										<label class="sr-only" for="form-first-name">First name</label>
-										<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+										<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name"<?php
+                      if (isset($_SESSION['form-first-name'])) {
+                        echo ' value="'.$_SESSION['form-first-name'].'"';
+                      }?>>
+                      <?php
+                        if (isset($_SESSION['e-form-first-name'])) {
+                          echo '<div class="error-info">';
+                          echo $_SESSION['e-form-first-name'];
+                          echo '</div>';
+                        }
+                      ?>
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="form-last-name">Last name</label>
@@ -140,3 +150,7 @@
 	
   </body>
 </html>
+
+<?php
+  session_unset();
+?>
