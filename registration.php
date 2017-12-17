@@ -11,11 +11,11 @@
 	$response   = $_POST['g-recaptcha-response'];
   
   
-	$_SESSION['form-first-name'] = $_POST['form-first-name'];
-	$_SESSION['form-last-name'] = $_POST['form-last-name'];
-	$_SESSION['form-nickname'] = $_POST['form-nickname'];
-	$_SSESION['form-email'] = $_POST['form-email'];
-	$_SSESION['form-password'] = $_POST['form-password'];
+	$_SESSION['form-first-name']      = $_POST['form-first-name'];
+	$_SESSION['form-last-name']       = $_POST['form-last-name'];
+	$_SESSION['form-nickname']        = $_POST['form-nickname'];
+	$_SSESION['form-email']           = $_POST['form-email'];
+	$_SSESION['form-password']        = $_POST['form-password'];
 	$_SESSION['form-repeat-password'] = $_POST['form-repeat-password'];
 	
 	//***First Name***
