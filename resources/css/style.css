@@ -97,7 +97,19 @@ img {
 .error-info {
   font-size: 0.8rem;
   line-height: 1;
-  color: red;
+  color: #ff1a1a;
   padding: 5px 0 0 5px;
   margin: 0;
+}
+
+.registration-success, .server-error {
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 10px 5px;
+  margin: 20px 15px 0 15px;
+  background: #fff;
+  border-radius: 10px;
+  border-size: 3px;
+  border-style: solid;
 }
