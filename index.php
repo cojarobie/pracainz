@@ -48,7 +48,7 @@
             echo '<div class="row">';
             echo $_SESSION['registration-result'];
             echo '</div>';
-          }
+          }         
         ?>
 				
 				<div class="row main">
@@ -63,11 +63,24 @@
 								<form role="form" action="login.php" method="post">
 									<div class="form-group">
 										<label class="sr-only" for="login-email">Email</label>
-										<input type="text" name="login-email" placeholder="Email..." class="login-email form-control" id="login-email">
+										<input type="text" name="login-email" placeholder="Email..." class="login-email form-control" id="login-email"<?php
+                      if (isset($_SESSION['login-email'])) {
+                        echo ' value="'.$_SESSION['login-email'].'"';
+                      }?>>
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="login-password">Password</label>
-										<input type="password" name="login-password" placeholder="Password..." class="login-password form-control" id="login-password">
+										<input type="password" name="login-password" placeholder="Password..." class="login-password form-control" id="login-password"<?php
+                      if (isset($_SESSION['login-password'])) {
+                        echo ' value="'.$_SESSION['login-password'].'"';
+                      }?>>
+                    <?php
+                        if (isset($_SESSION['user-not-found'])) {
+                          echo '<div class="error-info">';
+                          echo $_SESSION['user-not-found'];
+                          echo '</div>';
+                        }
+                      ?>
 									</div>
 									<button type="submit" class="btn">Sign in!</button>
 								</form>
