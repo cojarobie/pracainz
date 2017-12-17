@@ -98,6 +98,10 @@
 		$correctData = false;
 		$_SESSION['e-form-recaptcha'] = "Prove that your not a robot";
 	}
+  
+  if ($correctData == false) {
+    header("Location: index.php");
+  }
 ?>
 <!doctype html>
 <html lang="en">
