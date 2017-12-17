@@ -132,20 +132,21 @@
         }
         
         $password_hash = password_hash($password1, PASSWORD_DEFAULT);
-        if ($connection->query("INSERT INTO users(firstname, lastname, nickname, email, password_hash) VALUES('$firstName', '$lastName', '$nickname', '$email', '$password_hash')")) {
-          $_SESSION['registration-result'] = '<div class="registration-success">Congratulations you have register! Now you can login.</div>';
+        if ($connection->query("INSERT INTO users(name, surname, nickname, email, password_hash) VALUES('$firstName', '$lastName', '$nickname', '$email', '$password_hash')")) {
         } else {
           $connection->close();
           throw new Exception($polaczenie->error);
         }
                 
-        $conncection->close();
+        $connection->close();
+        session_unset();
+        $_SESSION['registration-result'] = '<div style="color: green; border-color: green;" class="registration-success">Congratulations you have register! Now you can login.</div>';
         header('Location: index.php');
     }
   }
   catch (Exception $e) {
-    $_SESSION['registration-result'] = '<div class="server-error">It looks like we have a server error. Please try to register later</div>';
-    echo '</br> Error info: ' . $e . '<br/><br/>';
+    $_SESSION['registration-result'] = '<div style="color: #ff1a1a; border-color: #ff1a1a;" class="server-error">It looks like we have a server error. Please try to register later</div>';
+    header('Location: index.php');
   }
   
   function has_special($text) {
