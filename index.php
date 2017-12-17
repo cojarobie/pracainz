@@ -42,6 +42,14 @@
 		<div class="top-content">
 	
 			<div class="container">
+      
+        <?php
+          if (isset($_SESSION['registration-result'])) {
+            echo '<div class="row">';
+            echo $_SESSION['registration-result'];
+            echo '</div>';
+          }
+        ?>
 				
 				<div class="row main">
 					<div class="col-sm-5">
