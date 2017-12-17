@@ -18,37 +18,37 @@
 	$_SSESION['form-password']        = $_POST['form-password'];
 	$_SESSION['form-repeat-password'] = $_POST['form-repeat-password'];
 	
-	//***First Name***
-	if ((strlen($firstName) < 2) || (strlen($firstName) > 50)) {
-		$correctData = false;
-		$_SESSION['e-form-first-name'] = "First name must contain from 2 to 50 characters";
-	}
-	
+	//***First Name***	
 	if (!ctype_alnum($firstName)) {
 		$correctData = false;
 		$_SESSION['e-form-first-name'] = "First name can contain only alphanumeric characters"; 
 	}
-	
-	//***Last Name***
-	if ((strlen($lastName) < 2) || (strlen($lastName) > 50)) {
+  
+  if ((strlen($firstName) < 2) || (strlen($firstName) > 50)) {
 		$correctData = false;
-		$_SESSION['e-form-last-name'] = "Last name must contain from 2 to 50 characters";
+		$_SESSION['e-form-first-name'] = "First name must contain from 2 to 50 characters";
 	}
 	
+	//***Last Name***	
 	if (!ctype_alnum($lastName)) {
 		$correctData = false;
 		$_SESSION['e-form-last-name'] = "Last name can contain only alphanumeric characters"; 
 	}
-	
-	//***Nickname***
-	if ((strlen($nickname) < 2) || (strlen($nickname) > 50)) {
+  
+  if ((strlen($lastName) < 2) || (strlen($lastName) > 50)) {
 		$correctData = false;
-		$_SESSION['e-form-nickname'] = "Nickname must contain from 2 to 50 characters";
+		$_SESSION['e-form-last-name'] = "Last name must contain from 2 to 50 characters";
 	}
 	
+	//***Nickname***	
 	if (!ctype_alnum($nickname)) {
 		$correctData = false;
 		$_SESSION['e-form-nickname'] = "Nickname can contain only alphanumeric characters"; 
+	}
+  
+  if ((strlen($nickname) < 2) || (strlen($nickname) > 50)) {
+		$correctData = false;
+		$_SESSION['e-form-nickname'] = "Nickname must contain from 2 to 50 characters";
 	}
 	
 	//***Email***
@@ -59,15 +59,15 @@
 		$_SESSION['e-form-email'] = "Invalid email address";
 	}
 	
-	//***Password***
-	if ((strlen($password1) < 8) || (strlen($password1) > 30)) {
-		$correctData = false;
-		$_SESSION['e-form-password'] = "Password must contain from 8 to 30 characters";
-	}
-	
+	//***Password***	
 	if ($password1 != $password2) {
 		$correctData = false;
 		$_SESSION['e-form-password'] = "Passwords are not the same";
+	}
+  
+  if ((strlen($password1) < 8) || (strlen($password1) > 30)) {
+		$correctData = false;
+		$_SESSION['e-form-password'] = "Password must contain from 8 to 30 characters";
 	}
 	
 	//***reCaptcha***
