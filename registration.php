@@ -68,6 +68,11 @@
 		$correctData = false;
 		$_SESSION['e-form-password'] = "Password must contain from 8 to 30 characters";
 	}
+  
+  /*if (preg_match('/[\'"^L$%&*()}{@#~?><>,|=_+¬-]/', $password1)) {
+    $correctData = false;
+    $_SESSION['e-form-password'] = "Password password cannot contain ' or \"";
+  }*/
 	
 	//***reCaptcha***
 	$secret = "6LdzTz0UAAAAAOsYBumnWYzRUj84V45dQuJGgqG1";
