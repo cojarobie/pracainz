@@ -5,7 +5,7 @@ CREATE TABLE Users (
 	Nickname VARCHAR(50),
 	Birth_Date	DATE,
 	Email VARCHAR(50) NOT NULL,
-	Password_Hash VARCHAR(50) NOT NULL,
+	Password_Hash VARCHAR(100) NOT NULL,
 	Avatar VARCHAR(100),
 	Description VARCHAR(100),
 	Active TINYINT DEFAULT 1,

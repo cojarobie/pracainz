@@ -158,7 +158,7 @@
   
   function has_special($text) {
     $special = false;
-    if (preg_match('/[\'"^$%&*()}{@#~?><>,.;:|=_+¬]/', $text)) {
+    if (preg_match('/[\'"^$%&*()}{@#~?><>,.;:|=_+Â¬]/', $text)) {
       $special = true;
     }
     return $special;
