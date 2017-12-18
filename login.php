@@ -37,7 +37,7 @@
             $_SESSION['nickname'] = $rows['Nickname'];
             $result->free_result();
             echo "Your are loged in " . $_SESSION['nickname'];
-            //header('Location: main.php');
+            header('Location: main.php');
           }
           else {
             $_SESSION['user-not-found'] = "Invalid user or password";
