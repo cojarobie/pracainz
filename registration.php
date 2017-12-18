@@ -136,6 +136,8 @@
           exit();
         }
         
+        $connection->set_charset("utf8");
+        
         $password_hash = password_hash($password1, PASSWORD_DEFAULT);
         if ($connection->query("INSERT INTO users(name, surname, nickname, email, password_hash) VALUES('$firstName', '$lastName', '$nickname', '$email', '$password_hash')")) {
         } else {
@@ -145,7 +147,7 @@
                 
         $connection->close();
         session_unset();
-        $_SESSION['registration-result'] = '<div style="color: green; border-color: green;" class="registration-success">Congratulations you have register! Now you can login.</div>';
+        $_SESSION['registration-result'] = '<div style="color: green; border-color: green;" class="registration-success">Congratulations ' . $nickname . ', you have registerd! Now you can login.</div>';
         header('Location: index.php');
         exit();
     }
