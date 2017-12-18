@@ -206,7 +206,7 @@
 				
 				<div class="col-sm-8 text">
 					<p>
-						Author: Gaspar Kwiecień Supervisor: Rafał Zawiślak, PhD &copy;2017
+						Author: Gaspar Kwiecień Supervisor: Rafał‚ Zawiślak, PhD &copy;2017
 					</p>
 				</div>
 				
