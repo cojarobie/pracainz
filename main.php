@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if (!isset($_SESSION['logedin']) {
+  if (!isset($_SESSION['logedin'])) {
     header('Location: index.php');
     exit();
   }
