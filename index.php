@@ -59,12 +59,12 @@
 				<div class="row main">
 					<div class="col-sm-5">
 					
-						<div class="form-box">
-							<div class="form-top">
+						<div class="box">
+							<div class="box-top">
 								<h3>Login to our site</h3>
 								<p>Enter email and passwored to log on:</p>
 							</div>
-							<div class="form-bottom">
+							<div class="box-bottom">
 								<form role="form" action="login.php" method="post">
 									<div class="form-group">
 										<label class="sr-only" for="login-email">Email</label>
@@ -98,12 +98,12 @@
 					<div class="col-sm-1"></div>
 					
 					<div class="col-sm-5">
-						<div class="form-box">
-							<div class="form-top">
+						<div class="box">
+							<div class="box-top">
 								<h3>Sign up now</h3>
 								<p>Fill in the form below to get instant access:</p>
 							</div>
-							<div class="form-bottom">
+							<div class="box-bottom">
 								<form role="form" action="registration.php" method="post" class="registration-form">
 									<div class="form-group">
 										<label class="sr-only" for="form-first-name">First name</label>
