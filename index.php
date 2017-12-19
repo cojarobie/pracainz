@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/fontello/css/fontello..css">
   
     <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
