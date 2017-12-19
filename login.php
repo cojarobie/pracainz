@@ -39,8 +39,9 @@
             $_SESSION['surname'] = $row['Surname'];
             $_SESSION['nickname'] = $row['Nickname'];
             $_SESSION['email'] = $row['Email'];
-            $_SESSION['avatar'] = $row['avatar'];
-            $_SESSION['description'] = $row['description'];
+            $_SESSION['birth_date'] = $row['Birth_Date'];
+            $_SESSION['avatar'] = $row['Avatar'];
+            $_SESSION['description'] = $row['Description'];
             $result->free_result();
             $connection->close(); 
             header('Location: main.php');
