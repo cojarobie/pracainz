@@ -81,6 +81,11 @@ img {
   width: 25%;
 }
 
+.box-input {
+  font-size: 1rem;
+  line-height: 150%;
+}
+
 .clear-both {
   clear: both;
 }
