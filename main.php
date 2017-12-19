@@ -23,7 +23,7 @@
       throw new Exception(mysqli_connect_errno());
     } else {
       //Find my teams
-      
+      $connection->close();
     }
   } catch (Exception $e) {
     
@@ -50,11 +50,28 @@
   
   <body>
   
-    <?php
-      echo "You are logged: ". $nickname . "</br>";
-    ?>
-    
-    [<a href="logout.php">Logout</a>]
+    <div class="top-content">
+      <div class="container">
+        
+        <div class="row box">
+          <div class="col-md-3" style="min-width: 170px">
+            <img src="resources/img/user_large.png" width="170" height="170" style="min-width: 170px" alt="user icon">
+          </div>
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-6">
+            <?php
+              echo "You are logged: ". $nickname . "</br>";
+            ?>
+          </div>
+          <div class="col-md-1">
+            [<a href="logout.php">Logout</a>]
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  
   
     <!-- Optional JavaScript -->
     <!-- jQuery, Bootstrap JS -->
