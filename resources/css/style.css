@@ -45,12 +45,12 @@ img {
 	margin: 20px 0 20px 0;
 }
 
-.form-box {
+.box {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-.form-top {
+.box-top {
 	overflow: hidden;
 	padding: 15px 25px 5px 25px;
 	background: #003366;
@@ -58,15 +58,31 @@ img {
 	text-align: left;
 }
 
-.form-top p {
+.box-top p {
   margin: 0px;
 }
 
-.form-bottom {
+.box-bottom {
 	padding: 5px 25px 15px 25px;
 	background: #003366;
 	-moz-border-radius: 0 0 10px 10px; -webkit-border-radius: 0 0 10px 10px; border-radius: 0 0 10px 10px;
 	text-align: left;
+}
+
+.box-top-left {
+  text-align: left;
+  float:left;
+  width: 75%;
+}
+
+.box-top-right {
+  text-align: right;
+  float: left;
+  width: 25%;
+}
+
+.clear-both {
+  clear: both;
 }
 
 .header {
@@ -90,7 +106,6 @@ img {
 
 .middle-border {
 	margin: 20px 0;
-	min-height: 300px;
 	border-right: 1px solid #003366;
 }
 
@@ -116,16 +131,16 @@ img {
 
 /*main.php*/
 
-.box {
+.main-box {
   padding: 15px 25px;
   background: #003366;
   -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;
 	text-align: left; 
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
-.box img {
+.main-box img {
   width: 160px;
   height: 160px;
   min-width: 160px;
