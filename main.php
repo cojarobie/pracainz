@@ -7,7 +7,7 @@
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <title>E-sport</title>
     <!-- Required meta tags -->
@@ -30,7 +30,7 @@
       echo "You are logged: ".$_SESSION['nickname'] . "</br>";
     ?>
     
-    [<a href="logut.php">Logout</a>]
+    [<a href="logout.php">Logout</a>]
   
     <!-- Optional JavaScript -->
     <!-- jQuery, Bootstrap JS -->
