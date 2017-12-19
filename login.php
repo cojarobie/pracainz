@@ -23,9 +23,10 @@
     }
     else {
       
+      $connection->set_charset("utf8");
+      
       $email    = htmlentities($email, ENT_QUOTES, "UTF-8");
       $password = htmlentities($password, ENT_QUOTES, "UTF-8");
-      echo $email;
       
       if ($result = $connection->query(sprintf("SELECT * FROM users WHERE email='$email';"))) {
         $rows = $result->num_rows;
@@ -33,20 +34,20 @@
           $row = $result->fetch_assoc();
           if (password_verify($password, $row['Password_Hash'])) {
             $_SESSION['logedin'] = true;
-            $_SESSION['id'] = $rows['Id'];
-            $_SESSION['nickname'] = $rows['Nickname'];
+            $_SESSION['id'] = $row['ID'];
+            $_SESSION['nickname'] = $row['Nickname'];
+            $_SESSION['connection'] = $connection;
             $result->free_result();
-            echo "Your are loged in " . $_SESSION['nickname'];
+            $connection->close(); 
             header('Location: main.php');
-          }
-          else {
-            $_SESSION['user-not-found'] = "Invalid user or password";
-            header('Location: index.php');            
+            exit();
           }
         }
-      }          
-      $connection->close();
+      }     
+      $connection->close(); 
     }
+    $_SESSION['user-not-found'] = "Invalid user or password";
+    header('Location: index.php');
   } catch (Exception $e) {
     $_SESSION['registration-result'] = '<div style="color: #ff1a1a; border-color: #ff1a1a;" class="server-error">It looks like we have some problems. Please try to login later</div>';
     header('Location: index.php');
