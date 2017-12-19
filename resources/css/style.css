@@ -41,7 +41,7 @@ img {
 	max-width: 100%;
 }
 
-.top-content .description {
+.top-content, .description {
 	margin: 20px 0 20px 0;
 }
 
@@ -112,4 +112,21 @@ img {
   border-radius: 10px;
   border-size: 3px;
   border-style: solid;
+}
+
+/*main.php*/
+
+.box {
+  padding: 15px 25px;
+  background: #003366;
+  -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;
+	text-align: left; 
+  width: 80%;
+  margin: auto;
+}
+
+.box img {
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
 }
