@@ -130,3 +130,8 @@ img {
   height: 160px;
   min-width: 160px;
 }
+
+.user-info tr td {
+  font-size: 1rem;
+  padding: 0 5px;
+}
