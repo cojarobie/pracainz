@@ -54,17 +54,26 @@
       <div class="container">
         
         <div class="row box">
-          <div class="col-md-3" style="min-width: 170px">
-            <img src="resources/img/user_large.png" width="170" height="170" style="min-width: 170px" alt="user icon">
-          </div>
-          <div class="col-md-1">
+          <div class="col-md-4">
+            <img src="resources/img/user_large.png" alt="user icon">
           </div>
           <div class="col-md-6">
-            <?php
-              echo "You are logged: ". $nickname . "</br>";
-            ?>
+              <table class="user-info">
+                <tr>
+                  <td>First Name:</td>
+                  <td><?php echo "$name"; ?></td>
+                </tr>
+                <tr>
+                  <td>Last Name:</td>
+                  <td><?php echo "$surname"; ?></td>
+                </tr>
+                <tr>
+                  <td>Nickname:</td>
+                  <td><?php echo "$nickname"; ?></td>
+                </tr>
+              </table>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-2">
             [<a href="logout.php">Logout</a>]
           </div>
         </div>
