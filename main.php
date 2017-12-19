@@ -4,6 +4,32 @@
     header('Location: index.php');
     exit();
   }
+  
+  $id = $_SESSION['id'];
+  $name = $_SESSION['name'];
+  $surname = $_SESSION['surname'];
+  $nickname = $_SESSION['nickname'];
+  $email = $_SESSION['email'];
+  $avatar = $_SESSION['avatar'];
+  $description = $_SESSION['description'];
+  
+  require_once 'connection.php';
+  mysqli_report(MYSQLI_REPORT_STRICT);
+  
+  try {
+    $connection = new mysqli($host, $db_user, $db_password, $db_name);
+    
+    if ($connection->connect_errno != 0) {
+      throw new Exception(mysqli_connect_errno());
+    } else {
+      //Find my teams
+      
+    }
+  } catch (Exception $e) {
+    
+  }
+  
+  
 ?>
 
 <!doctype html>
@@ -20,14 +46,12 @@
 	  <link rel="stylesheet" href="resources/css/style.css">
 	  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=latin-ext" rel="stylesheet">
 	  <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
-  
-	  <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
   
   <body>
   
     <?php
-      echo "You are logged: ".$_SESSION['nickname'] . "</br>";
+      echo "You are logged: ". $nickname . "</br>";
     ?>
     
     [<a href="logout.php">Logout</a>]
