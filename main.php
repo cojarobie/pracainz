@@ -10,6 +10,7 @@
   $surname = $_SESSION['surname'];
   $nickname = $_SESSION['nickname'];
   $email = $_SESSION['email'];
+  $birth_date = $_SESSION['birth_date'];
   $avatar = $_SESSION['avatar'];
   $description = $_SESSION['description'];
   
@@ -70,6 +71,18 @@
                 <tr>
                   <td>Nickname:</td>
                   <td><?php echo "$nickname"; ?></td>
+                </tr>
+                <tr>
+                  <td>Email:</td>
+                  <td><?php echo "$email"; ?></td>
+                </tr>
+                <tr>
+                  <td>Birth Date:</td>
+                  <td><?php echo "$birth_date"; ?></td>
+                </tr>
+                <tr>
+                  <td>Description:</td>
+                  <td><?php echo "$description"; ?></td>
                 </tr>
               </table>
           </div>
