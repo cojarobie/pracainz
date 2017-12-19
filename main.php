@@ -110,12 +110,13 @@
           <div class="col-sm-5">
             <div class="box">
               <div class="box-top">
-                <div class="box-top-left">
+                <div class="box-left">
                   <h3>Your teams</h3>
                 </div>
-                <div class="bot-top-right">
+                <div class="bot-right">
                   [<a href="#">settings</a>]
                 </div>
+                <div class="clear-both"></div>
               </div>
               <div class="box-bottom">
               <?php
@@ -133,10 +134,10 @@
           <div class="col-sm-5">
             <div class="box">
               <div class="box-top">
-                <div class="box-top-left">
+                <div class="box-left">
                     <h3>Your tournaments</h3>
                   </div>
-                  <div class="bot-top-right">
+                  <div class="bot-right">
                     [<a href="#">settings</a>]
                   </div>
               </div>

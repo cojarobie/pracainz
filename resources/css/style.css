@@ -69,13 +69,13 @@ img {
 	text-align: left;
 }
 
-.box-top-left {
+.box-left {
   text-align: left;
   float:left;
   width: 75%;
 }
 
-.box-top-right {
+.box-right {
   text-align: right;
   float: left;
   width: 25%;
