@@ -14,6 +14,11 @@
   $avatar = $_SESSION['avatar'];
   $description = $_SESSION['description'];
   
+  $my_teams = [];
+  $my_tournaments = [];
+  $teams_memeber = [];
+  $tournaments_member = [];
+  
   require_once 'connection.php';
   mysqli_report(MYSQLI_REPORT_STRICT);
   
@@ -23,7 +28,14 @@
     if ($connection->connect_errno != 0) {
       throw new Exception(mysqli_connect_errno());
     } else {
-      //Find my teams
+      $connection->set_charset("utf8");
+      
+      if ($result = $connection->query("SELECT * FROM teams WHERE id_captain=$id")) {
+         while ($row = $result->fetch_assoc()) {
+          array_push($my_teams, $row);
+         }
+         $result->free();
+      }     
       $connection->close();
     }
   } catch (Exception $e) {
@@ -106,6 +118,11 @@
                 </div>
               </div>
               <div class="box-bottom">
+              <?php
+                for ($team = 0; $team < count($my_teams); $team++) {
+                  echo "Your team: " . $my_teams[$team]['Name'] . "</br>";
+                }
+              ?>
               </div>
             </div>
           </div>
