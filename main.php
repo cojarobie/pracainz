@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="resources/css/style.css">
 	  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=latin-ext" rel="stylesheet">
-	  <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="resources/fontello/css/fontello.css">
   </head>
   
   <body>
@@ -101,8 +101,8 @@
               </table>
           </div>
           <div class="col-md-2">
-            [<a href="logout.php">logout</a>]
-            [<a href="#">settings</a>]
+            [<a href="#"><i class="demo-icon icon-cog"></i></a>]
+            [<a href="logout.php"><i class="demo-icon icon-logout"></i></a>]
           </div>
         </div>
         
@@ -113,15 +113,24 @@
                 <div class="box-left">
                   <h3>Your teams</h3>
                 </div>
-                <div class="bot-right">
-                  [<a href="#">settings</a>]
+                <div class="box-right">
+                  [<a href="#"><i class="demo-icon icon-plus-circled"></i>]
                 </div>
                 <div class="clear-both"></div>
               </div>
               <div class="box-bottom">
               <?php
                 for ($team = 0; $team < count($my_teams); $team++) {
-                  echo "Your team: " . $my_teams[$team]['Name'] . "</br>";
+                  echo '<div class="box-input">';
+                  echo '<div class="box-left">';
+                  echo $my_teams[$team]['Name'];
+                  echo '</div>';
+                  echo '<div class="box-right">';
+                  echo '<a href="#"><i class="demo-icon icon-cog"></i></a>';
+                  echo '</div>';
+                  echo '<div class="clear-both">';
+                  echo '</div>';
+                  echo '</div>';
                 }
               ?>
               </div>
@@ -137,8 +146,8 @@
                 <div class="box-left">
                     <h3>Your tournaments</h3>
                   </div>
-                  <div class="bot-right">
-                    [<a href="#">settings</a>]
+                  <div class="box-right">
+                    [<a href="#"><i class="demo-icon icon-plus-circled"></i>]
                   </div>
               </div>
               <div class="box-bottom">
