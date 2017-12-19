@@ -28,15 +28,19 @@
       $email    = htmlentities($email, ENT_QUOTES, "UTF-8");
       $password = htmlentities($password, ENT_QUOTES, "UTF-8");
       
-      if ($result = $connection->query(sprintf("SELECT * FROM users WHERE email='$email';"))) {
+      if ($result = $connection->query(sprintf("SELECT * FROM users WHERE email='$email' AND active=1;"))) {
         $rows = $result->num_rows;
         if ($rows > 0) {
           $row = $result->fetch_assoc();
           if (password_verify($password, $row['Password_Hash'])) {
             $_SESSION['logedin'] = true;
             $_SESSION['id'] = $row['ID'];
+            $_SESSION['name'] = $row['Name'];
+            $_SESSION['surname'] = $row['Surname'];
             $_SESSION['nickname'] = $row['Nickname'];
-            $_SESSION['connection'] = $connection;
+            $_SESSION['email'] = $row['Email'];
+            $_SESSION['avatar'] = $row['avatar'];
+            $_SESSION['description'] = $row['description'];
             $result->free_result();
             $connection->close(); 
             header('Location: main.php');
