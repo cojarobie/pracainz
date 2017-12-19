@@ -54,9 +54,11 @@
     <div class="top-content">
       <div class="container">
         
-        <div class="row box">
+        <div class="row main-box">
           <div class="col-md-4">
-            <img src="resources/img/user_large.png" alt="user icon">
+            <div class="user-logo">
+              <img src="resources/img/user_large.png" alt="user icon">
+            </div>
           </div>
           <div class="col-md-6">
               <table class="user-info">
@@ -87,7 +89,43 @@
               </table>
           </div>
           <div class="col-md-2">
-            [<a href="logout.php">Logout</a>]
+            [<a href="logout.php">logout</a>]
+            [<a href="#">settings</a>]
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="box">
+              <div class="box-top">
+                <div class="box-top-left">
+                  <h3>Your teams</h3>
+                </div>
+                <div class="bot-top-right">
+                  [<a href="#">settings</a>]
+                </div>
+              </div>
+              <div class="box-bottom">
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-1 middle-border"></div>
+					<div class="col-sm-1"></div>
+          
+          <div class="col-sm-5">
+            <div class="box">
+              <div class="box-top">
+                <div class="box-top-left">
+                    <h3>Your tournaments</h3>
+                  </div>
+                  <div class="bot-top-right">
+                    [<a href="#">settings</a>]
+                  </div>
+              </div>
+              <div class="box-bottom">
+              </div>
+            <div>
           </div>
         </div>
         
