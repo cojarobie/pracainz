@@ -157,6 +157,19 @@
                   </div>
               </div>
               <div class="box-bottom">
+                <?php
+                for ($team = 0; $team < count($my_tournaments); $team++) {
+                  if ($team == 0) {
+                    echo '<table>';
+                  }
+                  echo '<tr>';
+                  echo '<td>' . $my_tournaments[$team]['Name'] . '</td>';
+                  echo '<td><a href="#"><i class="demo-icon icon-cog"></i></a></td>';
+                  echo '</tr>';
+                  if ($team == count($my_tournaments) - 1) {
+                    echo '</table>';
+                  }
+                }?>
               </div>
             <div>
           </div>
