@@ -72,13 +72,13 @@ img {
 .box-left {
   text-align: left;
   float:left;
-  width: 75%;
+  width: 65%;
 }
 
 .box-right {
   text-align: left;
   float: left;
-  width: 25%;
+  width: 35%;
   font-size: 2rem;
 }
 
@@ -164,4 +164,9 @@ img {
   font-size: 1rem;
   padding: 2px 5px;
   text-align: left;
+}
+
+.box-bottom table td {
+  font-size: 1.2rem;
+  width: 90%;
 }
