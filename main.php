@@ -35,7 +35,14 @@
           array_push($my_teams, $row);
          }
          $result->free();
-      }     
+      }
+
+      if ($result = $connection->query("SELECT * FROM leagues WHERE id_organizer=$id")) {
+         while ($row = $result->fetch_assoc()) {
+          array_push($my_tournaments, $row);
+         }
+         $result->free();
+      }
       $connection->close();
     }
   } catch (Exception $e) {
@@ -100,7 +107,7 @@
                 </tr>
               </table>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2" style="font-size: 2rem;">
             <a href="#"><i class="demo-icon icon-cog"></i></a>
             <a href="logout.php"><i class="demo-icon icon-logout"></i></a>
           </div>
@@ -121,16 +128,16 @@
               <div class="box-bottom">
               <?php
                 for ($team = 0; $team < count($my_teams); $team++) {
-                  echo '<div class="box-input">';
-                  echo '<div class="box-left">';
-                  echo $my_teams[$team]['Name'];
-                  echo '</div>';
-                  echo '<div class="box-right">';
-                  echo '<a href="#"><i class="demo-icon icon-cog"></i></a>';
-                  echo '</div>';
-                  echo '<div class="clear-both">';
-                  echo '</div>';
-                  echo '</div>';
+                  if ($team == 0) {
+                    echo '<table>';
+                  }
+                  echo '<tr>';
+                  echo '<td>' . $my_teams[$team]['Name'] . '</td>';
+                  echo '<td><a href="#"><i class="demo-icon icon-cog"></i></a></td>';
+                  echo '</tr>';
+                  if ($team == count($my_teams) - 1) {
+                    echo '</table>';
+                  }
                 }?>
               </div>
             </div>
@@ -146,7 +153,7 @@
                     <h3>Your tournaments</h3>
                   </div>
                   <div class="box-right">
-                    <a href="#"><i class="demo-icon icon-plus-circled"></i>
+                    <a href="#"><i class="demo-icon icon-plus-circled"></i></a>
                   </div>
               </div>
               <div class="box-bottom">
