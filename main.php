@@ -101,8 +101,8 @@
               </table>
           </div>
           <div class="col-md-2">
-            [<a href="#"><i class="demo-icon icon-cog"></i></a>]
-            [<a href="logout.php"><i class="demo-icon icon-logout"></i></a>]
+            <a href="#"><i class="demo-icon icon-cog"></i></a>
+            <a href="logout.php"><i class="demo-icon icon-logout"></i></a>
           </div>
         </div>
         
@@ -114,7 +114,7 @@
                   <h3>Your teams</h3>
                 </div>
                 <div class="box-right">
-                  [<a href="#"><i class="demo-icon icon-plus-circled"></i>]
+                  <a href="#"><i class="demo-icon icon-plus-circled"></i></a>
                 </div>
                 <div class="clear-both"></div>
               </div>
@@ -131,8 +131,7 @@
                   echo '<div class="clear-both">';
                   echo '</div>';
                   echo '</div>';
-                }
-              ?>
+                }?>
               </div>
             </div>
           </div>
@@ -147,7 +146,7 @@
                     <h3>Your tournaments</h3>
                   </div>
                   <div class="box-right">
-                    [<a href="#"><i class="demo-icon icon-plus-circled"></i>]
+                    <a href="#"><i class="demo-icon icon-plus-circled"></i>
                   </div>
               </div>
               <div class="box-bottom">

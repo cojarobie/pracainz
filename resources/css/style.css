@@ -152,6 +152,10 @@ img {
   margin: 10px auto; 
 }
 
+.user-logo img {
+  border-radius: 15px;
+}
+
 .user-info {
   margin: auto;
 }
