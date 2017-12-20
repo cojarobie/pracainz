@@ -76,9 +76,10 @@ img {
 }
 
 .box-right {
-  text-align: right;
+  text-align: left;
   float: left;
   width: 25%;
+  font-size: 2rem;
 }
 
 .box-input {
