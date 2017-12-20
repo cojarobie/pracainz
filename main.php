@@ -43,6 +43,14 @@
          }
          $result->free();
       }
+      
+      if ($result = $connection->query("SELECT * FROM users As u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams")) {
+         while ($row = $result->fetch_assoc()) {
+          array_push($teams_memeber, $row);
+         }
+         $result->free();
+      }
+      
       $connection->close();
     }
   } catch (Exception $e) {
@@ -136,6 +144,19 @@
                   echo '<td><a href="#"><i class="demo-icon icon-cog"></i></a></td>';
                   echo '</tr>';
                   if ($team == count($my_teams) - 1) {
+                    echo '</table>';
+                  }
+                }?>
+                <?php
+                for ($team = 0; $team < count($teams_memeber); $team++) {
+                  if ($team == 0) {
+                    echo '<table>';
+                  }
+                  echo '<tr>';
+                  echo '<td>' . $teams_memeber[$team]['Name'] . '</td>';
+                  echo '<td><a href="#"><i class="demo-icon icon-logout"></i></a></td>';
+                  echo '</tr>';
+                  if ($team == count($teams_memeber) - 1) {
                     echo '</table>';
                   }
                 }?>
