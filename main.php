@@ -15,9 +15,9 @@
   $description = $_SESSION['description'];
   
   $my_teams = [];
-  $my_tournaments = [];
+  $my_leagues = [];
   $teams_memeber = [];
-  $tournaments_member = [];
+  $leagues_member = [];
   
   require_once 'connection.php';
   mysqli_report(MYSQLI_REPORT_STRICT);
@@ -39,14 +39,21 @@
 
       if ($result = $connection->query("SELECT * FROM leagues WHERE id_organizer=$id")) {
          while ($row = $result->fetch_assoc()) {
-          array_push($my_tournaments, $row);
+          array_push($my_leagues, $row);
          }
          $result->free();
       }
       
-      if ($result = $connection->query("SELECT * FROM users As u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams")) {
+      if ($result = $connection->query("SELECT t.Name AS t_name FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id")) {
          while ($row = $result->fetch_assoc()) {
           array_push($teams_memeber, $row);
+         }
+         $result->free();
+      }
+      
+      if ($result = $connection->query("SELECT l.Name AS l_name FROM teams AS t LEFT JOIN teams_users AS tu ON t.id = tu.id_teams INNER JOIN teams_leagues AS tl ON t.id = tl.id_Team INNER JOIN leagues AS l ON l.id = tl.id_league WHERE t.id_captain=$id OR tu.id_users=$id;")) {
+         while ($row = $result->fetch_assoc()) {
+          array_push($leagues_member, $row);
          }
          $result->free();
       }
@@ -153,7 +160,7 @@
                     echo '<table>';
                   }
                   echo '<tr>';
-                  echo '<td>' . $teams_memeber[$team]['Name'] . '</td>';
+                  echo '<td>' . $teams_memeber[$team]['t_name'] . '</td>';
                   echo '<td><a href="#"><i class="demo-icon icon-logout"></i></a></td>';
                   echo '</tr>';
                   if ($team == count($teams_memeber) - 1) {
@@ -171,7 +178,7 @@
             <div class="box">
               <div class="box-top">
                 <div class="box-left">
-                    <h3>Your tournaments</h3>
+                    <h3>Your leagues</h3>
                   </div>
                   <div class="box-right">
                     <a href="#"><i class="demo-icon icon-plus-circled"></i></a>
@@ -179,15 +186,28 @@
               </div>
               <div class="box-bottom">
                 <?php
-                for ($team = 0; $team < count($my_tournaments); $team++) {
-                  if ($team == 0) {
+                for ($league = 0; $league < count($my_leagues); $league++) {
+                  if ($league == 0) {
                     echo '<table>';
                   }
                   echo '<tr>';
-                  echo '<td>' . $my_tournaments[$team]['Name'] . '</td>';
+                  echo '<td>' . $my_leagues[$league]['Name'] . '</td>';
                   echo '<td><a href="#"><i class="demo-icon icon-cog"></i></a></td>';
                   echo '</tr>';
-                  if ($team == count($my_tournaments) - 1) {
+                  if ($league == count($my_leagues) - 1) {
+                    echo '</table>';
+                  }
+                }?>
+                <?php
+                for ($league = 0; $league < count($leagues_member); $league++) {
+                  if ($league == 0) {
+                    echo '<table>';
+                  }
+                  echo '<tr>';
+                  echo '<td>' . $leagues_member[$league]['l_name'] . '</td>';
+                  echo '<td><a href="#"><i class="demo-icon icon-login"></i></a></td>';
+                  echo '</tr>';
+                  if ($league == count($leagues_member) - 1) {
                     echo '</table>';
                   }
                 }?>
