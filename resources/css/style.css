@@ -82,9 +82,22 @@ img {
   font-size: 2rem;
 }
 
-.box-input {
+.box-content {
   font-size: 1rem;
   line-height: 150%;
+}
+
+.box-right-content {
+  text-align: left;
+  float: left;
+  width: 35%;
+  font-size: 2rem;
+}
+
+.box-left-content {
+  text-align: left;
+  float:left;
+  width: 65%;
 }
 
 .clear-both {
