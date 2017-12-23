@@ -129,7 +129,7 @@
         </div>
         
         <div class="row">
-          <div class="col-sm-5">
+          <div class="col-md-5">
             <div class="box">
               <div class="box-top">
                 <div class="box-left">
@@ -143,38 +143,24 @@
               <div class="box-bottom">
               <?php
                 for ($team = 0; $team < count($my_teams); $team++) {
-                  if ($team == 0) {
-                    echo '<table>';
-                  }
-                  echo '<tr>';
-                  echo '<td>' . $my_teams[$team]['Name'] . '</td>';
-                  echo '<td><a href="#"><i class="demo-icon icon-cog"></i></a></td>';
-                  echo '</tr>';
-                  if ($team == count($my_teams) - 1) {
-                    echo '</table>';
-                  }
-                }?>
-                <?php
-                for ($team = 0; $team < count($teams_memeber); $team++) {
-                  if ($team == 0) {
-                    echo '<table>';
-                  }
-                  echo '<tr>';
-                  echo '<td>' . $teams_memeber[$team]['t_name'] . '</td>';
-                  echo '<td><a href="#"><i class="demo-icon icon-logout"></i></a></td>';
-                  echo '</tr>';
-                  if ($team == count($teams_memeber) - 1) {
-                    echo '</table>';
-                  }
-                }?>
+                  echo '<div class="box-left-content">' . $my_teams[$team]['Name'] . '</div>';
+                  echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-cog"></i></a></div>';
+                }
+                for ($team = 0; $team < count($teams_memeber); $team++) {                 
+                  echo '<div class="box-left-content">' . $teams_memeber[$team]['t_name'] . '</div>';
+                  echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-logout"></i></a></div>';
+                }
+                echo '<div class="clear-both"></div>';
+                ?>
+                
               </div>
             </div>
           </div>
           
-          <div class="col-sm-1 middle-border"></div>
-					<div class="col-sm-1"></div>
+          <div class="col-md-1 middle-border"></div>
+					<div class="col-md-1"></div>
           
-          <div class="col-sm-5">
+          <div class="col-md-5">
             <div class="box">
               <div class="box-top">
                 <div class="box-left">
