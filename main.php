@@ -16,7 +16,7 @@
   
   $my_teams = [];
   $my_leagues = [];
-  $teams_memeber = [];
+  $teams_member = [];
   $leagues_member = [];
   
   require_once 'connection.php';
@@ -46,7 +46,7 @@
       
       if ($result = $connection->query("SELECT t.Name AS t_name FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id")) {
          while ($row = $result->fetch_assoc()) {
-          array_push($teams_memeber, $row);
+          array_push($teams_member, $row);
          }
          $result->free();
       }
@@ -137,12 +137,12 @@
                   echo '<div class="box-left-content">' . $my_teams[$team]['Name'] . '</div>';
                   echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-cog"></i></a></div>';
                 }
-                for ($team = 0; $team < count($teams_memeber); $team++) {                 
-                  echo '<div class="box-left-content">' . $teams_memeber[$team]['t_name'] . '</div>';
+                for ($team = 0; $team < count($teams_member); $team++) {                 
+                  echo '<div class="box-left-content">' . $teams_member[$team]['t_name'] . '</div>';
                   echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-logout"></i></a></div>';
                 }
                 echo '<div class="clear-both"></div>';
-                ?>
+               ?>
                 
               </div>
             </div>
@@ -164,30 +164,15 @@
               <div class="box-bottom">
                 <?php
                 for ($league = 0; $league < count($my_leagues); $league++) {
-                  if ($league == 0) {
-                    echo '<table>';
-                  }
-                  echo '<tr>';
-                  echo '<td>' . $my_leagues[$league]['Name'] . '</td>';
-                  echo '<td><a href="#"><i class="demo-icon icon-cog"></i></a></td>';
-                  echo '</tr>';
-                  if ($league == count($my_leagues) - 1) {
-                    echo '</table>';
-                  }
-                }?>
-                <?php
-                for ($league = 0; $league < count($leagues_member); $league++) {
-                  if ($league == 0) {
-                    echo '<table>';
-                  }
-                  echo '<tr>';
-                  echo '<td>' . $leagues_member[$league]['l_name'] . '</td>';
-                  echo '<td><a href="#"><i class="demo-icon icon-login"></i></a></td>';
-                  echo '</tr>';
-                  if ($league == count($leagues_member) - 1) {
-                    echo '</table>';
-                  }
-                }?>
+                  echo '<div class="box-left-content">' . $my_leagues[$league]['Name'] . '</div>';
+                  echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-cog"></i></a></div>';
+                }
+                for ($league = 0; $league < count($leagues_member); $league++) {                 
+                  echo '<div class="box-left-content">' . $leagues_member[$league]['l_name'] . '</div>';
+                  echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-logout"></i></a></div>';
+                }
+                echo '<div class="clear-both"></div>';
+                ?>
               </div>
             <div>
           </div>
