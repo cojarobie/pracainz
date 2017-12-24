@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="resources/fontello/css/fontello.css">
   
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    
   </head>
   
   <body>
@@ -199,6 +200,43 @@
 	
 	<!-- Footer -->
 	<footer>
+    <div class="row socials">
+    <div class="col-md-2">
+      
+    </div>
+    <div class="col-md-2">
+      <div class="fb">
+        <a href="https://www.facebook.com" target="_blank" class="sociallink">
+        <i class="icon-facebook"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="yt">
+        <a href="https://www.youtube.com" target="_blank" class="sociallink">
+        <i class="icon-youtube"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="col-md-2">
+      <div class="tw">
+        <a href="https://www.twitter.com" target="_blank" class="sociallink">
+        <i class="icon-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="gp">
+        <a href="https://www.plus.google.com" target="_blank" class="sociallink">
+        <i class="icon-gplus"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-2">
+    
+    </div>
+  </div>
     <div class="row footer">
       
       <div class="col-sm-8 text">
