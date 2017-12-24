@@ -156,10 +156,10 @@
               <div class="box-top">
                 <div class="box-left">
                     <h3>Your leagues</h3>
-                  </div>
-                  <div class="box-right">
-                    <a href="#"><i class="demo-icon icon-plus-circled"></i></a>
-                  </div>
+                </div>
+                <div class="box-right">
+                  <a href="#"><i class="demo-icon icon-plus-circled"></i></a>
+                </div>
               </div>
               <div class="box-bottom box-content">
                 <?php
