@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="resources/fontello/css/fontello..css">
+    <link rel="stylesheet" href="resources/fontello/css/fontello.css">
   
     <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
@@ -28,24 +28,17 @@
 	
 	<!-- Header -->
 	<header>
-		<div class="container">
-			<div class="row header">
-				<div class="col-sm-8 text">
-					<h1>The Engineering Thesis Project</h1>
-					<div class="description">
-						<p>
-							WEB based application for the managment of the e-sport competitions
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="row header">
+      <div class="col-sm-8 text">        
+        <h1><i class="demo-icon icon-gamepad"></i>E-SPORT Manager</h1>
+      </div>
+    </div>
 	</header>
 
 	<!-- Top content -->
 	<main>
 		<div class="top-content">
-	
+    
 			<div class="container">
       
         <?php
@@ -210,9 +203,12 @@
 			<div class="row footer">
 				
 				<div class="col-sm-8 text">
-					<p>
-						Author: Gaspar Kwiecień Supervisor: Rafał‚ Zawiślak, PhD &copy;2017
-					</p>
+          <div clss="description">
+            Web based application for the management of the e-sport competitions
+          </div>
+          <div clss="description">
+            The engineering thesis project Author: Gaspar Kwiecień Supervisor: Rafał‚ Zawiślak, PhD &copy;2017
+          </div>
 				</div>
 				
 			</div>
