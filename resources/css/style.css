@@ -82,6 +82,12 @@ img {
   font-size: 2rem;
 }
 
+#rc-imageselect {transform:scale(0.77);
+  -webkit-transform:scale(0.77);
+  transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+} 
+
 .header {
 	background-color: #2a2e32;
 	-moz-border-radius: 0 0 10px 10px;

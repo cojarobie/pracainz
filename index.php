@@ -177,7 +177,7 @@
                       }?>>
 									</div>
 									<div class="form-group">
-										<div class="g-recaptcha" data-sitekey="6LdzTz0UAAAAAPzt8ywGo2j3IdTS9U0MnsD7b4vA"></div>
+										<div class="g-recaptcha" data-sitekey="6LdzTz0UAAAAAPzt8ywGo2j3IdTS9U0MnsD7b4vA" id="rc-imageselect"></div>
                     <?php
                         if (isset($_SESSION['e-form-recaptcha'])) {
                           echo '<div class="error-info">';
