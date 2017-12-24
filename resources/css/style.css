@@ -52,7 +52,7 @@ img {
 
 .box-top {
 	overflow: hidden;
-	padding: 15px 25px 5px 25px;
+	padding: 15px 35px 5px 35px;
 	background: #003366;
 	-moz-border-radius: 10px 10px 0 0; -webkit-border-radius: 10px 10px 0 0; border-radius: 10px 10px 0 0;
 	text-align: left;
@@ -63,7 +63,7 @@ img {
 }
 
 .box-bottom {
-	padding: 5px 25px 15px 25px;
+	padding: 5px 35px 15px 35px;
 	background: #003366;
 	-moz-border-radius: 0 0 10px 10px; -webkit-border-radius: 0 0 10px 10px; border-radius: 0 0 10px 10px;
 	text-align: left;
@@ -80,28 +80,6 @@ img {
   float: left;
   width: 35%;
   font-size: 2rem;
-}
-
-.box-content {
-  font-size: 1rem;
-  line-height: 150%;
-}
-
-.box-right-content {
-  text-align: left;
-  float: left;
-  width: 35%;
-  font-size: 2rem;
-}
-
-.box-left-content {
-  text-align: left;
-  float:left;
-  width: 65%;
-}
-
-.clear-both {
-  clear: both;
 }
 
 .header {
@@ -177,6 +155,44 @@ img {
   font-size: 1rem;
   padding: 2px 5px;
   text-align: left;
+}
+
+.box-content {
+  line-height: 300%;
+}
+
+.box-right-content {
+  text-align: left;
+  float: left;
+  width: 35%;
+  font-size: 1.5rem;
+}
+
+.box-left-content {
+  text-align: left;
+  float:left;
+  width: 65%;
+  font-size: 1rem;
+}
+
+.left-user {
+  text-align: left;
+  float:left;
+  width: 30%;
+  font-size: 1rem;
+  margin-left: 20%;
+}
+
+
+.right-user {
+  text-align: left;
+  float: left;
+  width: 50%;
+  font-size: 1rem;
+}
+
+.clear-both {
+  clear: both;
 }
 
 .box-bottom table td {
