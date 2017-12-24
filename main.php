@@ -161,7 +161,7 @@
                     <a href="#"><i class="demo-icon icon-plus-circled"></i></a>
                   </div>
               </div>
-              <div class="box-bottom">
+              <div class="box-bottom box-content">
                 <?php
                 for ($league = 0; $league < count($my_leagues); $league++) {
                   echo '<div class="box-left-content">' . $my_leagues[$league]['Name'] . '</div>';
