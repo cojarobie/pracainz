@@ -199,20 +199,18 @@
 	
 	<!-- Footer -->
 	<footer>
-		<div class="container">
-			<div class="row footer">
-				
-				<div class="col-sm-8 text">
-          <div clss="description">
-            Web based application for the management of the e-sport competitions
-          </div>
-          <div clss="description">
-            The engineering thesis project Author: Gaspar Kwiecień Supervisor: Rafał‚ Zawiślak, PhD &copy;2017
-          </div>
-				</div>
-				
-			</div>
-		</div>
+    <div class="row footer">
+      
+      <div class="col-sm-8 text">
+        <div clss="description">
+          Web based application for the management of the e-sport competitions
+        </div>
+        <div clss="description">
+          The engineering thesis project Author: Gaspar Kwiecień Supervisor: Rafał‚ Zawiślak, PhD &copy;2017
+        </div>
+      </div>
+      
+    </div>
 	</footer>
 	
   <!-- Optional JavaScript -->
