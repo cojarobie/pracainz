@@ -89,38 +89,29 @@
       <div class="container">
         
         <div class="row main-box">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="user-logo">
               <img src="resources/img/user_large.png" alt="user icon">
             </div>
           </div>
-          <div class="col-md-6">
-              <table class="user-info">
-                <tr>
-                  <td>First Name:</td>
-                  <td><?php echo "$name"; ?></td>
-                </tr>
-                <tr>
-                  <td>Last Name:</td>
-                  <td><?php echo "$surname"; ?></td>
-                </tr>
-                <tr>
-                  <td>Nickname:</td>
-                  <td><?php echo "$nickname"; ?></td>
-                </tr>
-                <tr>
-                  <td>Email:</td>
-                  <td><?php echo "$email"; ?></td>
-                </tr>
-                <tr>
-                  <td>Birth Date:</td>
-                  <td><?php echo "$birth_date"; ?></td>
-                </tr>
-                <tr>
-                  <td>Description:</td>
-                  <td><?php echo "$description"; ?></td>
-                </tr>
-              </table>
+          <div class="col-md-7">
+              <?php
+                echo '<div class="left-user">First name: </div>';
+                echo '<div class="right-user">'.$name.'</div>';
+                echo '<div class="clear-both"></div>';
+                echo '<div class="left-user">Last name: </div>';
+                echo '<div class="right-user">'.$surname.'</div>';
+                echo '<div class="clear-both"></div>';
+                echo '<div class="left-user">Nickname: </div>';
+                echo '<div class="right-user">'.$nickname.'</div>';
+                echo '<div class="clear-both"></div>';
+                echo '<div class="left-user">Birth date: </div>';
+                echo '<div class="right-user">'.$birth_date.'</div>';
+                echo '<div class="clear-both"></div>';
+                echo '<div class="left-user">Description: </div>';
+                echo '<div class="right-user">'.$description.'</div>';
+                echo '<div class="clear-both"></div>';
+              ?>
           </div>
           <div class="col-md-2" style="font-size: 2rem;">
             <a href="#"><i class="demo-icon icon-cog"></i></a>
@@ -140,7 +131,7 @@
                 </div>
                 <div class="clear-both"></div>
               </div>
-              <div class="box-bottom">
+              <div class="box-bottom box-content">
               <?php
                 for ($team = 0; $team < count($my_teams); $team++) {
                   echo '<div class="box-left-content">' . $my_teams[$team]['Name'] . '</div>';
