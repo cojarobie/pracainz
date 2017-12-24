@@ -90,17 +90,13 @@ img {
 
 .header {
 	background-color: #2a2e32;
-	-moz-border-radius: 0 0 10px 10px;
-	-webkit-border-radius: 0 0 10px 10px;
-	border-radius: 0 0 10px 10px;
+  margin: 0px;
 }
 
 .footer {
+  margin: 0px;
 	padding-top: 5px;
 	background-color: #2a2e32;
-	-moz-border-radius: 10px 10px 0 0;
-	-webkit-border-radius: 10px 10px 0 0;
-	border-radius: 10px 10px 0 0;
 }
 
 .text {
@@ -136,6 +132,7 @@ img {
 	width: 100%;
 	text-align: center;
 	background-color: #191d21;
+  box-sizing: border-box;
 }
 
 .socials a {
