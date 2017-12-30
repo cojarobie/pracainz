@@ -44,7 +44,7 @@
       
       if ($result = $connection->query("SELECT t.Name AS t_name FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id AND tu.ustatus='member'")) {
          while ($row = $result->fetch_assoc()) {
-           $team = team_arrays($row['t.Name'], 'Member', 'Leave');
+           $team = team_arrays($row['t_name'], 'Member', 'Leave');
            array_push($teams, $team);
          }
          $result->free();
