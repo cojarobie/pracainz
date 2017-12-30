@@ -108,7 +108,8 @@
                 </div>
               </div>
               <div class="box-bottom box-content">
-                <?php/*
+                <?php
+                /*
                 for ($league = 0; $league < count($my_leagues); $league++) {
                   echo '<div class="box-left-content">' . $my_leagues[$league]['Name'] . '</div>';
                   echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-cog"></i></a></div>';
