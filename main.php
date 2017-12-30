@@ -134,6 +134,14 @@
               </div>
               <div class="box-bottom box-content">
               <?php
+                echo '<table>';
+                echo '<tr>';
+                echo '<th>Name</th>';
+                echo '<th>Status</th>';
+                echo '<th>Action</th>';
+                echo '</tr>';
+                echo '</table>';
+                
                 for ($team = 0; $team < count($my_teams); $team++) {
                   echo '<div class="box-left-content">' . $my_teams[$team]['Name'] . '</div>';
                   echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-cog"></i></a></div>';

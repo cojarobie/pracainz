@@ -251,7 +251,11 @@ img {
   clear: both;
 }
 
-.box-bottom table td {
-  font-size: 1.2rem;
-  width: 90%;
+.box-content table {
+  width: 100%;
+}
+
+.box-content table tr th {
+  text-align: center;
+  border: 1px white solid;
 }
