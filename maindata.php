@@ -29,7 +29,8 @@
       
       if ($result = $connection->query("SELECT * FROM teams WHERE id_captain=$id")) {
          while ($row = $result->fetch_assoc()) {
-          array_push($my_teams, $row);
+          $team = team_arrays($row['Name'], 'Owner', 'Manage'); 
+          array_push($teams, $team);
          }
          $result->free();
       }
@@ -67,5 +68,6 @@
       'status' => $status,
       'action' => $action
     );
+    return $team;
   }
 ?>
