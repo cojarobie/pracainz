@@ -75,7 +75,13 @@
                 echo '<th>Status</th>';
                 echo '<th>Action</th>';
                 echo '</tr>';
-                
+                foreach ($teams as $team) {
+                  echo '<tr>';
+                  echo '<td>'.$team['name'].'</td>';
+                  echo '<td>'.$team['status'].'</td>';
+                  echo '<td>'.$team['action'].'</td>';
+                  echo '</tr>';
+                }                
                 
                 echo '</table>';
                 /*
