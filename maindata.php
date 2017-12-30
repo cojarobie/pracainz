@@ -14,10 +14,7 @@
   $avatar = $_SESSION['avatar'];
   $description = $_SESSION['description'];
   
-  $my_teams = [];
-  $my_leagues = [];
-  $teams_member = [];
-  $leagues_member = [];
+  $teams = [];
   
   require_once 'connection.php';
   mysqli_report(MYSQLI_REPORT_STRICT);
@@ -62,5 +59,13 @@
     }
   } catch (Exception $e) {
     
-  }  
+  }
+  
+  function team_arrays($name, $status, $action) {
+    $team = array(
+      'name' => $name,
+      'status' => $status,
+      'action' => $action
+    );
+  }
 ?>
