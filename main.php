@@ -84,16 +84,6 @@
                 }                
                 
                 echo '</table>';
-                /*
-                for ($team = 0; $team < count($my_teams); $team++) {
-                  echo '<div class="box-left-content">' . $my_teams[$team]['Name'] . '</div>';
-                  echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-cog"></i></a></div>';
-                }
-                for ($team = 0; $team < count($teams_member); $team++) {                 
-                  echo '<div class="box-left-content">' . $teams_member[$team]['t_name'] . '</div>';
-                  echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-logout"></i></a></div>';
-                }
-                echo '<div class="clear-both"></div>';*/
                ?>
                 
               </div>
