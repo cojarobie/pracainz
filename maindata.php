@@ -44,7 +44,7 @@
       
       if ($result = $connection->query("SELECT t.Name AS t_name FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id AND tu.ustatus='member'")) {
          while ($row = $result->fetch_assoc()) {
-           $team = team_arrays($row['t_name'], 'Member', 'Leave<i class="icon-logout"></i>');
+           $team = team_arrays($row['t_name'], 'Member', '<div class="leave"><a href="#">Leave<i class="icon-logout"></i></a></div>');
            array_push($teams, $team);
          }
          $result->free();
@@ -52,7 +52,7 @@
       
       if ($result = $connection->query("SELECT t.Name AS t_name FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id AND tu.ustatus='invited'")) {
          while ($row = $result->fetch_assoc()) {
-           $team = team_arrays($row['t_name'], 'Invited', 'Accept<i class="icon-ok-circled"></i> Decline<i class="icon-cancel-circled"></i>');
+           $team = team_arrays($row['t_name'], 'Invited', '<div class="accept"><a href="#">Accept<i class="icon-ok-circled"></i></a></div> <div class="decline"><a href="#">Decline<i class="icon-cancel-circled"></i></a></div>');
            array_push($teams, $team);
          }
          $result->free();

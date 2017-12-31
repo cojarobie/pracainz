@@ -13,12 +13,12 @@ strong {
 }
 
 a {
-	color: white;
+	color: #bbc;
 	text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: #bbc;
+  color: white;
 	text-decoration: none;
 }
 
@@ -213,9 +213,6 @@ img {
   text-align: left;
 }
 
-.box-content {
-  line-height: 300%;
-}
 
 .box-right-content {
   text-align: left;
@@ -268,14 +265,62 @@ img {
 
 .manage a {
   display: inline-block;
-  width: 70%;
-  background-color: #070;
+  width: 75%;
+  background-color: #080;
   margin: 10px 0;
-  border-radius: 15px;
+  padding: 0px 5px;
+  border-radius: 10px;
   text-decoration: none;
 }
 
 .manage a:hover {
   color: white;
-  background-color: #090;
+  background-color: #0a0;
 }
+
+.leave a {
+  display: inline-block;
+  width: 75%;
+  background-color: #800;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.leave a:hover {
+  color: white;
+  background-color: #a00;
+}
+
+.accept a {
+  display: inline-block;
+  width: 75%;
+  background-color: #080;
+  margin: 10px 0 3px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.accept a:hover {
+  color: white;
+  background-color: #0a0;
+}
+
+.decline a {
+  display: inline-block;
+  width: 75%;
+  background-color: #800;
+  margin: 3px 0 10px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.decline a:hover {
+  color: white;
+  background-color: #a00;
+}
+
+
+
