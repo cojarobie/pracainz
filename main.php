@@ -59,7 +59,7 @@
           <div class="col-md-5">
             <div class="box">
               <div class="box-top">
-                <div class="box-left">
+                <div class="box-left teams-title">
                   <h3>Your teams</h3>
                 </div>
                 <div class="box-right button">

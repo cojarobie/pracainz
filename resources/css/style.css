@@ -239,12 +239,10 @@ img {
 .box-content table tr th {
   font-size: 1.1rem;
   text-align: center;
-  border: 1px white solid;
 }
 
 .box-content table tr td {
   text-align: center;
-  border: 1px white solid;
 }
 
 .manage a {
@@ -323,5 +321,7 @@ img {
   background-color: #0a0;
 }
 
-
+.teams-title {
+  text-align: center;
+}
 
