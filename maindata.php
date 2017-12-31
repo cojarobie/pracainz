@@ -29,7 +29,7 @@
       
       if ($result = $connection->query("SELECT * FROM teams WHERE id_captain=$id")) {
          while ($row = $result->fetch_assoc()) {
-           $team = team_arrays($row['Name'], 'Owner', 'Manage <i class="icon-cog"></i>'); 
+           $team = team_arrays($row['Name'], 'Owner', '<div class="manage"><a href="#">Manage <i class="icon-cog"></i></a></div>'); 
            array_push($teams, $team);
          }
          $result->free();

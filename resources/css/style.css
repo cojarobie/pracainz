@@ -256,7 +256,7 @@ img {
 }
 
 .box-content table tr th {
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
   border: 1px white solid;
 }
@@ -264,4 +264,18 @@ img {
 .box-content table tr td {
   text-align: center;
   border: 1px white solid;
+}
+
+.manage a {
+  display: inline-block;
+  width: 70%;
+  background-color: #070;
+  margin: 10px 0;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.manage a:hover {
+  color: white;
+  background-color: #090;
 }
