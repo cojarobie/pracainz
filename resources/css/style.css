@@ -79,7 +79,6 @@ img {
   text-align: left;
   float: left;
   width: 35%;
-  font-size: 2rem;
 }
 
 #rc-imageselect {transform:scale(0.77);
@@ -213,21 +212,6 @@ img {
   text-align: left;
 }
 
-
-.box-right-content {
-  text-align: left;
-  float: left;
-  width: 35%;
-  font-size: 1.5rem;
-}
-
-.box-left-content {
-  text-align: left;
-  float:left;
-  width: 65%;
-  font-size: 1rem;
-}
-
 .left-user {
   text-align: left;
   float:left;
@@ -320,6 +304,23 @@ img {
 .decline a:hover {
   color: white;
   background-color: #a00;
+}
+
+.button {
+  text-align: center;
+}
+
+.button a{
+  display: inline-box;
+  background-color: #080;
+  padding: 6px 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.button a:hover {
+  color: white;
+  background-color: #0a0;
 }
 
 

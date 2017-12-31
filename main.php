@@ -62,8 +62,8 @@
                 <div class="box-left">
                   <h3>Your teams</h3>
                 </div>
-                <div class="box-right">
-                  <a href="#"><i class="demo-icon icon-plus-circled"></i></a>
+                <div class="box-right button">
+                  <h3><a href="#">Add<i class="icon-plus-circled"></i></a></h3>
                 </div>
                 <div class="clear-both"></div>
               </div>
