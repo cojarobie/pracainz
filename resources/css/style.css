@@ -256,6 +256,12 @@ img {
 }
 
 .box-content table tr th {
+  font-size: 1rem;
+  text-align: center;
+  border: 1px white solid;
+}
+
+.box-content table tr td {
   text-align: center;
   border: 1px white solid;
 }
