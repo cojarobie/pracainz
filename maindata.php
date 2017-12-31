@@ -29,7 +29,7 @@
       
       if ($result = $connection->query("SELECT * FROM teams WHERE id_captain=$id")) {
          while ($row = $result->fetch_assoc()) {
-           $team = team_arrays($row['Name'], 'Owner', 'Manage'); 
+           $team = team_arrays($row['Name'], 'Owner', 'Manage <i class="icon-cog"></i>'); 
            array_push($teams, $team);
          }
          $result->free();
@@ -44,7 +44,7 @@
       
       if ($result = $connection->query("SELECT t.Name AS t_name FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id AND tu.ustatus='member'")) {
          while ($row = $result->fetch_assoc()) {
-           $team = team_arrays($row['t_name'], 'Member', 'Leave');
+           $team = team_arrays($row['t_name'], 'Member', 'Leave<i class="icon-logout"></i>');
            array_push($teams, $team);
          }
          $result->free();
@@ -52,7 +52,7 @@
       
       if ($result = $connection->query("SELECT t.Name AS t_name FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id AND tu.ustatus='invited'")) {
          while ($row = $result->fetch_assoc()) {
-           $team = team_arrays($row['t_name'], 'Invited', 'Accept Decline');
+           $team = team_arrays($row['t_name'], 'Invited', 'Accept<i class="icon-ok-circled"></i> Decline<i class="icon-cancel-circled"></i>');
            array_push($teams, $team);
          }
          $result->free();
