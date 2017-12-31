@@ -37,9 +37,9 @@
     </div>
 	</header>
 
-	<!-- Top content -->
+	<!-- main content -->
 	<main>
-		<div class="top-content">
+		<div class="main-content">
     
 			<div class="container">
       
@@ -51,8 +51,9 @@
           }         
         ?>
 				
+        <div class="add-margin">
 				<div class="row main">
-					<div class="col-sm-5">
+					<div class="col-sm-6">
 					
 						<div class="box">
 							<div class="box-top">
@@ -89,10 +90,7 @@
 						
 					</div>
 					
-					<div class="col-sm-1 middle-border"></div>
-					<div class="col-sm-1"></div>
-					
-					<div class="col-sm-5">
+					<div class="col-sm-6">
 						<div class="box">
 							<div class="box-top">
 								<h3>Sign up now</h3>
@@ -195,6 +193,7 @@
 				</div>
 				
 			</div>
+      </div>
 			
 		</div>
 	</main>

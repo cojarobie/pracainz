@@ -21,42 +21,44 @@
   
   <body>
   
-    <div class="top-content">
-      <div class="container">
+    <div class="container">
+      <div class="main-content">
         
-        <div class="row main-box">
-          <div class="col-md-3">
-            <div class="user-logo">
-              <img src="resources/img/user_large.png" alt="user icon">
+        <div class="add-margin">
+          <div class="row main-box">
+            <div class="col-md-3">
+              <div class="user-logo">
+                <img src="resources/img/user_large.png" alt="user icon">
+              </div>
             </div>
-          </div>
-          <div class="col-md-7">
-              <?php
-                echo '<div class="left-user">First name: </div>';
-                echo '<div class="right-user">'.$name.'</div>';
-                echo '<div class="clear-both"></div>';
-                echo '<div class="left-user">Last name: </div>';
-                echo '<div class="right-user">'.$surname.'</div>';
-                echo '<div class="clear-both"></div>';
-                echo '<div class="left-user">Nickname: </div>';
-                echo '<div class="right-user">'.$nickname.'</div>';
-                echo '<div class="clear-both"></div>';
-                echo '<div class="left-user">Birth date: </div>';
-                echo '<div class="right-user">'.$birth_date.'</div>';
-                echo '<div class="clear-both"></div>';
-                echo '<div class="left-user">Description: </div>';
-                echo '<div class="right-user">'.$description.'</div>';
-                echo '<div class="clear-both"></div>';
-              ?>
-          </div>
-          <div class="col-md-2" style="font-size: 2rem;">
-            <a href="#"><i class="demo-icon icon-cog"></i></a>
-            <a href="logout.php"><i class="demo-icon icon-logout"></i></a>
+            <div class="col-md-7">
+                <?php
+                  echo '<div class="left-user">First name: </div>';
+                  echo '<div class="right-user">'.$name.'</div>';
+                  echo '<div class="clear-both"></div>';
+                  echo '<div class="left-user">Last name: </div>';
+                  echo '<div class="right-user">'.$surname.'</div>';
+                  echo '<div class="clear-both"></div>';
+                  echo '<div class="left-user">Nickname: </div>';
+                  echo '<div class="right-user">'.$nickname.'</div>';
+                  echo '<div class="clear-both"></div>';
+                  echo '<div class="left-user">Birth date: </div>';
+                  echo '<div class="right-user">'.$birth_date.'</div>';
+                  echo '<div class="clear-both"></div>';
+                  echo '<div class="left-user">Description: </div>';
+                  echo '<div class="right-user">'.$description.'</div>';
+                  echo '<div class="clear-both"></div>';
+                ?>
+            </div>
+            <div class="col-md-2" style="font-size: 2rem;">
+              <a href="#"><i class="demo-icon icon-cog"></i></a>
+              <a href="logout.php"><i class="demo-icon icon-logout"></i></a>
+            </div>
           </div>
         </div>
         
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-6">
             <div class="box">
               <div class="box-top">
                 <div class="box-left teams-title">
@@ -90,10 +92,8 @@
             </div>
           </div>
           
-          <div class="col-md-1 middle-border"></div>
-					<div class="col-md-1"></div>
           
-          <div class="col-md-5">
+          <div class="col-md-6">
             <div class="box">
               <div class="box-top">
                 <div class="box-left">
