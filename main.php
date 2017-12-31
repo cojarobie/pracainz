@@ -71,7 +71,7 @@
               <?php
                 echo '<table>';
                 echo '<tr>';
-                echo '<th>Name</th>';
+                echo '<th>Team Name</th>';
                 echo '<th>Status</th>';
                 echo '<th>Action</th>';
                 echo '</tr>';

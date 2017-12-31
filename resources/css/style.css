@@ -53,7 +53,7 @@ img {
 .box-top {
 	overflow: hidden;
 	padding: 15px 35px 5px 35px;
-	background: #003366;
+	background: #114477;
 	-moz-border-radius: 10px 10px 0 0; -webkit-border-radius: 10px 10px 0 0; border-radius: 10px 10px 0 0;
 	text-align: left;
 }
@@ -64,7 +64,7 @@ img {
 
 .box-bottom {
 	padding: 5px 35px 15px 35px;
-	background: #003366;
+	background: #114477;
 	-moz-border-radius: 0 0 10px 10px; -webkit-border-radius: 0 0 10px 10px; border-radius: 0 0 10px 10px;
 	text-align: left;
 }
@@ -104,7 +104,7 @@ img {
 
 .middle-border {
 	margin: 20px 0;
-	border-right: 1px solid #003366;
+	border-right: 1px solid #114477;
 }
 
 .error-info {
@@ -185,7 +185,7 @@ img {
 
 .main-box {
   padding: 15px 25px;
-  background: #003366;
+  background: #114477;
   -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;
   width: 100%;
   margin: auto;
