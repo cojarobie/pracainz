@@ -1,6 +1,6 @@
 body {
 	background: url("../bg/noisy_net_2X.png");
-	color: #bbc;
+	color: #ddd;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -13,7 +13,7 @@ strong {
 }
 
 a {
-	color: #bbc;
+	color: #ddd;
 	text-decoration: none;
 }
 
@@ -278,14 +278,18 @@ img {
   background-color: #a00;
 }
 
+.accept {
+  text-align: center;
+}
+
 .accept a {
+  float: left;
   display: inline-block;
-  width: 75%;
+  width: 50%;
+  margin: 10px 0 10px 0;
   background-color: #080;
-  margin: 10px 0 3px 0;
   border-radius: 10px;
   text-decoration: none;
-  line-height: 25px;
 }
 
 .accept a:hover {
@@ -293,14 +297,19 @@ img {
   background-color: #0a0;
 }
 
+.decline {
+  text-align: center;
+}
+
 .decline a {
+  float: left;
   display: inline-block;
-  width: 75%;
+  width: 50%;
+  margin: 10px 0 10px 0;
   background-color: #800;
-  margin: 3px 0 10px 0;
   border-radius: 10px;
   text-decoration: none;
-  line-height: 25px;
+  text-align: center;
 }
 
 .decline a:hover {
@@ -308,11 +317,16 @@ img {
   background-color: #a00;
 }
 
+.invited {
+  margin: auto;
+  width: 100%;
+}
+
 .button {
   text-align: center;
 }
 
-.button a{
+.button a {
   display: inline-box;
   background-color: #080;
   padding: 6px 15px;
@@ -329,3 +343,6 @@ img {
   text-align: center;
 }
 
+.box-content table th, .box-content table td{
+  border: 1px solid white;
+}
