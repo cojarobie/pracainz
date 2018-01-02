@@ -24,33 +24,47 @@
     <div class="container">
       <div class="main-content">
         <div class="row">
-          <div class="col-lg-2">
+          <div class="visible-lg-2">
           </div>
           <div class="col-lg-8 main-box">
-            <div class="user-logo">
-              <img src="resources/img/user_large.png" alt="user icon">
+            <div class="user-image">
+              <img src="
+              <?php
+              if ($avatar == null) {
+                echo 'resources/img/user_large.png';
+              } else {
+                echo $avatar;
+              }
+              ?>
+              " alt="user-image" class="img-thumbnail">
             </div>
-            <?php
-              echo '<div class="left-user">First name: </div>';
-              echo '<div class="right-user">'.$name.'</div>';
-              echo '<div class="clear-both"></div>';
-              echo '<div class="left-user">Last name: </div>';
-              echo '<div class="right-user">'.$surname.'</div>';
-              echo '<div class="clear-both"></div>';
-              echo '<div class="left-user">Nickname: </div>';
-              echo '<div class="right-user">'.$nickname.'</div>';
-              echo '<div class="clear-both"></div>';
-              echo '<div class="left-user">Birth date: </div>';
-              echo '<div class="right-user">'.$birth_date.'</div>';
-              echo '<div class="clear-both"></div>';
-              echo '<div class="left-user">Description: </div>';
-              echo '<div class="right-user">'.$description.'</div>';
-              echo '<div class="clear-both"></div>';
-             ?>
-             <div class="button"><a href="#"><i class="icon-cog"></i></a></div>
-             <div class="button"><a href="logout.php"><i class="demo-icon icon-logout"></i></a></div>
-          </div>             
-          <div class="col-lg-2">
+            <div class="user-data">
+              <div class="data-type">First name:</div>
+              <div class="data"><?php echo $name; ?></div>
+              <div class="clear-both"></div>
+              <div class="data-type">Last name:</div>
+              <div class="data"><?php echo $surname; ?></div>
+              <div class="clear-both"></div>
+              <div class="data-type">Nickname:</div>
+              <div class="data"><?php echo $nickname; ?></div>
+              <div class="clear-both"></div>
+              <div class="data-type">Birth Date:</div>
+              <div class="data"><?php echo $birth_date; ?></div>
+              <div class="clear-both"></div>
+              <div class="data-type">Description:</div>
+              <div class="data"><?php echo $description; ?></div>
+              <div class="clear-both"></div>
+            </div>
+            <div class="user-settings">
+              <button type="button" class="btn btn-default">Settings<i class="icon-cog"></i></button>
+              <button type="button" class="btn btn-default">
+              Log out<i class="icon-logout"></i></div></button>
+            </div>
+            <div class="clear-both">
+              
+            </div>
+          </div>
+          <div class="visible-lg-2">
           </div>
         </div>
         
@@ -90,7 +104,7 @@
           </div>
           
           
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="box">
               <div class="box-top">
                 <div class="box-left">

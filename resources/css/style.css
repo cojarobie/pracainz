@@ -42,7 +42,7 @@ img {
 }
 
 .main-content, .description {
-	margin: 20px 50px;
+	margin: 20px 0px;
 }
 
 .box {
@@ -85,7 +85,7 @@ img {
   -webkit-transform:scale(0.77);
   transform-origin:0 0;
   -webkit-transform-origin:0 0;
-} 
+}
 
 .header {
 	background-color: #2a2e32;
@@ -188,7 +188,7 @@ img {
 }
 
 .main-box {
-  padding: 15px 25px;
+  padding: 15px 10px;
   background: #114477;
   -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;
   width: 100%;
@@ -343,6 +343,39 @@ img {
   text-align: center;
 }
 
-.box-content table th, .box-content table td{
-  border: 1px solid white;
+.box-content table tr {
+  border-bottom: 1px dashed white;
+}
+
+.user-image {
+  float: left;
+  width: 33%;
+}
+
+.user-data {
+  float: left;
+  width: 34%;
+  font-size: 1rem;
+  margin: auto;
+}
+
+.data-type {
+  float: left;
+  width: 100px;
+  height: 25px;
+}
+
+.data {
+  float: left;
+  width: 100px;
+  height: 25px;
+}
+
+.user-settings {
+  float: left;
+  width: 33%;
+}
+
+button {
+  cursor: pointer;
 }
