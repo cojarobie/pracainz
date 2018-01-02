@@ -42,7 +42,7 @@ img {
 }
 
 .main-content, .description {
-	margin: 20px 0px;
+	margin: 10px 0px;
 }
 
 .box {
@@ -76,7 +76,7 @@ img {
 }
 
 .box-right {
-  text-align: center;
+  text-align: right;
   float: left;
   width: 35%;
 }
@@ -327,7 +327,9 @@ img {
 }
 
 .teams-title {
-  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
 }
 
 .box-content table tr {
@@ -343,16 +345,19 @@ img {
   float: left;
   width: 34%;
   font-size: 1rem;
-  margin: auto;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
 .data-type {
+  text-align: left;
   float: left;
   width: 100px;
   height: 25px;
 }
 
 .data {
+  text-align: left;
   float: left;
   width: 100px;
   height: 25px;

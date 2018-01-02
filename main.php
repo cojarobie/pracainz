@@ -24,47 +24,48 @@
     <div class="container">
       <div class="main-content">
         <div class="row">
-          <div class="visible-lg-2">
+          <div class="col-lg-2">
           </div>
-          <div class="col-lg-8 main-box">
-            <div class="user-image">
-              <img src="
-              <?php
-              if ($avatar == null) {
-                echo 'resources/img/user_large.png';
-              } else {
-                echo $avatar;
-              }
-              ?>
-              " alt="user-image" class="img-thumbnail">
-            </div>
-            <div class="user-data">
-              <div class="data-type">First name:</div>
-              <div class="data"><?php echo $name; ?></div>
+          <div class="col-lg-8">
+            <div class="main-box">
+              <div class="user-image">
+                <img src="
+                <?php
+                if ($avatar == null) {
+                  echo 'resources/img/user_large.png';
+                } else {
+                  echo $avatar;
+                }
+                ?>
+                " alt="user-image" class="img-thumbnail">
+              </div>
+              <div class="user-data">
+                <div class="data-type">First name:</div>
+                <div class="data"><?php echo $name; ?></div>
+                <div class="clear-both"></div>
+                <div class="data-type">Last name:</div>
+                <div class="data"><?php echo $surname; ?></div>
+                <div class="clear-both"></div>
+                <div class="data-type">Nickname:</div>
+                <div class="data"><?php echo $nickname; ?></div>
+                <div class="clear-both"></div>
+                <div class="data-type">Birth date:</div>
+                <div class="data"><?php echo $birth_date; ?></div>
+                <div class="clear-both"></div>
+                <div class="data-type">Description:</div>
+                <div class="data"><?php echo $description; ?></div>
+                <div class="clear-both"></div>
+              </div>
+              <div class="user-settings">
+                <button type="button" class="btn btn-default menu-button" onclick="settings()">Settings<i class="icon-cog"></i></button>
+                <button type="button" class="btn btn-default menu-button" onclick="logout()">
+                Log out<i class="icon-logout"></i></button>
+              </div>
               <div class="clear-both"></div>
-              <div class="data-type">Last name:</div>
-              <div class="data"><?php echo $surname; ?></div>
-              <div class="clear-both"></div>
-              <div class="data-type">Nickname:</div>
-              <div class="data"><?php echo $nickname; ?></div>
-              <div class="clear-both"></div>
-              <div class="data-type">Birth Date:</div>
-              <div class="data"><?php echo $birth_date; ?></div>
-              <div class="clear-both"></div>
-              <div class="data-type">Description:</div>
-              <div class="data"><?php echo $description; ?></div>
-              <div class="clear-both"></div>
-            </div>
-            <div class="user-settings">
-              <button type="button" class="btn btn-default menu-button" onclick="settings()">Settings<i class="icon-cog"></i></button>
-              <button type="button" class="btn btn-default menu-button" onclick="logout()">
-              Log out<i class="icon-logout"></i></div></button>
-            </div>
-            <div class="clear-both">
-              
+              </div>
             </div>
           </div>
-          <div class="visible-lg-2">
+          <div class="col-lg-2">
           </div>
         </div>
         
@@ -73,7 +74,7 @@
             <div class="box">
               <div class="box-top">
                 <div class="box-left teams-title">
-                  <h3>Your teams</h3>
+                  Your teams
                 </div>
                 <div class="box-right">
                   <button type="button" class="btn btn-success add-team">
