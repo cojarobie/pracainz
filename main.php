@@ -57,7 +57,7 @@
             </div>
             <div class="user-settings">
               <button type="button" class="btn btn-default">Settings<i class="icon-cog"></i></button>
-              <button type="button" class="btn btn-default">
+              <button type="button" class="btn btn-default" onclick="logout()">
               Log out<i class="icon-logout"></i></div></button>
             </div>
             <div class="clear-both">
@@ -140,6 +140,12 @@
     <!-- jQuery, Bootstrap JS -->
     <script src="resources/js/jquery-3.2.1.min.js"></sript>
     <script src="resources/bootstrap/js/bootstrap.min.js"></script>	
+    
+    <script>
+      function logout() {
+        window.location.href = 'logout.php';
+      }
+    </script>
 	
   </body>
 </html>
