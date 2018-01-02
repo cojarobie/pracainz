@@ -53,7 +53,7 @@
 				
         <div class="add-margin">
 				<div class="row main">
-					<div class="col-sm-6">
+					<div class="col-lg-6">
 					
 						<div class="box">
 							<div class="box-top">
@@ -90,7 +90,7 @@
 						
 					</div>
 					
-					<div class="col-sm-6">
+					<div class="col-lg-6">
 						<div class="box">
 							<div class="box-top">
 								<h3>Sign up now</h3>
