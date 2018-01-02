@@ -44,7 +44,7 @@
       
       if ($result = $connection->query("SELECT t.Name AS t_name FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id AND tu.ustatus='member'")) {
          while ($row = $result->fetch_assoc()) {
-           $team = team_arrays($row['t_name'], 'Member',  '<button type="button" class="btn btn-danger leave onclikc="leave()">Leave<i class="icon-logout"></button>');
+           $team = team_arrays($row['t_name'], 'Member',  '<button type="button" class="btn btn-danger leave" onclick="leave()">Leave<i class="icon-logout"></button>');
            array_push($teams, $team);
          }
          $result->free();
@@ -52,7 +52,7 @@
       
       if ($result = $connection->query("SELECT t.Name AS t_name FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id AND tu.ustatus='invited'")) {
          while ($row = $result->fetch_assoc()) {
-           $team = team_arrays($row['t_name'], 'Invited', '<div class="invited"><div class="accept"><a href="#">Accept<i class="icon-ok-circled"></i></a></div> <div class="decline"><a href="#">Decline<i class="icon-cancel-circled"></i></a></div><div class="clear-both"></div></div>');
+           $team = team_arrays($row['t_name'], 'Invited','<div class="invited"><div class="accept-container"><button type="button" class="btn btn-success accept" onclick="accept()">Accept<i class="icon-ok-circled"></i></button></div> <div class="decline-container"><button type="button" class="btn btn-danger decline" onclick="decline()">Decline<i class="icon-cancel-circled"></i></button></div><div class="clear-both"></div></div>');
            array_push($teams, $team);
          }
          $result->free();

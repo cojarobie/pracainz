@@ -56,8 +56,8 @@
               <div class="clear-both"></div>
             </div>
             <div class="user-settings">
-              <button type="button" class="btn btn-default">Settings<i class="icon-cog"></i></button>
-              <button type="button" class="btn btn-default" onclick="logout()">
+              <button type="button" class="btn btn-default menu-button" onclick="settings()">Settings<i class="icon-cog"></i></button>
+              <button type="button" class="btn btn-default menu-button" onclick="logout()">
               Log out<i class="icon-logout"></i></div></button>
             </div>
             <div class="clear-both">
@@ -85,15 +85,15 @@
               <?php
                 echo '<table>';
                 echo '<tr>';
-                echo '<th>Team Name</th>';
-                echo '<th>Status</th>';
-                echo '<th>Action</th>';
+                echo '<th class="column-team">Team Name</th>';
+                echo '<th class="column-status">Status</th>';
+                echo '<th class="column-action">Action</th>';
                 echo '</tr>';
                 foreach ($teams as $team) {
                   echo '<tr>';
-                  echo '<td>'.$team['name'].'</td>';
-                  echo '<td>'.$team['status'].'</td>';
-                  echo '<td>'.$team['action'].'</td>';
+                  echo '<td class="column-team">'.$team['name'].'</td>';
+                  echo '<td class="column-status">'.$team['status'].'</td>';
+                  echo '<td class="column-action">'.$team['action'].'</td>';
                   echo '</tr>';
                 }                
                 

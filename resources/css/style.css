@@ -249,8 +249,19 @@ img {
   text-align: center;
 }
 
+.column-team {
+  width: 50%;
+}
+
+.column-statsu {
+  width: 20%;
+}
+
+.column-action {
+  width: 30%;
+}
+
 .manage {
-  display: inline-block;
   width: 75%;
   background-color: #080;
   margin: 10px 0;
@@ -268,7 +279,6 @@ img {
 }
 
 .leave {
-  display: inline-block;
   width: 75%;
   background-color: #800;
   margin: 10px 0;
@@ -285,52 +295,63 @@ img {
   background-color: #a00;
 }
 
-.accept {
-  text-align: center;
-}
-
-.accept a {
-  float: left;
-  display: inline-block;
-  width: 50%;
-  margin: 10px 0 10px 0;
-  background-color: #080;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-.accept a:hover {
-  color: white;
-  background-color: #0a0;
-}
-
-.decline {
-  text-align: center;
-}
-
-.decline a {
-  float: left;
-  display: inline-block;
-  width: 50%;
-  margin: 10px 0 10px 0;
-  background-color: #800;
-  border-radius: 10px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.decline a:hover {
-  color: white;
-  background-color: #a00;
-}
-
 .invited {
+  text-align: center;
   margin: auto;
   width: 100%;
 }
 
+.accept-container {
+  float:left;
+  box-sizing: border-box;
+  padding-rigth: 5px;
+  width: 50%;
+}
+
+.accept {
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+  padding: 0px;
+  background-color: #080;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border-width: 0px;
+  overflow: hidden;
+}
+
+.accept:hover {
+  background-color: #0a0;
+}
+
+.decline-container {
+  float:left;
+  box-sizing: border-box;
+  padding-left: 5px;
+  width: 50%;
+}
+
+.decline {
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+  padding: 0px;
+  background-color: #800;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border-width: 0px;
+  overflow: hidden;
+}
+
+.decline:hover {
+  background-color: #a00;
+}
+
 .add-team {
-  display: inline-box;
   background-color: #080;
   padding: 6px 15px;
   text-align: center;
@@ -377,6 +398,10 @@ img {
 .user-settings {
   float: left;
   width: 33%;
+}
+
+.menu-button {
+  margin: 10px 10px;
 }
 
 button {
