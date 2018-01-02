@@ -255,7 +255,6 @@ img {
   background-color: #080;
   margin: 10px 0;
   padding: 0px 5px;
-  border-radius: 10px;
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
@@ -268,13 +267,17 @@ img {
   background-color: #0a0;
 }
 
-.leave a {
+.leave {
   display: inline-block;
   width: 75%;
   background-color: #800;
   margin: 10px 0;
-  border-radius: 10px;
+  padding: 0px 5px;
   text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border-width: 0px;
 }
 
 .leave a:hover {
@@ -326,19 +329,15 @@ img {
   width: 100%;
 }
 
-.button {
-  text-align: center;
-}
-
-.button a {
+.add-team {
   display: inline-box;
   background-color: #080;
   padding: 6px 15px;
-  border-radius: 10px;
   text-align: center;
+  border-width: 0px;
 }
 
-.button a:hover {
+.add-team:hover {
   color: white;
   background-color: #0a0;
 }
