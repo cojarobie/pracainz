@@ -249,7 +249,7 @@ img {
   text-align: center;
 }
 
-.manage a {
+.manage {
   display: inline-block;
   width: 75%;
   background-color: #080;
@@ -257,9 +257,13 @@ img {
   padding: 0px 5px;
   border-radius: 10px;
   text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border-width: 0px;
 }
 
-.manage a:hover {
+.manage:hover {
   color: white;
   background-color: #0a0;
 }
