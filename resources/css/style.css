@@ -195,43 +195,6 @@ img {
   margin: auto;
 }
 
-.user-logo {
-  width: 160px;
-  height: 160px;
-  min-width: 160px;
-  margin: 10px auto; 
-}
-
-.user-logo img {
-  border-radius: 15px;
-}
-
-.user-info {
-  margin: auto;
-}
-
-.user-info tr td {
-  font-size: 1rem;
-  padding: 2px 5px;
-  text-align: left;
-}
-
-.left-user {
-  text-align: left;
-  float:left;
-  width: 30%;
-  font-size: 1rem;
-  margin-left: 20%;
-}
-
-
-.right-user {
-  text-align: left;
-  float: left;
-  width: 50%;
-  font-size: 1rem;
-}
-
 .clear-both {
   clear: both;
 }
