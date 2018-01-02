@@ -75,8 +75,9 @@
                 <div class="box-left teams-title">
                   <h3>Your teams</h3>
                 </div>
-                <div class="box-right button">
-                  <h3><a href="#">Add<i class="icon-plus-circled"></i></a></h3>
+                <div class="box-right">
+                  <button type="button" class="btn btn-success">
+                  Add<i class="icon-plus-circled"></i></button>
                 </div>
                 <div class="clear-both"></div>
               </div>
