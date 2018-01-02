@@ -31,7 +31,7 @@
 	<!-- Header -->
 	<header>
     <div class="row header">
-      <div class="col-sm-8 text">        
+      <div class="col-lg-8 text">        
         <h1><i class="demo-icon icon-gamepad"></i>E-SPORT Manager</h1>
       </div>
     </div>
@@ -51,9 +51,10 @@
           }         
         ?>
 				
-        <div class="add-margin">
 				<div class="row main">
-					<div class="col-lg-6">
+          <div class="col-lg-1">
+          </div>
+					<div class="col-lg-5">
 					
 						<div class="box">
 							<div class="box-top">
@@ -90,7 +91,7 @@
 						
 					</div>
 					
-					<div class="col-lg-6">
+					<div class="col-lg-5">
 						<div class="box">
 							<div class="box-top">
 								<h3>Sign up now</h3>
@@ -190,10 +191,11 @@
 							</div>
 						</div>
 					</div>
+          <div class="col-lg-1">
+          </div>
 				</div>
 				
 			</div>
-      </div>
 			
 		</div>
 	</main>
