@@ -62,7 +62,6 @@
                 Log out<i class="icon-logout"></i></button>
               </div>
               <div class="clear-both"></div>
-              </div>
             </div>
           </div>
           <div class="col-lg-2">
@@ -137,7 +136,7 @@
                 echo '</table>';
                ?>
               </div>
-            <div>
+            </div>
           </div>
         </div>
         
