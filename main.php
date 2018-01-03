@@ -77,7 +77,7 @@
                   Your teams
                 </div>
                 <div class="box-right">
-                  <button type="button" class="btn btn-success add-team">
+                  <button type="button" class="btn btn-success add-button">
                   Add<i class="icon-plus-circled"></i></button>
                 </div>
                 <div class="clear-both"></div>
@@ -109,11 +109,11 @@
           <div class="col-lg-6">
             <div class="box">
               <div class="box-top">
-                <div class="box-left">
-                    <h3>Your leagues</h3>
+                <div class="box-left box-title">
+                    Your leagues
                 </div>
                 <div class="box-right">
-                  <button type="button" class="btn btn-success add-team">
+                  <button type="button" class="btn btn-success add-button">
                   Add<i class="icon-plus-circled"></i></button>
                 </div>
                 <div class="clear-both"></div>

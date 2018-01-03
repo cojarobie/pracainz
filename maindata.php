@@ -63,19 +63,13 @@
         $result->free(); 
       }
       
-      /*if ($result = $connection->query("SELECT * FROM leagues WHERE id_organizer=$id")) {
+      if ($result = $connection->query("SELECT l.Name AS l_name FROM teams AS t LEFT JOIN teams_users AS tu ON t.id = tu.id_teams INNER JOIN teams_leagues AS tl ON t.id = tl.id_Team INNER JOIN leagues AS l ON l.id = tl.id_league WHERE t.id_captain=$id OR tu.id_users=$id;")) {
          while ($row = $result->fetch_assoc()) {
-          array_push($my_leagues, $row);
+          $league = to_array($row['l_name'], 'Participant', '<button type="button" class="btn btn-info details" onclick="details()">Details <i class="icon-cog"></i></button>');
+          array_push($leagues, $league);
          }
          $result->free();
-      }*/
-      
-      /*if ($result = $connection->query("SELECT l.Name AS l_name FROM teams AS t LEFT JOIN teams_users AS tu ON t.id = tu.id_teams INNER JOIN teams_leagues AS tl ON t.id = tl.id_Team INNER JOIN leagues AS l ON l.id = tl.id_league WHERE t.id_captain=$id OR tu.id_users=$id;")) {
-         while ($row = $result->fetch_assoc()) {
-          array_push($leagues_member, $row);
-         }
-         $result->free();
-      }*/
+      }
       
       $connection->close();
     }

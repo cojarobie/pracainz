@@ -314,14 +314,30 @@ img {
   background-color: #a00;
 }
 
-.add-team {
+.details {
+  width: 75%;
+  background-color: #17a2b8;
+  margin: 10px 0;
+  padding: 0px 5px;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border-width: 0px;
+}
+
+.details:hover {
+  background-color: #39c4da;
+}
+
+.add-button {
   background-color: #080;
   padding: 6px 15px;
   text-align: center;
   border-width: 0px;
 }
 
-.add-team:hover {
+.add-button:hover {
   color: white;
   background-color: #0a0;
 }
