@@ -1,13 +1,13 @@
 <?php
 
-  if (!isset($_GET['id'])) {
+  if (!isset($_GET['id']) || !isset($_GET['status'])) {
     /*no get variable*/
     header('Location: index.php');
     exit();
   }
   
   $id = $_GET['id'];
-  $status = $_GET['id'];
+  $status = $_GET['status'];
   session_start();
   
   if (!isset($_SESSION['invited'.$id])) {
@@ -25,7 +25,7 @@
     if ($connection->connect_errno != 0) {
       throw new Exception(mysqli_connect_errno());
     } else {
-      $connection->query("UPDATE teams_users SET Ustatus='member' WHERE id=$id;");
+      $connection->query("UPDATE teams_users SET Ustatus='$status' WHERE id=$id;");
     $connection->close();
     }
   } catch (Exception $e) {
