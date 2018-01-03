@@ -212,7 +212,7 @@ img {
   text-align: center;
 }
 
-.column-team {
+.column-name {
   width: 50%;
 }
 
@@ -326,7 +326,7 @@ img {
   background-color: #0a0;
 }
 
-.teams-title {
+.box-title {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: left;

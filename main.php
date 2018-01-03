@@ -73,7 +73,7 @@
           <div class="col-lg-6">
             <div class="box">
               <div class="box-top">
-                <div class="box-left teams-title">
+                <div class="box-left box-title">
                   Your teams
                 </div>
                 <div class="box-right">
@@ -86,13 +86,13 @@
               <?php
                 echo '<table>';
                 echo '<tr>';
-                echo '<th class="column-team">Team Name</th>';
+                echo '<th class="column-name">Team Name</th>';
                 echo '<th class="column-status">Status</th>';
                 echo '<th class="column-action">Action</th>';
                 echo '</tr>';
                 foreach ($teams as $team) {
                   echo '<tr>';
-                  echo '<td class="column-team">'.$team['name'].'</td>';
+                  echo '<td class="column-name">'.$team['name'].'</td>';
                   echo '<td class="column-status">'.$team['status'].'</td>';
                   echo '<td class="column-action">'.$team['action'].'</td>';
                   echo '</tr>';
@@ -113,22 +113,29 @@
                     <h3>Your leagues</h3>
                 </div>
                 <div class="box-right">
-                  <a href="#"><i class="demo-icon icon-plus-circled"></i></a>
+                  <button type="button" class="btn btn-success add-team">
+                  Add<i class="icon-plus-circled"></i></button>
                 </div>
+                <div class="clear-both"></div>
               </div>
               <div class="box-bottom box-content">
                 <?php
-                /*
-                for ($league = 0; $league < count($my_leagues); $league++) {
-                  echo '<div class="box-left-content">' . $my_leagues[$league]['Name'] . '</div>';
-                  echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-cog"></i></a></div>';
-                }
-                for ($league = 0; $league < count($leagues_member); $league++) {                 
-                  echo '<div class="box-left-content">' . $leagues_member[$league]['l_name'] . '</div>';
-                  echo '<div class="box-right-content"><a href="#"><i class="demo-icon icon-logout"></i></a></div>';
-                }
-                echo '<div class="clear-both"></div>';*/
-                ?>
+                echo '<table>';
+                echo '<tr>';
+                echo '<th class="column-name">League Name</th>';
+                echo '<th class="column-status">Status</th>';
+                echo '<th class="column-action">Action</th>';
+                echo '</tr>';
+                foreach ($leagues as $league) {
+                  echo '<tr>';
+                  echo '<td class="column-name">'.$league['name'].'</td>';
+                  echo '<td class="column-status">'.$league['status'].'</td>';
+                  echo '<td class="column-action">'.$league['action'].'</td>';
+                  echo '</tr>';
+                }                
+                
+                echo '</table>';
+               ?>
               </div>
             <div>
           </div>
