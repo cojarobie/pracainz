@@ -166,6 +166,14 @@
       function yesLeave(id) {
         window.location.href = 'leave.php?id=' + id;
       }
+      
+      function accept(id) {
+        
+      }
+      
+      function decline(id) {
+        
+      }
     </script>
 	
   </body>
