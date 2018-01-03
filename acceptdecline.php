@@ -7,6 +7,7 @@
   }
   
   $id = $_GET['id'];
+  $status = $_GET['id'];
   session_start();
   
   if (!isset($_SESSION['invited'.$id])) {
