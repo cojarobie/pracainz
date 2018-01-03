@@ -154,6 +154,18 @@
       function logout() {
         window.location.href = 'logout.php';
       }
+      
+      function leave(id) {
+        $("#leave" + id).html('<div class="accept-container"><button type="button" class="btn btn-success accept" onclick="yesLeave('+ id +')">Yes<i class="icon-ok-circled"></i></button></div> <div class="decline-container"><button type="button" class="btn btn-danger decline" onclick="noLeave('+ id +')">No<i class="icon-cancel-circled"></i></button></div><div class="clear-both"></div>');
+      }
+      
+      function noLeave(id) {
+        $("#leave" + id).html('<div id="leave'+id+'" ><button type="button" class="btn btn-danger leave" onclick="leave('+id+')">Leave<i class="icon-logout"></button></div>');
+      }
+      
+      function yesLeave(id) {
+        window.location.href = 'leave.php?id=' + id;
+      }
     </script>
 	
   </body>

@@ -40,7 +40,8 @@
       /* select teams where user is memeber */
       if ($result = $connection->query("SELECT t.Name AS t_name, tu.ID as tu_id FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id AND tu.ustatus='member'")) {
          while ($row = $result->fetch_assoc()) {
-           $team = to_array($row['t_name'], 'Member',  '<button type="button" class="btn btn-danger leave" onclick="leave('. $row['tu_id'] .')">Leave<i class="icon-logout"></button>');
+           $team = to_array($row['t_name'], 'Member',  '<div id="leave'.$row['tu_id'].'" ><button type="button" class="btn btn-danger leave" onclick="leave('. $row['tu_id'] .')">Leave<i class="icon-logout"></button></div>');
+           $_SESSION['leave' . $row['tu_id']] = true;
            array_push($teams, $team);
          }
          $result->free();
