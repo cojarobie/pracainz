@@ -172,7 +172,7 @@
       }
       
       function yesAccept(id) {
-        window.location.href = 'accept.php?id=' + id;
+        window.location.href = 'acceptdecline.php?id=' + id + '&status=member';
       }
       
       function decline(id) {
@@ -180,7 +180,7 @@
       }
       
       function yesDecline(id) {
-        window.location.href = 'decline.php?id=' + id;
+        window.location.href = 'acceptdecline.php?id=' + id + '&status=rejected';
       }
       
       function noAcceptDecline(id) {
