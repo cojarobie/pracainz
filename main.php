@@ -146,6 +146,9 @@
           <div class="col-lg-6">
             <div class="box">
               <div class="box-top">
+                <div class="box-left box-title">
+                  Manage your team
+                </div>
               </div>
               <div class="box-bottom">
               </div>
