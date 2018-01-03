@@ -50,7 +50,7 @@
       /* select teams where user is invited */
       if ($result = $connection->query("SELECT t.Name AS t_name, tu.ID AS tu_id FROM users AS u INNER JOIN teams_users AS tu ON tu.id_users=u.id INNER JOIN teams AS t ON t.id=tu.id_teams WHERE u.id=$id AND tu.ustatus='invited'")) {
          while ($row = $result->fetch_assoc()) {
-           $team = to_array($row['t_name'], 'Invited','<div class="invited"><div class="accept-container"><button type="button" class="btn btn-success accept" onclick="accept('.$row['tu_id'].')">Accept<i class="icon-ok-circled"></i></button></div> <div class="decline-container"><button type="button" class="btn btn-danger decline" onclick="decline('.$row['tu_id'].')">Decline<i class="icon-cancel-circled"></i></button></div><div class="clear-both"></div></div>');
+           $team = to_array($row['t_name'], 'Invited','<div class="invited" id="invited'. $row['tu_id'] .'"><div class="accept-container"><button type="button" class="btn btn-success accept" onclick="accept('.$row['tu_id'].')">Accept<i class="icon-ok-circled"></i></button></div> <div class="decline-container"><button type="button" class="btn btn-danger decline" onclick="decline('.$row['tu_id'].')">Decline<i class="icon-cancel-circled"></i></button></div><div class="clear-both"></div></div>');
            $_SESSION['invited' . $row['tu_id']] = true;
            array_push($teams, $team);
          }
