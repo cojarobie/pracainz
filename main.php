@@ -168,11 +168,23 @@
       }
       
       function accept(id) {
-        
+        $("#invited" + id).html(buttonsYesNo(id, "yesAccept", "noAcceptDecline"));
+      }
+      
+      function yesAccept(id) {
+        window.location.href = 'accept.php?id=' + id;
       }
       
       function decline(id) {
-        
+        $("#invited" + id).html(buttonsYesNo(id, "yesDecline", "noAcceptDecline"));
+      }
+      
+      function yesDecline(id) {
+        window.location.href = 'decline.php?id=' + id;
+      }
+      
+      function noAcceptDecline(id) {
+        $("#invited" + id).html('<div class="invited" id="invited'+ id +'"><div class="accept-container"><button type="button" class="btn btn-success accept" onclick="accept('+ id +')">Accept<i class="icon-ok-circled"></i></button></div> <div class="decline-container"><button type="button" class="btn btn-danger decline" onclick="decline('+ id +')">Decline<i class="icon-cancel-circled"></i></button></div><div class="clear-both"></div></div>');
       }
       
       function buttonsYesNo(id, yesFunction, noFunction) {
