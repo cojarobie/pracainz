@@ -141,9 +141,9 @@
         </div>
         
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-2">
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-8">
             <div class="box">
               <div class="box-top">
                 <div class="box-left box-title">
@@ -154,7 +154,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-2">
           </div>
         </div>
       </div>
