@@ -392,3 +392,8 @@ img {
 button {
   cursor: pointer;
 }
+
+.not-visible {
+  visibility: hidden;
+  height: 0px;
+}

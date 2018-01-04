@@ -144,7 +144,7 @@
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box">
+            <div class="box not-visible">
               <div class="box-top">
                 <div class="box-left box-title">
                   Manage your team
