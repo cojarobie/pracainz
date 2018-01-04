@@ -168,6 +168,15 @@
     <script src="resources/js/jquery.scrollTo.min.js"></script>
     
     <script>
+      jQuery(function($) {
+          $.scrollTo(0);
+          
+          $('.manage').click(function() {$.scrollTo($('#teamPanel'), 500);});
+      }
+      );
+    </script>
+    
+    <script>
       function logout() {
         window.location.href = 'logout.php';
       }
