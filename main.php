@@ -144,7 +144,7 @@
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box not-visible">
+            <div class="box not-visible" id="teamPanel">
               <div class="box-top">
                 <div class="box-left box-title">
                   Manage your team
@@ -206,6 +206,11 @@
       function buttonsYesNo(id, yesFunction, noFunction) {
         return '<div class="accept-container"><button type="button" class="btn btn-success accept" onclick="'+ yesFunction +'('+ id +')">Yes<i class="icon-ok-circled"></i></button></div> <div class="decline-container"><button type="button" class="btn btn-danger decline" onclick="'+ noFunction +'('+ id +')">No<i class="icon-cancel-circled"></i></button></div><div class="clear-both"></div>'
       }
+      
+      function manageTeam(id) {
+        $('#teamPanel').removeClass("not-visible");
+      }
+      
     </script>
 	
   </body>

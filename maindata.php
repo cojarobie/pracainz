@@ -31,7 +31,8 @@
       /* selcet teams where user is captain */
       if ($result = $connection->query("SELECT * FROM teams WHERE id_captain=$id")) {
          while ($row = $result->fetch_assoc()) {
-           $team = to_array($row['Name'], 'Owner', '<button type="button" class="btn btn-success manage" onclick="manage()">Manage <i class="icon-cog"></i></button>'); 
+           $team = to_array($row['Name'], 'Owner', '<button type="button" class="btn btn-success manage" onclick="manageTeam('.$row['ID'].')">Manage <i class="icon-cog"></i></button>'); 
+           $_SESSION['manageteam' . $row['ID']] = true;
            array_push($teams, $team);
          }
          $result->free();
