@@ -332,7 +332,7 @@ img {
 }
 
 .add-button {
-  background-color: #080;
+  background-color: #0a0;
   padding: 6px 15px;
   text-align: center;
   border-width: 0px;
@@ -340,7 +340,7 @@ img {
 
 .add-button:hover {
   color: white;
-  background-color: #0a0;
+  background-color: #0c0;
 }
 
 .box-title {

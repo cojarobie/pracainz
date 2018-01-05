@@ -23,7 +23,7 @@
   
     <div class="container">
       <div class="main-content">
-        <div class="row">
+        <div class="row" id="userData">
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
@@ -68,7 +68,7 @@
           </div>
         </div>
         
-        <div class="row">
+        <div class="row" id="userTeamsAndLeagues">
           <div class="col-lg-6">
             <div class="box">
               <div class="box-top">
@@ -150,7 +150,7 @@
                   Manage your team
                 </div>
                 <div class="clear-both"></div>
-                <div class="cancle-button">
+                <div class="cancle-button" id="closeTeamManager" onclick="hideTeamManagerPanel()">
                   <i class="icon-cancel"></i>
                 </div>
               </div>
@@ -176,6 +176,8 @@
           $.scrollTo(0);
           
           $('.manage').click(function() {$.scrollTo($('#teamPanel'), 500);});
+          
+          $('#closeTeamManager').click(function() {$.scrollTo($('#userTeamsAndLeagues'), 500)});
       }
       );
     </script>
@@ -224,6 +226,11 @@
       function manageTeam(id) {
         $('#teamPanel').removeClass("not-visible");
       }
+      
+      function hideTeamManagerPanel(id) {
+        $('#teamPanel').addClass("not-visible");
+      }
+
       
     </script>
 	
