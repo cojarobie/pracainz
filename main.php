@@ -149,6 +149,10 @@
                 <div class="box-left box-title">
                   Manage your team
                 </div>
+                <div class="clear-both"></div>
+                <div class="cancle-button">
+                  <i class="icon-cancel"></i>
+                </div>
               </div>
               <div class="box-bottom">
               </div>

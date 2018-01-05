@@ -227,7 +227,7 @@ img {
 
 .manage {
   width: 75%;
-  background-color: #080;
+  background-color: #0a0;
   margin: 10px 0;
   padding: 0px 5px;
   text-decoration: none;
@@ -239,12 +239,12 @@ img {
 
 .manage:hover {
   color: white;
-  background-color: #0a0;
+  background-color: #0c0;
 }
 
 .leave {
   width: 75%;
-  background-color: #800;
+  background-color: #a00;
   margin: 10px 0;
   padding: 0px 5px;
   text-decoration: none;
@@ -256,7 +256,7 @@ img {
 
 .leave a:hover {
   color: white;
-  background-color: #a00;
+  background-color: #c00;
 }
 
 .invited {
@@ -277,7 +277,7 @@ img {
   width: 100%;
   margin: 10px 0;
   padding: 0px;
-  background-color: #080;
+  background-color: #0a0;
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
@@ -287,7 +287,7 @@ img {
 }
 
 .accept:hover {
-  background-color: #0a0;
+  background-color: #0c0;
 }
 
 .decline-container {
@@ -302,7 +302,7 @@ img {
   width: 100%;
   margin: 10px 0;
   padding: 0px;
-  background-color: #800;
+  background-color: #a00;
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
@@ -312,12 +312,12 @@ img {
 }
 
 .decline:hover {
-  background-color: #a00;
+  background-color: #c00;
 }
 
 .details {
   width: 75%;
-  background-color: #17a2b8;
+  background-color: #29b3c9;
   margin: 10px 0;
   padding: 0px 5px;
   text-decoration: none;
@@ -328,7 +328,7 @@ img {
 }
 
 .details:hover {
-  background-color: #39c4da;
+  background-color: #4ad5eb;
 }
 
 .add-button {
@@ -397,3 +397,23 @@ button {
   visibility: hidden;
   height: 0px;
 }
+
+.cancle-button {
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  font-size: 25px;
+  background-color: #a00;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.cancle-button:hover {
+  background-color: #c00;
+}
+
