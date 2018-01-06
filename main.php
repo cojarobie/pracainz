@@ -59,7 +59,7 @@
               </div>
               <div class="user-settings">
                 <button type="button" class="btn btn-default menu-button" onclick="settings()">Settings<i class="icon-cog"></i></button>
-                <button type="button" class="btn btn-default menu-button" onclick="logout()">
+                <button type="button" class="btn btn-default menu-button" id="logoutButton" onclick="logout()">
                 Log out<i class="icon-logout"></i></button>
               </div>
               <div class="clear-both"></div>
@@ -78,7 +78,7 @@
                   Your teams
                 </div>
                 <div class="box-right">
-                  <button type="button" class="btn btn-success add-button">
+                  <button type="button" class="btn btn-success add-button" id="addTeam">
                   Add<i class="icon-plus-circled"></i></button>
                 </div>
                 <div class="clear-both"></div>
