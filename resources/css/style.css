@@ -393,11 +393,6 @@ button {
   cursor: pointer;
 }
 
-.not-visible {
-  visibility: hidden;
-  height: 0px;
-}
-
 .cancle-button {
   position: absolute;
   right: 25px;

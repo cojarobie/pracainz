@@ -140,21 +140,21 @@
           </div>
         </div>
         
-        <div class="row">
+        <div class="row" id="teamData" style="display:none;">
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box not-visible" id="teamPanel">
+            <div class="box">
               <div class="box-top">
                 <div class="box-left box-title">
                   Manage your team
                 </div>
                 <div class="clear-both"></div>
-                <div class="cancle-button" id="closeTeamManager" onclick="hideTeamManagerPanel()">
+                <div class="cancle-button" id="closeTeamManager">
                   <i class="icon-cancel"></i>
                 </div>
               </div>
-              <div class="box-bottom">
+              <div class="box-bottom" id="teamPanel">
               </div>
             </div>
           </div>
@@ -171,13 +171,26 @@
     <script src="resources/bootstrap/js/bootstrap.min.js"></script>
     <script src="resources/js/jquery.scrollTo.min.js"></script>
     
-    <script>
+    <script>      
       jQuery(function($) {
           $.scrollTo(0);
           
-          $('.manage').click(function() {$.scrollTo($('#teamPanel'), 500);});
+          $('.manage').click(function() {
+            $('#teamData').show("slow");
+          });
           
-          $('#closeTeamManager').click(function() {$.scrollTo($('#userTeamsAndLeagues'), 500)});
+          $('.manage').click(function() {
+            $.scrollTo($('#teamPanel'), 500);
+          });          
+          
+          $('#closeTeamManager').click(function() {
+            $.scrollTo($('#userTeamsAndLeagues'), 500);
+          });
+          
+          $('#closeTeamManager').click(function(event) {
+            event.preventDefault();
+            $('#teamData').hide("slow");
+          });
       }
       );
     </script>
@@ -224,12 +237,12 @@
       }
       
       function manageTeam(id) {
-        $('#teamPanel').removeClass("not-visible");
+        
       }
-      
+      /*
       function hideTeamManagerPanel(id) {
         $('#teamPanel').addClass("not-visible");
-      }
+      }*/
 
       
     </script>
