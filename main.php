@@ -142,11 +142,11 @@
           </div>
         </div>
         
-        <div class="row" id="teamData" style="display:none;">
+        <div class="row" id="teamData">
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box">
+            <div class="box" id="teamBox" style="display:none;">
               <div class="box-top">
                 <div class="box-left box-title">
                   Manage your team

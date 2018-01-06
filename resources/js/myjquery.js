@@ -2,7 +2,7 @@ $( document ).ready(function() {
   $.scrollTo(0);
   
   $('.manage-team').click(function() {
-    $('#teamData').show("slow");
+    $('#teamBox').show("slow");
   });
   
   $('.manage-team').click(function() {
@@ -14,7 +14,7 @@ $( document ).ready(function() {
   });
 
   $('.manage-team').click(function() {
-    $(this).hide("slow");
+    $('.manage-team').hide("slow");
   });
   
   $('#closeTeamManager').click(function() {
@@ -23,7 +23,7 @@ $( document ).ready(function() {
   
   $('#closeTeamManager').click(function(event) {
     event.preventDefault();
-    $('#teamData').hide("slow");
+    $('#teamBox').hide("slow");
   });
   
   $('#closeTeamManager').click(function() {
