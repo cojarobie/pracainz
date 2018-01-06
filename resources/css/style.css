@@ -47,8 +47,8 @@ img {
 }
 
 .box {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .box-top {
@@ -351,6 +351,7 @@ img {
 
 .box-content table tr {
   border-bottom: 1px dashed white;
+  height: 53px;
 }
 
 .user-image {
@@ -396,7 +397,7 @@ button {
 .cancle-button {
   position: absolute;
   right: 25px;
-  top: 30px;
+  top: 20px;
   font-size: 25px;
   background-color: #a00;
   cursor: pointer;

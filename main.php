@@ -27,7 +27,8 @@
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="main-box">
+            <div class="box">
+              <div class="main-box">
               <div class="user-image">
                 <img src="
                 <?php
@@ -62,6 +63,7 @@
                 Log out<i class="icon-logout"></i></button>
               </div>
               <div class="clear-both"></div>
+            </div>
             </div>
           </div>
           <div class="col-lg-2">
@@ -181,7 +183,11 @@
           
           $('.manage').click(function() {
             $.scrollTo($('#teamPanel'), 500);
-          });          
+          });
+
+          $('.manage').click(function() {
+            $(this).hide("slow");
+          });
           
           $('#closeTeamManager').click(function() {
             $.scrollTo($('#userTeamsAndLeagues'), 500);
@@ -190,6 +196,10 @@
           $('#closeTeamManager').click(function(event) {
             event.preventDefault();
             $('#teamData').hide("slow");
+          });
+          
+          $('#closeTeamManager').click(function() {
+            $('.manage').show("slow");
           });
       }
       );
@@ -239,11 +249,6 @@
       function manageTeam(id) {
         
       }
-      /*
-      function hideTeamManagerPanel(id) {
-        $('#teamPanel').addClass("not-visible");
-      }*/
-
       
     </script>
 	
