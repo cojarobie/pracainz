@@ -177,19 +177,19 @@
       jQuery(function($) {
           $.scrollTo(0);
           
-          $('.manage').click(function() {
+          $('.manage-team').click(function() {
             $('#teamData').show("slow");
           });
           
-          $('.manage').click(function() {
+          $('.manage-team').click(function() {
             $.scrollTo($('#teamPanel'), 500);
           });
           
-          $('.manage').click(function() {
-            $('.manage').show("slow");
+          $('.manage-team').click(function() {
+            $('.manage-team').show("slow");
           });
 
-          $('.manage').click(function() {
+          $('.manage-team').click(function() {
             $(this).hide("slow");
           });
           
@@ -203,7 +203,7 @@
           });
           
           $('#closeTeamManager').click(function() {
-            $('.manage').show("slow");
+            $('.manage-team').show("slow");
           });
       }
       );

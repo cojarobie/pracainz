@@ -225,7 +225,7 @@ img {
   width: 30%;
 }
 
-.manage {
+.manage-team, .manage-league {
   width: 75%;
   background-color: #0a0;
   margin: 10px 0;
@@ -237,7 +237,7 @@ img {
   border-width: 0px;
 }
 
-.manage:hover {
+.manage-team:hover, .manage-league:hover {
   color: white;
   background-color: #0c0;
 }

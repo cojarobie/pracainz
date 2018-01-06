@@ -31,7 +31,7 @@
       /* selcet teams where user is captain */
       if ($result = $connection->query("SELECT * FROM teams WHERE id_captain=$id")) {
          while ($row = $result->fetch_assoc()) {
-           $team = to_array($row['Name'], 'Owner', '<button type="button" class="btn btn-success manage" id="manageTeam'.$row['ID'].'" onclick="manageTeam('.$row['ID'].')">Manage <i class="icon-cog"></i></button>'); 
+           $team = to_array($row['Name'], 'Owner', '<button type="button" class="btn btn-success manage-team" id="manageTeam'.$row['ID'].'" onclick="manageTeam('.$row['ID'].')">Manage <i class="icon-cog"></i></button>'); 
            $_SESSION['manageteam' . $row['ID']] = true;
            array_push($teams, $team);
          }
@@ -60,7 +60,7 @@
       
       if ($result = $connection->query("SELECT * FROM leagues WHERE id_organizer=$id")) {
         while ($row = $result->fetch_assoc()) {
-          $league = to_array($row['Name'], 'Organizer', '<button type="button" class="btn btn-success manage" onclick="manage()">Manage <i class="icon-cog"></i></button>');
+          $league = to_array($row['Name'], 'Organizer', '<button type="button" class="btn btn-success manage-league" onclick="manage()">Manage <i class="icon-cog"></i></button>');
           array_push($leagues, $league);
         } 
         $result->free(); 
