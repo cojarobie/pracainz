@@ -7,9 +7,7 @@ $( document ).ready(function() {
   });
   
   $('.manage-team').click(function() {
-    $('#managerBox').show("slow");
-    $.scrollTo($('#managerRow'), 500);
-    $('button').hide("slow");
+    managerBoxSetUp();
     $('#managerTitle').html('Team Manager');
   });
   
