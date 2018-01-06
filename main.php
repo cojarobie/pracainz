@@ -23,7 +23,7 @@
   
     <div class="container">
       <div class="main-content">
-        <div class="row" id="userData">
+        <div class="row" id="userRow">
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
@@ -70,7 +70,7 @@
           </div>
         </div>
         
-        <div class="row" id="userTeamsAndLeagues">
+        <div class="row" id="contentRow">
           <div class="col-lg-6">
             <div class="box">
               <div class="box-top">
@@ -142,21 +142,20 @@
           </div>
         </div>
         
-        <div class="row" id="teamData">
+        <div class="row" id="managerRow">
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box" id="teamBox" style="display:none;">
+            <div class="box" id="managerBox" style="display:none;">
               <div class="box-top">
-                <div class="box-left box-title">
-                  Manage your team
+                <div class="box-left box-title" id="managerTitle"> 
                 </div>
                 <div class="clear-both"></div>
-                <div class="cancle-button" id="closeTeamManager">
+                <div class="cancle-button">
                   <i class="icon-cancel"></i>
                 </div>
               </div>
-              <div class="box-bottom" id="teamPanel">
+              <div class="box-bottom" id="managerPanel">
               </div>
             </div>
           </div>

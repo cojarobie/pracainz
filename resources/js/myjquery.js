@@ -2,31 +2,17 @@ $( document ).ready(function() {
   $.scrollTo(0);
   
   $('.manage-team').click(function() {
-    $('#teamBox').show("slow");
-  });
-  
-  $('.manage-team').click(function() {
-    $.scrollTo($('#teamPanel'), 500);
-  });
-  
-  $('.manage-team').click(function() {
-    $('.manage-team').show("slow");
-  });
-
-  $('.manage-team').click(function() {
+    $('#managerBox').show("slow");
+    $.scrollTo($('#managerRow'), 500);
     $('.manage-team').hide("slow");
+    $('#managerTitle').html('Team Manager');
+    $('.cancle-button').attr('id', 'teamManagerCancleButton');
   });
   
-  $('#closeTeamManager').click(function() {
-    $.scrollTo($('#userTeamsAndLeagues'), 500);
-  });
-  
-  $('#closeTeamManager').click(function(event) {
-    event.preventDefault();
-    $('#teamBox').hide("slow");
-  });
-  
-  $('#closeTeamManager').click(function() {
+  $('.cancle-button').click(function() {
+    $.scrollTo($('#contentRow'), 500);
+    $('#managerBox').hide("slow");
+    
     $('.manage-team').show("slow");
   });
 }
