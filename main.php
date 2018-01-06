@@ -184,6 +184,10 @@
           $('.manage').click(function() {
             $.scrollTo($('#teamPanel'), 500);
           });
+          
+          $('.manage').click(function() {
+            $('.manage').show("slow");
+          });
 
           $('.manage').click(function() {
             $(this).hide("slow");

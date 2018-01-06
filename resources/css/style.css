@@ -333,7 +333,7 @@ img {
 
 .add-button {
   background-color: #0a0;
-  padding: 6px 15px;
+  padding: 3px 15px;
   text-align: center;
   border-width: 0px;
 }
@@ -352,6 +352,10 @@ img {
 .box-content table tr {
   border-bottom: 1px dashed white;
   height: 53px;
+}
+
+.box-content table tr:first-child {
+  border-top: 1px dashed white;
 }
 
 .user-image {
