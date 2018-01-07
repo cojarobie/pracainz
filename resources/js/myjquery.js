@@ -30,13 +30,13 @@ $( document ).ready(function() {
     var length = $('#teamName').val().length;
     if (length > 30 || length < 2) {
       $('#teamNameGroup').removeClass('has-success');
-      $('#teamNameGroup').addClass('has-error');
+      $('#teamNameGroup').addClass('has-danger');
+      $('#teamNameHelpBlock').html('Team Name must be contain from 2 to 30 characters');
     }
     else {
-      $('#teamNameGroup').removeClass('has-error');
+      $('#teamNameGroup').removeClass('has-danger');
       $('#teamNameGroup').addClass('has-success');
     }
-    $('#output').html('zyje');
   }
 }
 );
