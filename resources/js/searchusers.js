@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var usedId = new Object();
   $('#invitePlayer').keyup(function(){
     $.ajax({
       method: 'POST',
@@ -6,7 +7,7 @@ $(document).ready(function() {
       data: {input: $('#invitePlayer').val()}
     })
     .done(function(msg){
-      alert("Alert: " + msg)
+      alert("Alert: " + msg);
     });
   });
 });
