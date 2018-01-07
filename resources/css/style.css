@@ -331,6 +331,15 @@ img {
   background-color: #4ad5eb;
 }
 
+.my-button {
+  margin: 10px 0;
+  padding: 0px 5px;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
 .add-button {
   background-color: #0a0;
   padding: 3px 15px;
@@ -390,7 +399,7 @@ img {
   width: 33%;
 }
 
-.menu-button {
+.margin-10 {
   margin: 10px 10px;
 }
 

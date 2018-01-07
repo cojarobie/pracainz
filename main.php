@@ -58,8 +58,8 @@
                 <div class="clear-both"></div>
               </div>
               <div class="user-settings">
-                <button type="button" class="btn btn-default menu-button" onclick="settings()">Settings<i class="icon-cog"></i></button>
-                <button type="button" class="btn btn-default menu-button" id="logoutButton" onclick="logout()">
+                <button type="button" class="btn btn-default margin-10 my-button" onclick="settings()">Settings<i class="icon-cog"></i></button>
+                <button type="button" class="btn btn-default margin-10 my-button" id="logoutButton" onclick="logout()">
                 Log out<i class="icon-logout"></i></button>
               </div>
               <div class="clear-both"></div>
@@ -156,6 +156,20 @@
                 </div>
               </div>
               <div class="box-bottom" id="managerPanel">
+                <form id="teamData" action="" method="post" class="margin-10">
+                  <div class="form-group has-error" id="teamNameGroup">
+                    <input type="text" placeholder="Enter team name..." id="teamName" class="form-control">
+                    
+                  </div>
+                  <div class="form-group has-success has-feedback">
+  <label class="control-label" for="inputSuccess2">Input with success</label>
+  <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+</div>
+                    <button type="submit" class="btn my-button">Create team</button>
+                </form>
+                <div id="output"></div>
               </div>
             </div>
           </div>
