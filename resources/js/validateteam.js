@@ -27,6 +27,7 @@ $( document ).ready(function() {
       $('#teamNameGroup').removeClass('has-success');
       $('#teamNameGroup').addClass('has-danger');
       $('#teamNameHelpBlock').html('Team Name must be contain from 2 to 30 characters');
+      $('#teamNameHelpBlock').show('slow');
       error_team = true;
     } else if (pattern.test(content)) {
       $('#teamNameGroup').removeClass('has-success');
@@ -36,7 +37,9 @@ $( document ).ready(function() {
     } else {
       $('#teamNameGroup').removeClass('has-danger');
       $('#teamNameGroup').addClass('has-success');
-      $('#teamNameHelpBlock').html('');
+      $('#teamNameHelpBlock').hide('slow', function() {
+        $('#teamNameHelpBlock').html('');
+      });
     }   
   }
   

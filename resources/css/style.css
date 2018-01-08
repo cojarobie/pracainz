@@ -434,6 +434,10 @@ button {
   font-size: 18px;
 }
 
+#teamNameHelpBlock {
+  display: none;
+}
+
 #foundPlayers {
   display: none;
   color: black;

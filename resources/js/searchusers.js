@@ -1,4 +1,4 @@
-var allUsers = [];
+var foundUsers = [];
 var invitedUsers = [];
 
 $(document).ready(function() {
@@ -16,6 +16,7 @@ $(document).ready(function() {
       }
     })
     .done(function(jsonArray) {
+      foundUsers = [];
       jsonArray.forEach(function(playerObject) {
         outputContent += '<div class="player" id="player' + playerObject['id'] + '" onclick="invitePlayerToTeam(\''
         + playerObject['id']      + '\',\''
@@ -28,7 +29,7 @@ $(document).ready(function() {
         + playerObject['surname'] + ' ' 
         + playerObject['email']   + 
         '</div>';
-        //allUsers.push(playerObject['id']);
+        foundUsers.push(playerObject['id']);
       });
       if (jsonArray.length == 0) {
         $('#foundPlayers').hide('fast');
@@ -48,7 +49,15 @@ $(document).ready(function() {
 
 function invitePlayerToTeam(id, name, surname, nick, email) {
   invitedUsers.push(id);
-  console.log(invitedUsers);
+  var index = foundUsers.indexOf(id.toString());
+  console.log("After: " + foundUsers);
+  if (index > -1) {
+    var removed = foundUsers.splice(index, 1);
+  }
+  if (foundUsers.length == 0) {
+    $('#foundPlayers').hide('fast');
+  }
+  console.log("Before: " + foundUsers);
   $('#player' + id).hide('fast');
   $('#output').append('<div style="display:none;" class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right" onclick="removeInvitation('+id+')"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
   + name    + ' "' 
@@ -64,9 +73,7 @@ function removeInvitation(id) {
     $('#invitedPlayer'+id).remove();
   });
   var index = invitedUsers.indexOf(id.toString());
-  console.log("removed" + index);
   if (index > -1) {
     var removed = invitedUsers.splice(index, 1);
-    console.log(removed);
   }
 }
