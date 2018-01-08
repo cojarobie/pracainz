@@ -15,7 +15,7 @@
       throw new Exception(mysqli_connect_errno());
     } else {
       $connection->set_charset("utf8");
-      if (strlen($input) > 0 && $result = $connection->query("SELECT * FROM users WHERE  Name LIKE '$input%' AND ID != $id")) {
+      if (strlen($input) > 0 && $result = $connection->query("SELECT * FROM users WHERE  (Name LIKE '$input%' OR Surname LIKE '$input%' OR Nickname LIKE '$input%' OR Email LIKE '$input%') AND ID != $id")) {
         while ($row = $result->fetch_assoc()) {
           array_push($players, Array('id'=>$row['ID'], 'name'=>$row['Name'], 'surname'=>$row['Surname'], 'nick'=>$row['Nickname'], 'email'=>$row['Email']));
         }

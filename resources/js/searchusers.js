@@ -9,22 +9,24 @@ $(document).ready(function() {
       dataType: 'json',
       data: {input: $('#invitePlayer').val()},
       beforeSend: function() {
-        $('#output').html('');
+        $('#foundPlayers').html('');
       }
     })
     .done(function(jsonArray){
       jsonArray.forEach(function(playerObject) {
-        outputContent += '<li>'
+        outputContent += '<div class="player" id="player' + playerObject['id'] + '" onclick="invitePlayerToTeam('+playerObject['id']+')">'
         + playerObject['id']      + ' ' 
         + playerObject['name']    + ' ' 
         + playerObject['surname'] + ' ' 
         + playerObject['nick']    + ' ' 
         + playerObject['email']   + 
-        '</li>';
+        '</div>';
         
       });
-      $('#output').html(outputContent);
+      $('#foundPlayers').show('fast');
+      $('#foundPlayers').html(outputContent);
       outputContent = '';
     });
   });
+
 });

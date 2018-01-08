@@ -146,7 +146,7 @@
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box" id="managerBox" style="display:none;">
+            <div class="box" id="managerBox">
               <div class="box-top">
                 <div class="box-left box-title" id="managerTitle"> 
                 </div>
@@ -173,6 +173,9 @@
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="invitePlayer" aria-describedby="invitePlayerStatus">
                       <span id="invitePlayerHelpBlock" class="help-block"></span>
+                      <div id="foundPlayers">
+                        
+                      </div>
                     </div>
                   </div>
                   <button class="btn my-button" type="submit">Create team</button>

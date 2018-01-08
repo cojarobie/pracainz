@@ -407,6 +407,10 @@ button {
   cursor: pointer;
 }
 
+#managerBox {
+  display: none;
+}
+
 .cancle-button {
   position: absolute;
   right: 25px;
@@ -428,5 +432,28 @@ button {
 
 .input-label {
   font-size: 18px;
+}
+
+#foundPlayers {
+  display: none;
+  color: black;
+  background-color: white;
+  position: absolute;
+  bottom: 38px;
+  left: 187.5;
+  width: 487.5px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.player {
+  padding: 5px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.player:hover {
+  background-color: #eee;
 }
 
