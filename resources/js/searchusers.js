@@ -50,10 +50,22 @@ function invitePlayerToTeam(id, name, surname, nick, email) {
   invitedUsers.push(id);
   console.log(invitedUsers);
   $('#player' + id).hide('fast');
-  $('#output').append('<div class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
+  $('#output').append('<div class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right" onclick="removeInvitation('+id+')"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
   + name    + ' "' 
   + nick    + '" ' 
   + surname + ' ' 
   + email   + '</div></div>'
   );
+}
+
+function removeInvitation(id) {
+  $('#invitedPlayer'+id).hide("slow", function() {
+    $('#invitedPlayer'+id).remove();
+  });
+  var index = invitedUsers.indexOf(id.toString());
+  console.log("removed" + index);
+  if (index > -1) {
+    var removed = invitedUsers.splice(index, 1);
+    console.log(removed);
+  }
 }
