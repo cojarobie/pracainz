@@ -28,5 +28,9 @@ $(document).ready(function() {
       outputContent = '';
     });
   });
+  
+  $('#invitePlayer').focusout(function(){
+    $('#foundPlayers').hide('fast');
+  });
 
 });

@@ -173,9 +173,7 @@
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="invitePlayer" aria-describedby="invitePlayerStatus">
                       <span id="invitePlayerHelpBlock" class="help-block"></span>
-                      <div id="foundPlayers">
-                        
-                      </div>
+                      <div id="foundPlayers"></div>
                     </div>
                   </div>
                   <button class="btn my-button" type="submit">Create team</button>
