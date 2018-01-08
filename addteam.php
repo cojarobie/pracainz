@@ -34,8 +34,10 @@
       $connection->close();
     }
   }
-  catch (Exception $e) {
-    
+  catch (Exception $e) {    
     exit();
   }
+  
+  header('Location: main.php');
+  exit();
 ?>
