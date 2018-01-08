@@ -26,11 +26,15 @@ $(document).ready(function() {
       $('#foundPlayers').show('fast');
       $('#foundPlayers').html(outputContent);
       outputContent = '';
+    }).always(function() {
+      if ($('#invitePlayer').val().length == 0) {
+        $('#foundPlayers').hide('fast');
+      }
     });
   });
-  
-  $('#invitePlayer').focusout(function(){
-    $('#foundPlayers').hide('fast');
-  });
-
 });
+
+function invitePlayerToTeam(id) {
+  $('#player' + id).hide('fast');
+  $('#output').append('<li>' + id + '</li>');
+}
