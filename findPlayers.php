@@ -1,6 +1,9 @@
 <?php
 
+  session_start();
+
   $input = $_POST['input'];
+  $id = $_SESSION['id'];
   $players = Array();
   
   require_once 'connection.php';
@@ -11,15 +14,15 @@
     if ($connection->connect_errno != 0) {
       throw new Exception(mysqli_connect_errno());
     } else {
-      if ($result = $connection->query("SELECT * FROM users WHERE  Name LIKE '$input%'")) {
+      $connection->set_charset("utf8");
+      if (strlen($input) > 0 && $result = $connection->query("SELECT * FROM users WHERE  Name LIKE '$input%' AND ID != $id")) {
         while ($row = $result->fetch_assoc()) {
-          $counter = 0;
-          $player = Array('id'=>$row['ID'], 'name'=>$row['Name'], 'surname'=>$row['Surname'], 'nick'=>$row['Nickname'], 'email'=>$row['Email']);
-          $players[$counter] = $player;
-          $counter++;
+          array_push($players, Array('id'=>$row['ID'], 'name'=>$row['Name'], 'surname'=>$row['Surname'], 'nick'=>$row['Nickname'], 'email'=>$row['Email']));
         }
+        $result->free();
       }
       echo json_encode($players);
+      
       $connection->close();
     }
   } catch(Exception $e) {
