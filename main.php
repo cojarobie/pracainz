@@ -176,12 +176,10 @@
                       <div id="foundPlayers"></div>
                     </div>
                   </div>
-                  <button class="btn my-button" type="submit">Create team</button>
-                  <div>
-                    <ul id="output">
-                      
-                    </ul>
+                  <div id ="output">
+                    
                   </div>
+                  <button class="btn my-button" type="submit">Create team</button>
                 </form>
               </div>
             </div>

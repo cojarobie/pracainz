@@ -4,7 +4,7 @@ var invitedUsers = [];
 $(document).ready(function() {
   var outputContent = '';
   const $box = $('#managerPanel');
-  $('#invitePlayer').keyup(function(){
+  $('#invitePlayer').on('input', function(){
     var jsonStringInivtedUsers = JSON.stringify(invitedUsers);
     $.ajax({
       method: 'POST',
@@ -15,7 +15,7 @@ $(document).ready(function() {
         $('#foundPlayers').html('');
       }
     })
-    .done(function(jsonArray){
+    .done(function(jsonArray) {
       jsonArray.forEach(function(playerObject) {
         outputContent += '<div class="player" id="player' + playerObject['id'] + '" onclick="invitePlayerToTeam(\''
         + playerObject['id']      + '\',\''
@@ -23,16 +23,20 @@ $(document).ready(function() {
         + playerObject['surname'] + '\',\''
         + playerObject['nick']    + '\',\''
         + playerObject['email']   + '\')">'
-        + playerObject['id']      + ' ' 
-        + playerObject['name']    + ' ' 
+        + playerObject['name']    + ' "' 
+        + playerObject['nick']    + '" ' 
         + playerObject['surname'] + ' ' 
-        + playerObject['nick']    + ' ' 
         + playerObject['email']   + 
         '</div>';
         //allUsers.push(playerObject['id']);
       });
-      $('#foundPlayers').show('fast');
-      $('#foundPlayers').html(outputContent);
+      if (jsonArray.length == 0) {
+        $('#foundPlayers').hide('fast');
+      }
+      else {
+        $('#foundPlayers').show('fast');
+        $('#foundPlayers').html(outputContent);
+      }
       outputContent = '';
     }).always(function() {
       if ($('#invitePlayer').val().length == 0) {
@@ -46,10 +50,10 @@ function invitePlayerToTeam(id, name, surname, nick, email) {
   invitedUsers.push(id);
   console.log(invitedUsers);
   $('#player' + id).hide('fast');
-  $('#output').append('<li>'
-  + id      + ' ' 
-  + name    + ' ' 
+  $('#output').append('<div class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
+  + name    + ' "' 
+  + nick    + '" ' 
   + surname + ' ' 
-  + nick    + ' ' 
-  + email   +'</li>');
+  + email   + '</div></div>'
+  );
 }

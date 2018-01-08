@@ -456,3 +456,33 @@ button {
   background-color: #eee;
 }
 
+.mini-cancle-button {
+  background-color: #a00;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  padding-top: 1px;
+}
+
+.mini-cancle-button:hover {
+  background-color: #c00;
+}
+
+.float-right{
+  float:right;
+}
+
+.invited-players {
+  font-size: 18px;
+}
+
+.cancle-buttons {
+  padding-top: 3px;
+  padding-right: 0px;
+}
+
