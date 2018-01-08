@@ -50,12 +50,13 @@ function invitePlayerToTeam(id, name, surname, nick, email) {
   invitedUsers.push(id);
   console.log(invitedUsers);
   $('#player' + id).hide('fast');
-  $('#output').append('<div class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right" onclick="removeInvitation('+id+')"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
+  $('#output').append('<div style="display:none;" class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right" onclick="removeInvitation('+id+')"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
   + name    + ' "' 
   + nick    + '" ' 
   + surname + ' ' 
   + email   + '</div></div>'
   );
+  $('#invitedPlayer'+id).show("slow");
 }
 
 function removeInvitation(id) {
