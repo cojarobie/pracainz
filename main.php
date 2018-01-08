@@ -162,7 +162,7 @@
                       <label class="control-label input-label" for="teamName">Enter team name: </label>
                     </div>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="teamName" aria-describedby="inputTeamNameStatus">
+                      <input type="text" name="teamName" class="form-control" id="teamName" aria-describedby="inputTeamNameStatus">
                       <span id="teamNameHelpBlock" class="help-block"></span>
                     </div>
                   </div>

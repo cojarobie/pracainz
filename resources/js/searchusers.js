@@ -8,7 +8,7 @@ $(document).ready(function() {
     var jsonStringInivtedUsers = JSON.stringify(invitedUsers);
     $.ajax({
       method: 'POST',
-      url: 'findPlayers.php',
+      url: 'findplayers.php',
       dataType: 'json',
       data: {input: $('#invitePlayer').val(), invited: jsonStringInivtedUsers},
       beforeSend: function() {
@@ -59,7 +59,7 @@ function invitePlayerToTeam(id, name, surname, nick, email) {
   }
   console.log("Before: " + foundUsers);
   $('#player' + id).hide('fast');
-  $('#output').append('<div style="display:none;" class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right" onclick="removeInvitation('+id+')"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
+  $('#output').append('<div style="display:none;" class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right" onclick="removeInvitation('+id+')"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers[]" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
   + name    + ' "' 
   + nick    + '" ' 
   + surname + ' ' 
