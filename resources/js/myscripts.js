@@ -39,5 +39,22 @@ function buttonsYesNo(id, yesFunction, noFunction) {
 }
 
 function manageTeam(id) {
-  
+  var outputContent = '';
+  $(document).ready(function() {
+    $('#managerPanel').html('Team memebers');
+    $.ajax({
+      method: 'POST',
+      url: 'findteammembers.php',
+      dataType: 'json',
+      data: {teamId: id}
+    })
+    .done(function(jsonArray) {
+      console.log("Zrobione");
+      jsonArray.forEach(function (teamMember) {
+        outputContent += '<div>' + teamMember['id'] + ' ' + teamMember['name'] + ' "' + teamMember['nick'] + '" ' + teamMember['surname'] + ' ' + teamMember['email'] + ' ' + teamMember['status'] + '</div>';
+      });
+      $('#managerPanel').append(outputContent);
+    });
+      
+  });
 }

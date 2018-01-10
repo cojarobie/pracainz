@@ -12,7 +12,6 @@ $( document ).ready(function() {
   
   $('.manage-team').click(function() {
     managerBoxSetUp();
-    $('#managerPanel').html('Manager');
     $('#managerTitle').html('Team Manager');
   });
   
