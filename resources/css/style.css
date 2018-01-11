@@ -235,6 +235,7 @@ img {
   font-weight: inherit;
   font-size: inherit;
   border-width: 0px;
+  overflow: hidden;
 }
 
 .manage-team:hover, .manage-league:hover {
@@ -325,6 +326,7 @@ img {
   font-weight: inherit;
   font-size: inherit;
   border-width: 0px;
+  overflow: hidden;
 }
 
 .details:hover {
@@ -345,6 +347,7 @@ img {
   padding: 3px 15px;
   text-align: center;
   border-width: 0px;
+  overflow: hidden;
 }
 
 .add-button:hover {
