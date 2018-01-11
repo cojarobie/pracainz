@@ -163,7 +163,7 @@
                     </div>
                     <div class="col-sm-9">
                       <input type="text" name="teamName" class="form-control" id="teamName" aria-describedby="inputTeamNameStatus">
-                      <span id="teamNameHelpBlock" class="help-block"></span>
+                      <div id="teamNameHelpBlock" class="help-block"></div>
                     </div>
                   </div>
                   <div class="form-group has-feedback row" id="playerNameGroup">

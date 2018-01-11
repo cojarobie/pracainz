@@ -24,20 +24,14 @@ $( document ).ready(function() {
     var content = $('#teamName').val();
     var length = content.length;
     if (length > 30 || length < 2) {
-      $('#teamNameGroup').removeClass('has-success');
-      $('#teamNameGroup').addClass('has-danger');
-      $('#teamNameHelpBlock').html('Team Name must be contain from 2 to 30 characters');
-      $('#teamNameHelpBlock').show('slow');
+      addHasDanger('Team Name must be contain from 2 to 30 characters');
       error_team = true;
     } else if (pattern.test(content)) {
-      $('#teamNameGroup').removeClass('has-success');
-      $('#teamNameGroup').addClass('has-danger');
-      $('#teamNameHelpBlock').html('Team name can contain only letters and numbers');
+      addHasDanger('Team name can contain only letters and numbers');
       error_team = true;
     } else if(nameAlreadyExists(content)) {
-      $('#teamNameGroup').removeClass('has-success');
-      $('#teamNameGroup').addClass('has-danger');
-      $('#teamNameHelpBlock').html('There is already a team with that name');
+      addHasDanger('There is already a team with that name');
+      error_team = true;
     } else {
       $('#teamNameGroup').removeClass('has-danger');
       $('#teamNameGroup').addClass('has-success');
@@ -55,12 +49,20 @@ $( document ).ready(function() {
       method: 'POST',
       url: 'ajax/checkteamname.php',
       dataType: 'json',
-      data: {teamName: content}
+      data: {teamName: content},
+      async: false
     }).done(function(result) {
       teamExists = result['nameExists'];
     });
     
     return teamExists;
+  }
+  
+  function addHasDanger(message) {
+    $('#teamNameGroup').removeClass('has-success');
+    $('#teamNameGroup').addClass('has-danger');
+    $('#teamNameHelpBlock').html(message);
+    $('#teamNameHelpBlock').show("slow");
   }
   
 });
