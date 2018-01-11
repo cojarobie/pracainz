@@ -1,6 +1,11 @@
 <?php
 
   session_start();
+  
+  if (!isset($_SESSION['loggedin'])) {
+    header ('Location: ../index.php');
+    exit();
+  }
 
   $teamName = $_POST['teamName'];
   $exists = false;

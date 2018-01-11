@@ -1,6 +1,11 @@
 <?php
 
   session_start();
+  
+  if (!isset($_SESSION['loggedin'])) {
+    header ('Location: ../index.php');
+    exit();
+  }
 
   $input = strtolower($_POST['input']);
   $invited = json_decode($_POST['invited']);
