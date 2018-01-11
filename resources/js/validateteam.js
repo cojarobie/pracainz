@@ -34,13 +34,33 @@ $( document ).ready(function() {
       $('#teamNameGroup').addClass('has-danger');
       $('#teamNameHelpBlock').html('Team name can contain only letters and numbers');
       error_team = true;
+    } else if(nameAlreadyExists(content)) {
+      $('#teamNameGroup').removeClass('has-success');
+      $('#teamNameGroup').addClass('has-danger');
+      $('#teamNameHelpBlock').html('There is already a team with that name');
     } else {
       $('#teamNameGroup').removeClass('has-danger');
       $('#teamNameGroup').addClass('has-success');
       $('#teamNameHelpBlock').hide('slow', function() {
         $('#teamNameHelpBlock').html('');
       });
-    }   
+    }
+  }
+  
+  function nameAlreadyExists(content) {
+    
+    var teamExists = false;
+    
+    $.ajax({
+      method: 'POST',
+      url: 'ajax/checkteamname.php',
+      dataType: 'json',
+      data: {teamName: content}
+    }).done(function(result) {
+      teamExists = result['nameExists'];
+    });
+    
+    return teamExists;
   }
   
 });
