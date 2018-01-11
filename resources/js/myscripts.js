@@ -44,7 +44,7 @@ function manageTeam(id) {
     $('#managerPanel').html('Team memebers');
     $.ajax({
       method: 'POST',
-      url: 'findteammembers.php',
+      url: 'ajax/findteammembers.php',
       dataType: 'json',
       data: {teamId: id}
     })

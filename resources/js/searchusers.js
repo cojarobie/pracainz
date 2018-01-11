@@ -8,7 +8,7 @@ $(document).ready(function() {
     var jsonStringInivtedUsers = JSON.stringify(invitedUsers);
     $.ajax({
       method: 'POST',
-      url: 'findplayers.php',
+      url: 'ajax/findplayers.php',
       dataType: 'json',
       data: {input: $('#invitePlayer').val(), invited: jsonStringInivtedUsers},
       beforeSend: function() {
