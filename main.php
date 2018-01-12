@@ -142,24 +142,25 @@
           </div>
         </div>
         
-        <div class="row" id="managerRow">
+        <div class="row" id="addTeamRow">
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box" id="managerBox">
+            <div class="box" id="addTeamBox">
               <div class="box-top">
-                <div class="box-left box-title" id="managerTitle"> 
+                <div class="box-left box-title" id="addTeamTitle"> 
                 </div>
                 <div class="clear-both"></div>
                 <div class="cancle-button">
                   <i class="icon-cancel"></i>
                 </div>
               </div>
-              <div class="box-bottom" id="managerPanel">
-                <form class="form-horizontal" id="teamForm" action="addteam.php" method="post">
+              <div class="box-bottom" id="addTeamPanel">
+                <form class="form-horizontal" id="addTeamForm" action="addteam.php" method="post">
                   <div class="form-group has-feedback row" id="teamNameGroup">
                     <div class="col-sm-3">
-                      <label class="control-label input-label" for="teamName">Enter team name: </label>
+                      <label class="control-label input-label" for="teamName">Enter team name:
+                      </label>
                     </div>
                     <div class="col-sm-9">
                       <input type="text" name="teamName" class="form-control" id="teamName" aria-describedby="inputTeamNameStatus">
