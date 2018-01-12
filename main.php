@@ -148,10 +148,11 @@
           <div class="col-lg-8">
             <div class="box" id="addTeamBox">
               <div class="box-top">
-                <div class="box-left box-title" id="addTeamTitle"> 
+                <div class="box-left box-title" id="addTeamTitle">
+                  Add Team
                 </div>
                 <div class="clear-both"></div>
-                <div class="cancle-button">
+                <div class="close-button" id="closeAddTeam">
                   <i class="icon-cancel"></i>
                 </div>
               </div>
@@ -178,7 +179,7 @@
                       </div>
                     </div>
                   </div>
-                  <div id="output"></div>
+                  <div id="invitedPlayersList"></div>
                   <button class="btn my-button" type="submit">Create team</button>
                 </form>
               </div>
@@ -187,6 +188,29 @@
           <div class="col-lg-2">
           </div>
         </div>
+        
+        <div class="row" id="manageTeamRow">
+          <div class="col-lg-2">
+          </div>
+          <div class="col-lg-8">
+            <div class="box" id="manageTeamBox">
+              <div class="box-top">
+                <div class="box-left box-title" id="manageTeamTitle">
+                  Manage Team
+                </div>
+                <div class="clear-both"></div>
+                <div class="close-button" id="closeManageTeam">
+                  <i class="icon-cancel"></i>
+                </div>
+              </div>
+              <div class="box-bottom" id="manageTeamPanel">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+          </div>            
+        </div>
+        
       </div>
     </div>
   

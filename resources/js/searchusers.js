@@ -3,7 +3,6 @@ var invitedUsers = [];
 
 $(document).ready(function() {
   var outputContent = '';
-  const $box = $('#managerPanel');
   $('#invitePlayer').on('input', function(){
     var jsonStringInivtedUsers = JSON.stringify(invitedUsers);
     $.ajax({
@@ -59,7 +58,7 @@ function invitePlayerToTeam(id, name, surname, nick, email) {
   }
   console.log("Before: " + foundUsers);
   $('#player' + id).hide('fast');
-  $('#output').append('<div style="display:none;" class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right" onclick="removeInvitation('+id+')"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers[]" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
+  $('#invitedPlayersList').append('<div style="display:none;" class="row" id="invitedPlayer'+id+'"><div class="col-sm-3 cancle-buttons"><div class="mini-cancle-button float-right" onclick="removeInvitation('+id+')"><i class="icon-cancel"></i></div></div><div class="col-sm-9"><input type="hidden" name="invitedPlayers[]" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'"><div class="invited-players">' 
   + name    + ' "' 
   + nick    + '" ' 
   + surname + ' ' 

@@ -41,7 +41,6 @@ function buttonsYesNo(id, yesFunction, noFunction) {
 function manageTeam(id) {
   var outputContent = '';
   $(document).ready(function() {
-    $('#managerPanel').html('Team memebers');
     $.ajax({
       method: 'POST',
       url: 'ajax/findteammembers.php',
@@ -49,8 +48,9 @@ function manageTeam(id) {
       data: {teamId: id}
     })
     .done(function(jsonArray) {
-      console.log("Zrobione");
+      $('#manageTeamPanel').html('');
       jsonArray.forEach(function (teamMember) {
+        console.log(teamMember);
         outputContent += 
         '<div class="row" id="invitedPlayer'+teamMember['id']+'">' +
           '<div class="col-sm-3 cancle-buttons">' + 
@@ -68,7 +68,7 @@ function manageTeam(id) {
         + teamMember['status'] 
         + '</div></div></div>';
       });
-      $('#managerPanel').append(outputContent);
+      $('#manageTeamPanel').append(outputContent);
     });
       
   });

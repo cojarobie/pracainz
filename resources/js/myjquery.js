@@ -2,25 +2,25 @@ $( document ).ready(function() {
   $.scrollTo(0);
   
   $('#addTeam').click(function() {
-    managerBoxSetUp();
-    $('#managerTitle').html('Add Team');
-    //$('#managerPanel').html('');
+    $('#addTeamBox').show("slow", function() {
+      $.scrollTo($('#addTeamRow'), 500);
+    });
+  });
+  
+  $('#closeAddTeam').click(function() {
+    $.scrollTo($('#contentRow'), 500);
+    $('#addTeamBox').hide("slow");
   });
   
   $('.manage-team').click(function() {
-    managerBoxSetUp();
-    $('#managerTitle').html('Team Manager');
-  });
-  
-  $('.cancle-button').click(function() {
-    $.scrollTo($('#contentRow'), 500);
-    $('#managerBox').hide("slow");
-  });
-  
-  function managerBoxSetUp() {
-    $('#managerBox').show("slow", function() {
-      $.scrollTo($('#managerRow'), 500);
+    $('#manageTeamBox').show("slow", function() {
+      $.scrollTo($('#manageTeamRow'), 500);
     });
-  }
+  });
+  
+  $('#closeManageTeam').click(function() {
+    $.scrollTo($('#contentRow'), 500);
+    $('#manageTeamBox').hide("slow");
+  })
 }
 );
