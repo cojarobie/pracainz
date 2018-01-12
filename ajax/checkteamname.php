@@ -2,8 +2,8 @@
 
   session_start();
   
-  if (!isset($_SESSION['loggedin'])) {
-    header ('Location: ../index.php');
+  if (!isset($_POST['teamName'])) {
+    header('Location: index.php');
     exit();
   }
 

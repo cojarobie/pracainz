@@ -2,7 +2,7 @@
 
   session_start();
   
-  if (!isset($_SESSION['loggedin'])) {
+  if (!isset($_POST['input'])) {
     header ('Location: ../index.php');
     exit();
   }
