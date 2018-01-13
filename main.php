@@ -53,7 +53,7 @@
                   
                 </div>
                 <div class="user-settings">
-                  <i onclick="settings()" class="icon-cog"></i>
+                  <i onclick="settings()" class="icon-cog"></i></li>
                   <i onclick="logout()" class="icon-logout"></i>         
                 </div>
                 <div class="clear-both"></div>
