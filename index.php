@@ -46,7 +46,11 @@
         <?php
           if (isset($_SESSION['registration-result'])) {
             echo '<div class="row">';
+            echo '<div class="col-lg-1"></div>';
+            echo '<div class="col-lg-10">';
             echo $_SESSION['registration-result'];
+            echo '</div>';
+            echo '<div class="col-lg-1"></div>';
             echo '</div>';
           }         
         ?>

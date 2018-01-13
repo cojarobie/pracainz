@@ -118,10 +118,9 @@ img {
 
 .registration-success, .server-error {
   font-size: 1rem;
-  width: 100%;
   text-align: center;
   padding: 10px 5px;
-  margin: 20px 15px 0 15px;
+  margin: 20px 0px;
   background: #fff;
   border-radius: 10px;
   border-size: 3px;
