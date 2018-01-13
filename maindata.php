@@ -10,7 +10,6 @@
   $surname = $_SESSION['surname'];
   $nickname = $_SESSION['nickname'];
   $email = $_SESSION['email'];
-  $birth_date = $_SESSION['birth_date'];
   $avatar = $_SESSION['avatar'];
   $description = $_SESSION['description'];
   

@@ -39,7 +39,6 @@
             $_SESSION['surname'] = $row['Surname'];
             $_SESSION['nickname'] = $row['Nickname'];
             $_SESSION['email'] = $row['Email'];
-            $_SESSION['birth_date'] = $row['Birth_Date'];
             $_SESSION['avatar'] = $row['Avatar'];
             $_SESSION['description'] = $row['Description'];
             $result->free_result();

@@ -196,7 +196,12 @@ img {
 }
 
 .menu-buttons {
+  width: 100%;
+  text-align: right;
+  margin: 0px;
+}
 
+.float-right {
   float: right;
 }
 
@@ -337,15 +342,6 @@ img {
   background-color: #4ad5eb;
 }
 
-.my-button {
-  margin: 10px 0;
-  padding: 0px 5px;
-  text-decoration: none;
-  line-height: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-}
-
 .add-button {
   background-color: #0a0;
   padding: 3px 15px;
@@ -376,15 +372,35 @@ img {
 
 .user-image {
   float: left;
-  width: 33%;
+  text-align: right;
+  width: 30%;
+}
+
+.user-image img {
+  width: 100px;
+  height: 100px;
 }
 
 .user-data {
   float: left;
-  width: 34%;
+  width: 50%;
   font-size: 1rem;
   padding-left: 20px;
   padding-right: 10px;
+}
+
+.user-name {
+  text-align: left;
+}
+
+.user-email {
+  text-align: left;
+  font-size: 16px;
+}
+
+.user-desription {
+  text-align: left;
+  font-size: 16px;
 }
 
 .data-type {
@@ -403,7 +419,17 @@ img {
 
 .user-settings {
   float: left;
-  width: 33%;
+  width: 20%;
+  text-align: right;
+}
+
+.user-settings i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.user-setting i:hover {
+  color: #ddd;
 }
 
 .margin-10 {

@@ -29,45 +29,35 @@
           <div class="col-lg-8">
             <div class="box">
               <div class="main-box">
-              <div class="user-image">
-                <img src="
-                <?php
-                if ($avatar == null) {
-                  echo 'resources/img/user_large.png';
-                } else {
-                  echo $avatar;
-                }
-                ?>
-                " alt="user-image" class="img-thumbnail">
-              </div>
-              <div class="user-data">
-                <div class="data-type">First name:</div>
-                <div class="data"><?php echo $name; ?></div>
-                <div class="clear-both"></div>
-                <div class="data-type">Last name:</div>
-                <div class="data"><?php echo $surname; ?></div>
-                <div class="clear-both"></div>
-                <div class="data-type">Nickname:</div>
-                <div class="data"><?php echo $nickname; ?></div>
-                <div class="clear-both"></div>
-                <div class="data-type">Birth date:</div>
-                <div class="data"><?php echo $birth_date; ?></div>
-                <div class="clear-both"></div>
-                <div class="data-type">Description:</div>
-                <div class="data"><?php echo $description; ?></div>
-                <div class="clear-both"></div>
-              </div>
-              <div class="user-settings">
-                <div class="menu-buttons">
-                  <button type="button" class="btn btn-default margin-10 my-button" onclick="settings()">Settings<i class="icon-cog"></i></button>
+                <div class="user-image">
+                  <img src="<?php echo $avatar; ?>" alt="user-image" class="img-thumbnail">
                 </div>
-                <div class="menu-buttons">
-                  <button type="button" class="btn btn-default margin-10 my-button" id="logoutButton" onclick="logout()">Log out<i class="icon-logout"></i></button>
+                <div class="user-data">
+                  <div class="user-name box-title">
+                  <?php
+                     echo "$name \"$nickname\" $surname";
+                  ?>
+                  </div>
+                  
+                  <div class="user-email">
+                  <?php
+                    echo "$email";
+                  ?>
+                  </div>
+                  
+                  <div class="user-description">
+                  <?php
+                    echo "$description";
+                  ?>
+                  </div>
+                  
                 </div>
-                <div style="clear-both"></div>
+                <div class="user-settings">
+                  <i onclick="settings()" class="icon-cog"></i>
+                  <i onclick="logout()" class="icon-logout"></i>         
+                </div>
+                <div class="clear-both"></div>
               </div>
-              <div class="clear-both"></div>
-            </div>
             </div>
           </div>
           <div class="col-lg-2">
