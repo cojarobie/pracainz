@@ -3,7 +3,6 @@ CREATE TABLE Users (
 	Name VARCHAR(50) NOT NULL,
 	Surname VARCHAR(50) NOT NULL,
 	Nickname VARCHAR(50),
-	Birth_Date	DATE,
 	Email VARCHAR(50) NOT NULL,
 	Password_Hash VARCHAR(255) NOT NULL,
 	Avatar VARCHAR(100),

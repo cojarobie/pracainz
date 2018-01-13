@@ -195,6 +195,11 @@ img {
   margin: auto;
 }
 
+.menu-buttons {
+
+  float: right;
+}
+
 .clear-both {
   clear: both;
 }

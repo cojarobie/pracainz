@@ -58,9 +58,13 @@
                 <div class="clear-both"></div>
               </div>
               <div class="user-settings">
-                <button type="button" class="btn btn-default margin-10 my-button" onclick="settings()">Settings<i class="icon-cog"></i></button>
-                <button type="button" class="btn btn-default margin-10 my-button" id="logoutButton" onclick="logout()">
-                Log out<i class="icon-logout"></i></button>
+                <div class="menu-buttons">
+                  <button type="button" class="btn btn-default margin-10 my-button" onclick="settings()">Settings<i class="icon-cog"></i></button>
+                </div>
+                <div class="menu-buttons">
+                  <button type="button" class="btn btn-default margin-10 my-button" id="logoutButton" onclick="logout()">Log out<i class="icon-logout"></i></button>
+                </div>
+                <div style="clear-both"></div>
               </div>
               <div class="clear-both"></div>
             </div>
