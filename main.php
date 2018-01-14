@@ -161,9 +161,7 @@
                           <tr>
                             <td class="user-settings-property">Name:</td>
                             <td class="user-settings-data" id="settingsName">
-                              <div id="name">
-                                <?php echo $name ?> 
-                              </div>
+                              <div id="name"><?php echo $name ?></div>
                             </td>
                             <td class="user-settings-button" id="changeNameButton">
                               <button type="button" class="btn btn-warning change-button" id="buttonName">Change <i class="icon-cog"></i> </button>
@@ -172,9 +170,8 @@
                           <tr>
                             <td class="user-settings-property">Surname:</td>
                             <td class="user-settings-data" id="settingsSurname">
-                              <div id="surname">
-                                <?php echo $surname ?> </td>
-                              </div>
+                              <div id="surname"><?php echo $surname ?></div>
+                            </td>
                             <td class="user-settings-button" id="changeSurnameButton">
                               <button type="button" class="btn btn-warning change-button" id="buttonSurname">Change <i class="icon-cog"></i> </button>
                             </td>
@@ -182,9 +179,8 @@
                           <tr>
                             <td class="user-settings-property">Nickname:</td>
                             <td class="user-settings-data" id="settingsNickname">
-                              <div id="nickname">
-                                <?php echo $nickname ?> </td>
-                              </div>
+                              <div id="nickname"><?php echo $nickname ?></div>
+                            </td>
                             <td class="user-settings-button" id="changeNicknameButton">
                               <button type="button" class="btn btn-warning change-button" id="buttonNickname">Change <i class="icon-cog"></i> </button>
                             </td>
@@ -192,9 +188,8 @@
                           <tr>
                             <td class="user-settings-property">Email:</td>
                             <td class="user-settings-data" id="settingsEmail">
-                              <div id="email">  
-                                <?php echo $email ?> </td>
-                              </div>
+                              <div id="email"><?php echo $email ?></div>
+                            </td>
                             <td class="user-settings-button" id="changeEmailButton">
                               <button type="button" class="btn btn-warning change-button" id="buttonEmail">Change <i class="icon-cog"></i> </button>
                             </td>
@@ -202,9 +197,7 @@
                           <tr>
                             <td class="user-settings-property">Passowrd:</td>
                             <td class="user-settings-data" id="settingsPassword">
-                              <div id="password">
-                                **********
-                              </div>
+                              <div id="password">**********</div>
                             </td>
                             <td class="user-settings-button" id="changePasswordButton">
                               <button type="button" class="btn btn-warning change-button" id="buttonPassword">Change <i class="icon-cog"></i> </button>
@@ -213,9 +206,7 @@
                           <tr>
                             <td class="user-settings-property">Description:</td>
                             <td class="user-settings-data" id="settingsDescription">
-                              <div id="description">
-                                <?php echo $description ?> 
-                              </div>
+                              <div id="description"><?php echo $description ?></div>
                             </td>
                             <td class="user-settings-button" id="changeNameButton">
                               <button type="button" class="btn btn-warning change-button" id="buttonDescription">Change <i class="icon-cog"></i> </button>
