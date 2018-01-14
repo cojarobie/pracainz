@@ -27,6 +27,17 @@ $( document ).ready(function() {
     $('#addTeamBox').hide("slow");
   });
   
+  $('#addLeague').click(function() {
+    $('#addLeagueBox').show("slow", function(){
+      $.scrollTo($('#addLeagueRow'), 500);
+    });
+  });
+  
+  $('#closeAddLeague').click(function() {
+    $.scrollTo($('#contentRow'), 500);
+    $('#addLeagueBox').hide("slow");
+  });
+  
   $('.manage-team').click(function() {
     $('#manageTeamBox').show("slow", function() {
       $.scrollTo($('#manageTeamRow'), 500);

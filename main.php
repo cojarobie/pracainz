@@ -110,7 +110,7 @@
                     Your leagues
                 </div>
                 <div class="box-right">
-                  <button type="button" class="btn btn-success add-button">
+                  <button type="button" class="btn btn-success add-button" id="addLeague">
                   Add<i class="icon-plus-circled"></i></button>
                 </div>
                 <div class="clear-both"></div>
