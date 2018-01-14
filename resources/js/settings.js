@@ -4,7 +4,7 @@ $(document).ready(function() {
     
     var contentName = $('#name').html();
     
-    $('#buttonName').hide("slow", function() {
+    $('#buttonNameWrapper').hide("slow", function() {
       $('#nameYesNo').html(
         '<label class="settings-label" style="text-align: center;">Confirm</label>'+
         '<div class="accept-container">'+
@@ -19,14 +19,33 @@ $(document).ready(function() {
 
       $('#noNameSettings').click(function() {
         $('#nameYesNo').hide('slow', function() {
-          $('#buttonName').show("slow");
+          $('#buttonNameWrapper').show("slow");
         });
         
         $('#name').hide("slow", function() {
           $('#name').html(contentName);
-          $('#name').show();
+          $('#name').show("slow");
         });  
       });
+      
+      $('#yesNameSettings').click(function() {
+        $('#nameYesNo').hide('slow', function() {
+          $('#buttonNameWrapper').show("slow");
+        });
+        var newName = $('#changeNameInput').val();
+        if (newName != contentName) {
+          $('#name').hide("slow", function() {
+            $('#name').html(newName);
+            $('#name').show("slow");
+          }); 
+        } else {
+          $('#name').hide("slow", function() {
+            $('#name').html(contentName);
+            $('#name').show("slow");
+          });
+        }
+      });
+      
     });
     $('#name').hide("slow", function(){
       $('#name').html(

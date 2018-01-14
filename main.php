@@ -164,7 +164,9 @@
                               <div id="name"><?php echo $name ?></div>
                             </td>
                             <td class="user-settings-button" id="changeNameButton">
-                              <button type="button" class="btn btn-warning change-button" id="buttonName">Change <i class="icon-cog"></i> </button>
+                              <div id="buttonNameWrapper">
+                                <button type="button" class="btn btn-warning change-button" id="buttonName">Change <i class="icon-cog"></i> </button>
+                              </div>
                               <div id="nameYesNo"></div>
                             </td>
                           </tr>
