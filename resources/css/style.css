@@ -355,6 +355,23 @@ img {
   background-color: #0c0;
 }
 
+.change-button {
+  width: 90%;
+  background-color: #ec971f;
+  margin: 10px 0;
+  padding: 0px 5px;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border-width: 0px;
+  overflow: hidden;
+}
+
+.change-button:hover {
+  background-color: #f0ad4e;
+}
+
 .box-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -523,3 +540,35 @@ button {
   padding-right: 0px;
 }
 
+.user-settings-table {
+  width: 100%;
+}
+
+.user-settings-property {
+  font-size: 1rem;
+  width: 20%;
+}
+
+.user-settings-data {
+  font-size: 1rem;
+  padding-right: 10px;
+  width: 60%;
+}
+
+.user-settings-button {
+  width: 20%;
+}
+
+.user-settings-data tr {
+  border-bottom: 1px dashed white;
+}
+
+.user-settings-table tr {
+  border-bottom: 1px dashed white;
+  vertical-align: center;
+  height: 40px;
+}
+
+.user-settings-table tr:first-child {
+  border-top: 1px dashed white;
+}

@@ -1,6 +1,21 @@
 $( document ).ready(function() {
   $.scrollTo(0);
   
+  $('#logout').click(function() {
+    window.location.href="logout.php";
+  });
+  
+  $('#settings').click(function() {
+    $('#userSettingsBox').show("slow", function() {
+      $.scrollTo($('#userSettingsRow'), 500);
+    });
+  });
+  
+  $('#closeUserSettings').click(function() {
+    $.scrollTo($('#contentRow'));
+    $('#userSettingsBox').hide("slow");
+  })
+  
   $('#addTeam').click(function() {
     $('#addTeamBox').show("slow", function() {
       $.scrollTo($('#addTeamRow'), 500);

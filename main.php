@@ -53,8 +53,8 @@
                   
                 </div>
                 <div class="user-settings">
-                  <i onclick="settings()" class="icon-cog"></i></li>
-                  <i onclick="logout()" class="icon-logout"></i>         
+                  <i id="settings" class="icon-cog"></i></li>
+                  <i id="logout" class="icon-logout"></i>         
                 </div>
                 <div class="clear-both"></div>
               </div>
@@ -140,7 +140,7 @@
           <div class="col-lg-2">
           </div>
             <div class="col-lg-8">
-              <div class="box" id="userSettingBox">
+              <div class="box" id="userSettingsBox">
                 <div class="box-top">
                   <div class="box-left box-title" id="userSettingsTitle">
                     User Settings
@@ -151,7 +151,83 @@
                   </div>
                 </div>
                 <div class="box-bottom" id="userSettingsPanel">
-                  
+                  <div class="row single-user-data">
+                    <div class="col-lg-1">
+                     
+                    </div>
+                    <div class="col-lg-10">
+                      <form action="usersettings.php" method="post">
+                        <table class="user-settings-table">
+                          <tr>
+                            <td class="user-settings-property">Name:</td>
+                            <td class="user-settings-data" id="settingsName">
+                              <div id="name">
+                                <?php echo $name ?> 
+                              </div>
+                            </td>
+                            <td class="user-settings-button" id="changeNameButton">
+                              <button type="button" class="btn btn-warning change-button" id="buttonName">Change <i class="icon-cog"></i> </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="user-settings-property">Surname:</td>
+                            <td class="user-settings-data" id="settingsSurname">
+                              <div id="surname">
+                                <?php echo $surname ?> </td>
+                              </div>
+                            <td class="user-settings-button" id="changeSurnameButton">
+                              <button type="button" class="btn btn-warning change-button" id="buttonSurname">Change <i class="icon-cog"></i> </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="user-settings-property">Nickname:</td>
+                            <td class="user-settings-data" id="settingsNickname">
+                              <div id="nickname">
+                                <?php echo $nickname ?> </td>
+                              </div>
+                            <td class="user-settings-button" id="changeNicknameButton">
+                              <button type="button" class="btn btn-warning change-button" id="buttonNickname">Change <i class="icon-cog"></i> </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="user-settings-property">Email:</td>
+                            <td class="user-settings-data" id="settingsEmail">
+                              <div id="email">  
+                                <?php echo $email ?> </td>
+                              </div>
+                            <td class="user-settings-button" id="changeEmailButton">
+                              <button type="button" class="btn btn-warning change-button" id="buttonEmail">Change <i class="icon-cog"></i> </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="user-settings-property">Passowrd:</td>
+                            <td class="user-settings-data" id="settingsPassword">
+                              <div id="password">
+                                **********
+                              </div>
+                            </td>
+                            <td class="user-settings-button" id="changePasswordButton">
+                              <button type="button" class="btn btn-warning change-button" id="buttonPassword">Change <i class="icon-cog"></i> </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="user-settings-property">Description:</td>
+                            <td class="user-settings-data" id="settingsDescription">
+                              <div id="description">
+                                <?php echo $description ?> 
+                              </div>
+                            </td>
+                            <td class="user-settings-button" id="changeNameButton">
+                              <button type="button" class="btn btn-warning change-button" id="buttonDescription">Change <i class="icon-cog"></i> </button>
+                            </td>
+                          </tr>
+                        </table>
+                      </form>
+                    </div>
+                    <div class="col-lg-1">
+                      
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>  
@@ -243,6 +319,7 @@
     <script src="resources/js/myscripts.js"></script>
     <script src="resources/js/validateteam.js"></script>
     <script src="resources/js/searchusers.js"></script>
+    <script src="resources/js/settings.js"></script>
 	
   </body>
 </html>
