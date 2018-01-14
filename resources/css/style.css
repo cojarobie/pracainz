@@ -504,7 +504,7 @@ button {
   display: none;
 }
 
-#foundPlayers {
+#foundPlayers, #foundTeams {
   display: none;
   color: black;
   background-color: white;

@@ -295,6 +295,32 @@
                 </div>
               </div>
               <div class="box-bottom" id="addLeaguePanel">
+                <form class="form-horizontal" id="addLeagueForm" action="addteam.php" method="post">
+                  <div class="form-group has-feedback row" id="leagueNameGroup">
+                    <div class="col-sm-3">
+                      <label class="control-label input-label" for="teamName">League name:
+                      </label>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="text" name="leagueName" class="form-control" id="leagueName" aria-describedby="inputTeamLeagueStatus">
+                      <div id="teamleagueHelpBlock" class="help-block"></div>
+                    </div>
+                  </div>
+                  <div class="form-group has-feedback row" id="addTeamToLeagueNameGroup">
+                    <div class="col-sm-3">
+                      <label class="control-label input-label" for="invitePlayer">Invite team: </label>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inviteTeam" aria-describedby="inviteTeamStatus">
+                      <span id="inviteTeamHelpBlock" class="help-block"></span>
+                      <div id="foundTeams">
+                        Tutaj
+                      </div>
+                    </div>
+                  </div>
+                  <div id="invitedTeamsList"></div>
+                  <button class="btn my-button" type="submit">Create league</button>
+                </form>
               </div>
             </div>
           </div>
@@ -338,6 +364,7 @@
     <script src="resources/js/myscripts.js"></script>
     <script src="resources/js/validateteam.js"></script>
     <script src="resources/js/searchusers.js"></script>
+    <script src="resources/js/searchteams.js"></script>
     <script src="resources/js/settings.js"></script>
 	
   </body>
