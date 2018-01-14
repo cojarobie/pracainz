@@ -278,7 +278,7 @@
           </div>
           <div class="col-lg-2">
           </div>
-        </div>
+        </div>       
         
         <div class="row" id="manageTeamRow">
           <div class="col-lg-2">

@@ -473,7 +473,7 @@ button {
   cursor: pointer;
 }
 
-#addTeamBox, #manageTeamBox {
+#addTeamBox, #manageTeamBox, #userSettingsBox {
   display: none;
 }
 
