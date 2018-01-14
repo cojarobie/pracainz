@@ -28,9 +28,9 @@
 		$_SESSION['e-form-first-name'] = "First name can contain only alphanumeric characters"; 
 	}
   
-  if ((strlen($firstName) < 2) || (strlen($firstName) > 50)) {
+  if ((strlen($firstName) < 2) || (strlen($firstName) > 30)) {
 		$correctData = false;
-		$_SESSION['e-form-first-name'] = "First name must contain from 2 to 50 characters";
+		$_SESSION['e-form-first-name'] = "First name must contain from 2 to 30 characters";
 	}
 	
 	//***Last Name***	
@@ -39,9 +39,9 @@
 		$_SESSION['e-form-last-name'] = "Last name can contain only alphanumeric characters"; 
 	}
   
-  if ((strlen($lastName) < 2) || (strlen($lastName) > 50)) {
+  if ((strlen($lastName) < 2) || (strlen($lastName) > 30)) {
 		$correctData = false;
-		$_SESSION['e-form-last-name'] = "Last name must contain from 2 to 50 characters";
+		$_SESSION['e-form-last-name'] = "Last name must contain from 2 to 30 characters";
 	}
 	
 	//***Nickname***	

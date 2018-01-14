@@ -1,5 +1,7 @@
 $(document).ready(function() {
   
+  var pattern = new RegExp(/[\'"^$%&*()}{@#~?><>,.;:|=_+¬]/);
+  
   $('#buttonName').click(function(){
     
     var contentName = $('#name').html();
@@ -25,7 +27,7 @@ $(document).ready(function() {
         $('#name').hide("slow", function() {
           $('#name').html(contentName);
           $('#name').show("slow");
-        });  
+        });
       });
       
       $('#yesNameSettings').click(function() {
@@ -33,10 +35,23 @@ $(document).ready(function() {
           $('#buttonNameWrapper').show("slow");
         });
         var newName = $('#changeNameInput').val();
-        if (newName != contentName) {
+        if (newName != contentName) {          
           $('#name').hide("slow", function() {
-            $('#name').html(newName);
+            var validation = validate(newName, "First name");
+            if (validation != null) {
+              $('#nameInfo').addClass('settings-error');
+              $('#nameInfo').removeClass('settings-success');
+              $('#name').html(newName);
+              $('#nameInfo').html(validation);
+            }
+            else {
+              $('#name').html(newName);
+              $('#nameInfo').removeClass('settings-error');
+              $('#nameInfo').addClass('settings-success');
+              $('#nameInfo').html("Name was successfuly changed");
+            }
             $('#name').show("slow");
+            $('#nameInfo').show("slow");
           }); 
         } else {
           $('#name').hide("slow", function() {
@@ -47,6 +62,8 @@ $(document).ready(function() {
       });
       
     });
+    
+    $('#nameInfo').hide("slow");
     $('#name').hide("slow", function(){
       $('#name').html(
       '<label class="settings-label" for="exampleInputEmail1">Enter new name</label>' +
@@ -85,4 +102,17 @@ $(document).ready(function() {
       
     });
   });
+  
+  function validate(value, type) {
+    var pattern = new RegExp(/[\'"^$%&*()}{@#~?><>,.;:|=_+¬]/);
+    if (value.length > 30 || value.length < 2) {
+      return type + "must contain from 2 to 30";
+    }
+    
+    if (pattern.test(value)) {
+      return "Only alphanumeric characters allowed";
+    }
+    
+    return null;
+  }
 });

@@ -162,6 +162,7 @@
                             <td class="user-settings-property">Name:</td>
                             <td class="user-settings-data" id="settingsName">
                               <div id="name"><?php echo $name ?></div>
+                              <div id="nameInfo"></div>
                             </td>
                             <td class="user-settings-button" id="changeNameButton">
                               <div id="buttonNameWrapper">

@@ -116,6 +116,22 @@ img {
   margin: 0;
 }
 
+.settings-error {
+  font-size: 0.8rem;
+  line-height: 1;
+  color: #ff1a1a;
+  padding: 0 0 5px 5px;
+  margin: 0;
+}
+
+.settings-success {
+  font-size: 0.8rem;
+  line-height: 1;
+  color: #1aff1a;
+  padding: 0 0 5px 5px;
+  margin: 0;
+}
+
 .registration-success, .server-error {
   font-size: 1rem;
   text-align: center;
