@@ -278,7 +278,29 @@
           </div>
           <div class="col-lg-2">
           </div>
-        </div>       
+        </div>
+        
+        <div class="row" id="addLeagueRow">
+          <div class="col-lg-2">
+          </div>
+          <div class="col-lg-8">
+            <div class="box" id="addLeagueBox">
+              <div class="box-top">
+                <div class="box-left box-title" id="addLeagueTitle">
+                  Add League
+                </div>
+                <div class="clear-both"></div>
+                <div class="close-button" id="closeAddLeague">
+                  <i class="icon-cancel"></i>
+                </div>
+              </div>
+              <div class="box-bottom" id="addLeaguePanel">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+          </div>            
+        </div>
         
         <div class="row" id="manageTeamRow">
           <div class="col-lg-2">
