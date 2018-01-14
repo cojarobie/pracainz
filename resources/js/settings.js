@@ -49,6 +49,14 @@ $(document).ready(function() {
               $('#nameInfo').removeClass('settings-error');
               $('#nameInfo').addClass('settings-success');
               $('#nameInfo').html("Name was successfuly changed");
+              $('#mainName').html(newName);
+              
+              $.ajax({
+                method: 'POST',
+                url: 'ajaxsettings/changeuserame.php',
+                dataType: 'json',
+                data: {userName: newName},
+              });
             }
             $('#name').show("slow");
             $('#nameInfo').show("slow");

@@ -1,10 +1,5 @@
 <?php
   session_start();
-  if (!isset($_SESSION['logedin'])) {
-    header('Location: index.php');
-    exit();
-  }
-  
   $id = $_SESSION['id'];
   $name = $_SESSION['name'];
   $surname = $_SESSION['surname'];
@@ -12,6 +7,11 @@
   $email = $_SESSION['email'];
   $avatar = $_SESSION['avatar'];
   $description = $_SESSION['description'];
+  
+  if (!isset($_SESSION['logedin'])) {
+    header('Location: index.php');
+    exit();
+  }
   
   $teams = [];
   $leagues = [];

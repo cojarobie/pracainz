@@ -35,19 +35,21 @@
                 <div class="user-data">
                   <div class="user-name box-title">
                   <?php
-                     echo "$name \"$nickname\" $surname";
+                     echo '<span id="mainName">'.$name.'</span>'; 
+                     echo ' <span id="mainNickname">"'.$nickname.'"</span> ';
+                     echo '<span id="mainSurname">'.$surname.'</span>';
                   ?>
                   </div>
                   
                   <div class="user-email">
                   <?php
-                    echo "$email";
+                    echo '<span id="mainEmail">' . $email . '</span>';
                   ?>
                   </div>
                   
                   <div class="user-description">
                   <?php
-                    echo "$description";
+                    echo '<span id="mainDescription">' . $description .'</span>';
                   ?>
                   </div>
                   
