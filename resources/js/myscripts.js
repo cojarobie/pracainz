@@ -39,7 +39,7 @@ function noAcceptDecline(id) {
 }
 
 function buttonsYesNo(id, yesFunction, noFunction) {
-  return '<div class="accept-container"><button type="button" class="btn btn-success accept" onclick="'+ yesFunction +'('+ id +')">Yes<i class="icon-ok-circled"></i></button></div> <div class="decline-container"><button type="button" class="btn btn-danger decline" onclick="'+ noFunction +'('+ id +')">No<i class="icon-cancel-circled"></i></button></div><div class="clear-both"></div>'
+  return '<div class="accept-container"><button type="button" class="btn btn-success accept" onclick="'+ yesFunction +'('+ id +')">Yes<i class="icon-ok-circled"></i></button></div> <div class="decline-container"><button type="button" class="btn btn-danger decline" onclick="'+ noFunction +'('+ id +')">No<i class="icon-cancel-circled"></i></button></div><div class="clear-both"></div>';
 }
 
 function manageTeam(id) {
