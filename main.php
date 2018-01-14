@@ -136,6 +136,30 @@
           </div>
         </div>
         
+        <div class="row" id="userSettingsRow">
+          <div class="col-lg-2">
+          </div>
+            <div class="col-lg-8">
+              <div class="box" id="userSettingBox">
+                <div class="box-top">
+                  <div class="box-left box-title" id="userSettingsTitle">
+                    User Settings
+                  </div>
+                  <div class="clear-both"></div>
+                  <div class="close-button" id="closeUserSettings">
+                    <i class="icon-cancel"></i>
+                  </div>
+                </div>
+                <div class="box-bottom" id="userSettingsPanel">
+                  
+                </div>
+              </div>
+            </div>  
+          </div>
+          <div class="col-lg-2">
+          </div>
+        </div>
+        
         <div class="row" id="addTeamRow">
           <div class="col-lg-2">
           </div>

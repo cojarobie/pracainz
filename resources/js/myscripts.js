@@ -2,6 +2,10 @@ function logout() {
   window.location.href = 'logout.php';
 }
 
+function settings() {
+  
+}
+
 function leave(id) {
   $("#leave" + id).html(buttonsYesNo(id, "yesLeave", "noLeave"));
 }
