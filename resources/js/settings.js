@@ -1,8 +1,14 @@
 $(document).ready(function() {
   
   $('#buttonName').click(function(){
+    var content = $('#name').html();
     $('#name').hide("slow", function(){
-
+      $('#name').html(
+      '<label class="settings-label" for="exampleInputEmail1">Enter new name</label>' +
+      '<input type="text" class="form-control" id="changeNameInput" aria-describedby="nameHelp" value="'+content+'">' +
+      '<span id="settingsNameHelp" class="form-text text-muted"></span>');
+      $('#name').show("slow");  
+      
     });
   });
   
