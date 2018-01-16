@@ -28,7 +28,7 @@
         $result->free();
         
         foreach($invitedTeamsId as $invitedId) {
-          $connection->query("INSERT INTO teams_leagues (ID_Team,ID_League) VALUES($teamId, $invitedId)");
+          $connection->query("INSERT INTO teams_leagues (ID_Team,ID_League) VALUES($invitedId, $leagueId)");
         }
       }
       $connection->close();
