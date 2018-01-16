@@ -473,7 +473,7 @@ button {
   cursor: pointer;
 }
 
-#addTeamBox, #manageTeamBox, #userSettingsBox {
+#addTeamBox, #addLeagueBox, #manageTeamBox, #userSettingsBox {
   display: none;
 }
 
