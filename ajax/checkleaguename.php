@@ -2,12 +2,12 @@
 
   session_start();
   
-  if (!isset($_POST['teamName'])) {
+  if (!isset($_POST['leagueName'])) {
     header('Location: ../index.php');
     exit();
   }
 
-  $teamName = $_POST['teamName'];
+  $leagueName = $_POST['leagueName'];
   $exists = false;
   
   require_once '../connection.php';
@@ -19,7 +19,7 @@
       throw new Exception(mysqli_connect_errno());
     } else {
       $connection->set_charset("utf8");
-      if ($result = $connection->query("SELECT * FROM teams WHERE Name='$teamName'")) {
+      if ($result = $connection->query("SELECT * FROM leagues WHERE Name='$leagueName'")) {
         if ($result->num_rows > 0) {
           $exists = true;
         }

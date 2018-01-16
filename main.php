@@ -303,12 +303,12 @@
                     </div>
                     <div class="col-sm-9">
                       <input type="text" name="leagueName" class="form-control" id="leagueName" aria-describedby="inputTeamLeagueStatus">
-                      <div id="teamleagueHelpBlock" class="help-block"></div>
+                      <div id="leagueNameHelpBlock" class="help-block"></div>
                     </div>
                   </div>
                   <div class="form-group has-feedback row" id="addTeamToLeagueNameGroup">
                     <div class="col-sm-3">
-                      <label class="control-label input-label" for="invitePlayer">Invite team: </label>
+                      <label class="control-label input-label" for="inviteTeam">Invite team: </label>
                     </div>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="inviteTeam" aria-describedby="inviteTeamStatus">
@@ -363,6 +363,7 @@
     <script src="resources/js/myjquery.js"></script>   
     <script src="resources/js/myscripts.js"></script>
     <script src="resources/js/validateteam.js"></script>
+    <script src="resources/js/validateleague.js"></script>
     <script src="resources/js/searchusers.js"></script>
     <script src="resources/js/searchteams.js"></script>
     <script src="resources/js/settings.js"></script>

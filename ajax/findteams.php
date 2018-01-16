@@ -22,7 +22,7 @@
       throw new Exception(mysqli_connect_errno());
     } else {
       $connection->set_charset("utf8");
-      if (strlen($input) > 0 && $result = $connection->query("SELECT * FROM teams WHERE  LOWER(Name) LIKE '$input%' AND ID_Captain != $id")) {
+      if (strlen($input) > 0 && $result = $connection->query("SELECT * FROM teams WHERE  LOWER(Name) LIKE '$input%'")) {
         while ($row = $result->fetch_assoc()) {
           if (!in_array($row['ID'], $invited)) {
             array_push($teams, Array('id'=>$row['ID'], 'name'=>$row['Name']));
