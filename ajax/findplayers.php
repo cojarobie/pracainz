@@ -25,7 +25,7 @@
       if (strlen($input) > 0 && $result = $connection->query("SELECT * FROM users WHERE  (LOWER(Name) LIKE '$input%' OR LOWER(Surname) LIKE '$input%' OR LOWER(Nickname) LIKE '$input%' OR LOWER(Email) LIKE '$input%') AND ID != $id")) {
         while ($row = $result->fetch_assoc()) {
           if (!in_array($row['ID'], $invited)) {
-            array_push($players, Array('id'=>$row['ID'], 'name'=>$row['Name'], 'surname'=>$row['Surname'], 'nick'=>$row['Nickname'], 'email'=>$row['Email']));
+            array_push($players, Array('id'=>$row['ID'], 'name'=>$row['Name'], 'surname'=>$row['Surname'], 'nick'=>$row['Nickname'], 'email'=>$row['Email'], 'avatar'=>$row['Avatar']));
           }
         }
         $result->free();
