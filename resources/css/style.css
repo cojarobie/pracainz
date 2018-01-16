@@ -350,8 +350,8 @@ img {
   line-height: inherit;
   font-weight: inherit;
   font-size: inherit;
-  border-width: 0px;
   overflow: hidden;
+  border-width: 0px;
 }
 
 .details:hover {
@@ -500,7 +500,7 @@ button {
   font-size: 18px;
 }
 
-#teamNameHelpBlock {
+#teamNameHelpBlock, #leagueNameHelpBlock {
   display: none;
 }
 

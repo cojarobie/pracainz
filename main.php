@@ -295,7 +295,7 @@
                 </div>
               </div>
               <div class="box-bottom" id="addLeaguePanel">
-                <form class="form-horizontal" id="addLeagueForm" action="addteam.php" method="post">
+                <form class="form-horizontal" id="addLeagueForm" action="addleague.php" method="post">
                   <div class="form-group has-feedback row" id="leagueNameGroup">
                     <div class="col-sm-3">
                       <label class="control-label input-label" for="teamName">League name:
