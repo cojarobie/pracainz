@@ -68,22 +68,23 @@ function invitePlayerToTeam(id, name, surname, nick, email, avatar) {
     '</div>'+
     '<div class="col-sm-9">'+
       '<input type="hidden" name="invitedPlayers[]" class="form-control" id="invitedPlayerInput'+id+'"value="'+id+'">'+
-        '<div class="invited-players">'+
-          '<div class="float-left">'+
-            '<img class="img-thumbnail img-invited-player" src="' + avatar + '">'+
-          '</div>'+
-          '<div class="float-left">' +
-            '<div class="main-invitation-data">'
-              + name    + ' "' 
-              + nick    + '" ' 
-              + surname + 
-            '</div>' +
-            '<div class="invitation-email">' +
-              email + 
-            '</div>' +
-          '</div>'+
+      '<div class="invited-players">'+
+        '<div class="float-left">'+
+          '<img class="img-thumbnail img-invited-player" src="' + avatar + '">'+
         '</div>'+
-      '</div>'
+        '<div class="float-left">' +
+          '<div class="main-invitation-data">'
+            + name    + ' "' 
+            + nick    + '" ' 
+            + surname + 
+          '</div>' +
+          '<div class="invitation-email">' +
+            email + 
+          '</div>' +
+        '</div>'+
+      '</div>'+
+    '</div>'+
+  '</div>'
   );
   $('#invitedPlayer'+id).show("slow");
 }
