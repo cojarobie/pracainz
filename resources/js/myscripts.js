@@ -59,18 +59,27 @@ function manageTeam(id) {
         '<div class="row" id="invitedPlayer'+teamMember['id']+'">' +
           '<div class="col-sm-3 cancle-buttons">' + 
             '<div class="mini-cancle-button float-right" onclick="removePlayerFromTeam('+teamMember['id']+')">' +
-            '<i class="icon-cancel"></i>' + 
-          '</div>' + 
-        '</div>' +
-        '<div class="col-sm-9">' +
-          '<div class="invited-players">' + 
-        + teamMember['id'] + ' '
-        + teamMember['name'] + ' "' 
-        + teamMember['nick'] + '" ' 
-        + teamMember['surname'] + ' ' 
-        + teamMember['email'] + ' ' 
-        + teamMember['status'] 
-        + '</div></div></div>';
+              '<i class="icon-cancel"></i>' + 
+            '</div>' + 
+          '</div>' +
+          '<div class="col-sm-9">' +     
+            '<div class="invited-players">'+
+              '<div class="float-left">'+
+                '<img class="img-thumbnail img-invited-player" src="' + teamMember['avatar'] + '">'+
+              '</div>'+
+              '<div class="float-left">'+
+                '<div class="main-invitation-data">'
+                  + teamMember['name'] + ' "' 
+                  + teamMember['nick'] + '" ' 
+                  + teamMember['surname'] +
+                '</div>' +
+                '<div class="invitation-email">' +
+                  teamMember['email'] + 
+                '</div>'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>';
       });
       $('#manageTeamPanel').append(outputContent);
     });
