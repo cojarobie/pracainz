@@ -350,6 +350,28 @@
           </div>            
         </div>
         
+        <div class="row" id="leagueManagaRow">
+          <div class="col-lg-2">
+          </div>
+          <div class="col-lg-8">
+            <div class="box" id="manageLeagueBox">
+              <div class="box-top">
+                <div class="box-left box-title" id="manageLeagueTitle">
+                  Manage Team
+                </div>
+                <div class="clear-both"></div>
+                <div class="close-button" id="closeLeagueTeam">
+                  <i class="icon-cancel"></i>
+                </div>
+              </div>
+              <div class="box-bottom" id="manageLeaguePanel">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+          </div>            
+        </div>
+        
       </div>
     </div>
   
