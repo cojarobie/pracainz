@@ -86,3 +86,16 @@ function manageTeam(id) {
       
   });
 }
+
+function manageLeague(id) {
+  $(document).ready(function() {
+    $.ajax({
+      method: 'POST',
+      url: 'ajax/leaguemanager.php',
+      dataType: 'json',
+      data: {leagueId: id}
+    }).done(function() {
+      
+    });
+  });
+}

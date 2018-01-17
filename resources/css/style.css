@@ -479,7 +479,7 @@ button {
   cursor: pointer;
 }
 
-#addTeamBox, #addLeagueBox, #manageTeamBox, #userSettingsBox {
+.hide-box {
   display: none;
 }
 

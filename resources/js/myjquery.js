@@ -12,7 +12,7 @@ $( document ).ready(function() {
   });
   
   $('#closeUserSettings').click(function() {
-    $.scrollTo($('#contentRow'));
+    $.scrollTo($('#contentRow'), 500);
     $('#userSettingsBox').hide("slow");
   })
   
@@ -47,6 +47,17 @@ $( document ).ready(function() {
   $('#closeManageTeam').click(function() {
     $.scrollTo($('#contentRow'), 500);
     $('#manageTeamBox').hide("slow");
+  })
+  
+  $('.manage-league').click(function() {
+    $('#manageLeagueBox').show("slow", function() {
+      $.scrollTo($('#leagueManagaRow'), 500);
+    });
+  })
+  
+  $('#closeManageLeague').click(function() {
+    $.scrollTo($('#contentRow'), 500);
+    $('#manageLeagueBox').hide("slow");
   })
 }
 );

@@ -59,7 +59,7 @@
       
       if ($result = $connection->query("SELECT * FROM leagues WHERE id_organizer=$id")) {
         while ($row = $result->fetch_assoc()) {
-          $league = to_array($row['Name'], 'Organizer', '<button type="button" class="btn btn-success manage-league" onclick="manage()">Manage <i class="icon-cog"></i></button>');
+          $league = to_array($row['Name'], 'Organizer', '<button type="button" class="btn btn-success manage-league" onclick="manageLeague('.$row['ID'].')">Manage <i class="icon-cog"></i></button>');
           array_push($leagues, $league);
         } 
         $result->free(); 

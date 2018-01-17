@@ -142,7 +142,7 @@
           <div class="col-lg-2">
           </div>
             <div class="col-lg-8">
-              <div class="box" id="userSettingsBox">
+              <div class="box hide-box" id="userSettingsBox">
                 <div class="box-top">
                   <div class="box-left box-title" id="userSettingsTitle">
                     User Settings
@@ -158,68 +158,67 @@
                      
                     </div>
                     <div class="col-lg-10">
-                      <form action="usersettings.php" method="post">
-                        <table class="user-settings-table">
-                          <tr>
-                            <td class="user-settings-property">Name:</td>
-                            <td class="user-settings-data" id="settingsName">
-                              <div id="name"><?php echo $name ?></div>
-                              <div id="nameInfo"></div>
-                            </td>
-                            <td class="user-settings-button" id="changeNameButton">
-                              <div id="buttonNameWrapper">
-                                <button type="button" class="btn btn-warning change-button" id="buttonName">Change <i class="icon-cog"></i> </button>
-                              </div>
-                              <div id="nameYesNo"></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="user-settings-property">Surname:</td>
-                            <td class="user-settings-data" id="settingsSurname">
-                              <div id="surname"><?php echo $surname ?></div>
-                            </td>
-                            <td class="user-settings-button" id="changeSurnameButton">
-                              <button type="button" class="btn btn-warning change-button" id="buttonSurname">Change <i class="icon-cog"></i> </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="user-settings-property">Nickname:</td>
-                            <td class="user-settings-data" id="settingsNickname">
-                              <div id="nickname"><?php echo $nickname ?></div>
-                            </td>
-                            <td class="user-settings-button" id="changeNicknameButton">
-                              <button type="button" class="btn btn-warning change-button" id="buttonNickname">Change <i class="icon-cog"></i> </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="user-settings-property">Email:</td>
-                            <td class="user-settings-data" id="settingsEmail">
-                              <div id="email"><?php echo $email ?></div>
-                            </td>
-                            <td class="user-settings-button" id="changeEmailButton">
-                              <button type="button" class="btn btn-warning change-button" id="buttonEmail">Change <i class="icon-cog"></i> </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="user-settings-property">Passowrd:</td>
-                            <td class="user-settings-data" id="settingsPassword">
-                              <div id="password">**********</div>
-                            </td>
-                            <td class="user-settings-button" id="changePasswordButton">
-                              <button type="button" class="btn btn-warning change-button" id="buttonPassword">Change <i class="icon-cog"></i> </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="user-settings-property">Description:</td>
-                            <td class="user-settings-data" id="settingsDescription">
-                              <div id="description"><?php echo $description ?></div>
-                            </td>
-                            <td class="user-settings-button" id="changeNameButton">
-                              <button type="button" class="btn btn-warning change-button" id="buttonDescription">Change <i class="icon-cog"></i> </button>
-                            </td>
-                          </tr>
-                        </table>
-                      </form>
+
+                      <table class="user-settings-table">
+                        <tr>
+                          <td class="user-settings-property">Name:</td>
+                          <td class="user-settings-data" id="settingsName">
+                            <div id="name"><?php echo $name ?></div>
+                            <div id="nameInfo"></div>
+                          </td>
+                          <td class="user-settings-button" id="changeNameButton">
+                            <div id="buttonNameWrapper">
+                              <button type="button" class="btn btn-warning change-button" id="buttonName">Change <i class="icon-cog"></i> </button>
+                            </div>
+                            <div id="nameYesNo"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="user-settings-property">Surname:</td>
+                          <td class="user-settings-data" id="settingsSurname">
+                            <div id="surname"><?php echo $surname ?></div>
+                          </td>
+                          <td class="user-settings-button" id="changeSurnameButton">
+                            <button type="button" class="btn btn-warning change-button" id="buttonSurname">Change <i class="icon-cog"></i> </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="user-settings-property">Nickname:</td>
+                          <td class="user-settings-data" id="settingsNickname">
+                            <div id="nickname"><?php echo $nickname ?></div>
+                          </td>
+                          <td class="user-settings-button" id="changeNicknameButton">
+                            <button type="button" class="btn btn-warning change-button" id="buttonNickname">Change <i class="icon-cog"></i> </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="user-settings-property">Email:</td>
+                          <td class="user-settings-data" id="settingsEmail">
+                            <div id="email"><?php echo $email ?></div>
+                          </td>
+                          <td class="user-settings-button" id="changeEmailButton">
+                            <button type="button" class="btn btn-warning change-button" id="buttonEmail">Change <i class="icon-cog"></i> </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="user-settings-property">Passowrd:</td>
+                          <td class="user-settings-data" id="settingsPassword">
+                            <div id="password">**********</div>
+                          </td>
+                          <td class="user-settings-button" id="changePasswordButton">
+                            <button type="button" class="btn btn-warning change-button" id="buttonPassword">Change <i class="icon-cog"></i> </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="user-settings-property">Description:</td>
+                          <td class="user-settings-data" id="settingsDescription">
+                            <div id="description"><?php echo $description ?></div>
+                          </td>
+                          <td class="user-settings-button" id="changeNameButton">
+                            <button type="button" class="btn btn-warning change-button" id="buttonDescription">Change <i class="icon-cog"></i> </button>
+                          </td>
+                        </tr>
+                      </table>                      
                     </div>
                     <div class="col-lg-1">
                       
@@ -237,7 +236,7 @@
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box" id="addTeamBox">
+            <div class="box hide-box" id="addTeamBox">
               <div class="box-top">
                 <div class="box-left box-title" id="addTeamTitle">
                   Add Team
@@ -284,7 +283,7 @@
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box" id="addLeagueBox">
+            <div class="box hide-box" id="addLeagueBox">
               <div class="box-top">
                 <div class="box-left box-title" id="addLeagueTitle">
                   Add League
@@ -332,7 +331,7 @@
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box" id="manageTeamBox">
+            <div class="box hide-box" id="manageTeamBox">
               <div class="box-top">
                 <div class="box-left box-title" id="manageTeamTitle">
                   Manage Team
@@ -354,13 +353,13 @@
           <div class="col-lg-2">
           </div>
           <div class="col-lg-8">
-            <div class="box" id="manageLeagueBox">
+            <div class="box hide-box" id="manageLeagueBox">
               <div class="box-top">
                 <div class="box-left box-title" id="manageLeagueTitle">
                   Manage Team
                 </div>
                 <div class="clear-both"></div>
-                <div class="close-button" id="closeLeagueTeam">
+                <div class="close-button" id="closeManageLeague">
                   <i class="icon-cancel"></i>
                 </div>
               </div>
