@@ -88,59 +88,17 @@
           $awayTeam = $teams[$away];
         }
         
-        $matchPair = array($homeTeam, $awayTeam);
-        array_push($roundFixture, $matchPair);
+        if ($awayTeam != null && $homeTeam != null) {
+          $matchPair = array($homeTeam, $awayTeam);
+          array_push($roundFixture, $matchPair);
+        }
+        
       }
       array_push($scheduled, $roundFixture);
       
       nextRound($scheduledTable, $pairs);
-    }
+    }  
     
-    
-    for ($rounds = 0; $rounds < $teamQuantity-1; $rounds++) {
-      echo 'Fixture: ' . ($rounds + 1) . '<br/>';
-      foreach ($scheduled[$rounds] as $matchPair) {
-        echo $matchPair[0] . '-' . $matchPair[1] . '<br/>';
-      }
-      echo '<br/>';
-    }    
-    
-    /*$diagonaScheme = [];
-    
-    for ($homeTeam = 1; $homeTeam < $teamQuantity; $homeTeam++) {
-      $roundFixture  = [];
-      for ($awayTeam = 1; $awayTeam < $teamQuantity; $awayTeam++) {
-        $roundNo = $homeTeam + $awayTeam - 1;
-        if ($roundNo >= $teamQuantity) {
-          $roundNo -= ($teamQuantity - 1);         
-        }
-        
-        
-          $roundFixture[$awayTeam - 1] = $roundNo;
-          $match = array($homeTeam, $awayTeam);
-          $home = $homeTeam;
-          $away = $awayTeam;
-          if ($home == $away) {
-            if ($roundNo % 2 == 1) {
-              $away = $teamQuantity; 
-            }
-            else {
-              $home = $teamQuantity; 
-            }
-          }
-          $match = array($home, $away);
-          array_push($scheduled[$roundNo - 1], $match);
-        }
-
-      
-      $diagonaScheme[$homeTeam -1] = $roundFixture;
-      foreach ($roundFixture as $rounds) {
-        echo "$rounds ";
-      }
-      echo "</br>";
-    }
-    
-    return $scheduled;*/
   }
   
   function nextRound(&$scheduledTable, $pairs) {
