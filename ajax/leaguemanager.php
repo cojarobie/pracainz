@@ -44,6 +44,8 @@
     echo '</br>';
   }
   
+  echo json_encode($scheduled);
+  
   function scheduled($teams) {
     $teamQuantity = count($teams);
     
