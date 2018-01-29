@@ -30,7 +30,9 @@
         foreach($invitedTeamsId as $invitedId) {
           $connection->query("INSERT INTO teams_leagues (ID_Team,ID_League) VALUES($invitedId, $leagueId)");
           
-          $connection->quuery("
+        }
+        
+        $connection->query("
           CREATE VIEW `games_$leagueName` AS
           SELECT 
             t.Name               AS 'Team_Name', 
@@ -55,12 +57,6 @@
           INNER JOIN leagues AS l ON tl.ID_League=l.ID
           INNER JOIN scheduled AS s ON tl.ID_Team=s.ID_Second_Team_League
           WHERE l.Name='$leagueName'");
-          
-          // $connection->("
-            // CREATE VIEW `table_$leagueName` AS
-            // SELECT SUM
-            // GROUP BY Team_Name ");
-        }
       }
       $connection->close();
     }
