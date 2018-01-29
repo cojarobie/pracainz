@@ -29,6 +29,37 @@
         
         foreach($invitedTeamsId as $invitedId) {
           $connection->query("INSERT INTO teams_leagues (ID_Team,ID_League) VALUES($invitedId, $leagueId)");
+          
+          $connection->quuery("
+          CREATE VIEW `games_$leagueName` AS
+          SELECT 
+            t.Name               AS 'Team_Name', 
+            l.Name               AS 'League_Name', 
+            s.first_team_points  AS 'Points_Forward',
+            s.second_team_points AS 'Points_Against',
+            s.first_team_points - s.second_team_points AS 'Points_Difference'
+          FROM teams_leagues AS tl
+          INNER JOIN teams AS t ON tl.ID_Team=t.ID
+          INNER JOIN leagues AS l ON tl.ID_League=l.ID
+          INNER JOIN scheduled AS s ON tl.ID_Team=s.ID_First_Team_League
+          WHERE l.Name='$leagueName'
+          UNION ALL
+          SELECT 
+            t.Name               AS 'Team_Name', 
+            l.Name               AS 'League_Name', 
+            s.second_team_points  AS 'Points_Forward',
+            s.first_team_points AS 'Points_Against',
+            s.second_team_points - s.first_team_points AS 'Points_Difference'
+          FROM teams_leagues AS tl
+          INNER JOIN teams AS t ON tl.ID_Team=t.ID
+          INNER JOIN leagues AS l ON tl.ID_League=l.ID
+          INNER JOIN scheduled AS s ON tl.ID_Team=s.ID_Second_Team_League
+          WHERE l.Name='$leagueName'");
+          
+          // $connection->("
+            // CREATE VIEW `table_$leagueName` AS
+            // SELECT SUM
+            // GROUP BY Team_Name ");
         }
       }
       $connection->close();
