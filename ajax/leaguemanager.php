@@ -11,6 +11,7 @@
   
   $leagueId = $_POST['leagueId'];
   $teams = [];
+  $teamNames = [];
   
   try {
     $connection = new mysqli($host, $db_user, $db_password, $db_name);
@@ -18,10 +19,16 @@
       throw new Exception(mysqli_connect_errno());
     } else {
       $connection->set_charset("utf8");
-      if ($result = $connection->query("SELECT * FROM teams_leagues WHERE id_league=$leagueId")) {
+      if ($result = $connection->query(
+      "SELECT t.Name AS 't_Name', tl.id_league AS 'tl_ID_Team', t.ID AS 't_ID' FROM teams_leagues AS tl
+       INNER JOIN teams AS t ON t.id = tl.id_team
+       WHERE tl.id_league=$leagueId")) {
       
         while ($row = $result->fetch_assoc()) {
-          array_push($teams, $row['ID_Team']);
+          $teamLeagueId = $row['tl_ID_Team'];
+          $teamId = $row['t_ID'];
+          array_push($teams, $teamId);
+          $teamNames["$teamId"] = $row['t_Name'];
         }
         
         $result->free();
@@ -34,11 +41,15 @@
     
   }
   
-  $scheduled = scheduled($teams);
+  $schedule = schedule($teams);
   
-  echo json_encode($scheduled);
+  $data = [];
+  $data['schedule'] = $schedule;
+  $data['teamNames'] = $teamNames;
   
-  function scheduled($teams) {
+  echo json_encode($data);
+  
+  function schedule($teams) {
     $teamQuantity = count($teams);
     
     if ($teamQuantity % 2 == 1) {

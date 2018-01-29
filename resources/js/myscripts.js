@@ -94,8 +94,16 @@ function manageLeague(id) {
       url: 'ajax/leaguemanager.php',
       dataType: 'json',
       data: {leagueId: id}
-    }).done(function(scheduled) {
-      console.log(scheduled);
+    }).done(function(data) {
+      schedule = data['schedule'];
+      teamNames = data['teamNames'];
+      console.log(schedule);
+      console.log(teamNames);
+      
     });
+    
+    function showMatches(roundFixture) {
+      
+    }
   });
 }
