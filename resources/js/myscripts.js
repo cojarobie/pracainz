@@ -94,8 +94,8 @@ function manageLeague(id) {
       url: 'ajax/leaguemanager.php',
       dataType: 'json',
       data: {leagueId: id}
-    }).done(function() {
-      
+    }).done(function(scheduled) {
+      console.log(scheduled);
     });
   });
 }

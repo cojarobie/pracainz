@@ -2,14 +2,14 @@
 
   session_start();
   
-  // if (!isset($_POST['leagueId'])) {
-    // header('location: ../index.php');
-    // exit();
-  // }
+  if (!isset($_POST['leagueId'])) {
+    header('location: ../index.php');
+    exit();
+  }
   
   require_once '../connection.php';
   
-  $leagueId = 11;//$_POST['leagueId'];
+  $leagueId = $_POST['leagueId'];
   $teams = [];
   
   try {
@@ -35,14 +35,6 @@
   }
   
   $scheduled = scheduled($teams);
-  
-  for ($roundNo = 0; $roundNo < count($scheduled) - 1; $roundNo++) {
-    echo "Fixture: ".($roundNo+1)."</br>";
-    foreach ($scheduled[$roundNo] as $match) {
-      echo $match['0'] . "-" . $match['1'] . '</br>';      
-    }
-    echo '</br>';
-  }
   
   echo json_encode($scheduled);
   
@@ -99,8 +91,9 @@
       array_push($scheduled, $roundFixture);
       
       nextRound($scheduledTable, $pairs);
-    }  
+    }   
     
+    return $scheduled;
   }
   
   function nextRound(&$scheduledTable, $pairs) {
