@@ -43,7 +43,7 @@
           FROM teams_leagues AS tl
           INNER JOIN teams AS t ON tl.ID_Team=t.ID
           INNER JOIN leagues AS l ON tl.ID_League=l.ID
-          INNER JOIN scheduled AS s ON tl.ID_Team=s.ID_First_Team_League
+          INNER JOIN scheduled AS s ON tl.ID=s.ID_First_Team_League
           WHERE l.Name='$leagueName'
           UNION ALL
           SELECT 
@@ -55,7 +55,7 @@
           FROM teams_leagues AS tl
           INNER JOIN teams AS t ON tl.ID_Team=t.ID
           INNER JOIN leagues AS l ON tl.ID_League=l.ID
-          INNER JOIN scheduled AS s ON tl.ID_Team=s.ID_Second_Team_League
+          INNER JOIN scheduled AS s ON tl.ID=s.ID_Second_Team_League
           WHERE l.Name='$leagueName'");
       }
       $connection->close();
