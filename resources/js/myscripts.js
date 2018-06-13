@@ -102,6 +102,10 @@ function manageLeague(id) {
       
     });
     
+    function showFixtures(schedule) {
+      
+    }
+    
     function showMatches(roundFixture) {
       
     }

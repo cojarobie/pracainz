@@ -356,7 +356,7 @@
             <div class="box hide-box" id="manageLeagueBox">
               <div class="box-top">
                 <div class="box-left box-title" id="manageLeagueTitle">
-                  Manage Team
+                  Manage League
                 </div>
                 <div class="clear-both"></div>
                 <div class="close-button" id="closeManageLeague">
